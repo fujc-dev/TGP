@@ -17,6 +17,9 @@
 
 #pragma once
 #include <iostream>
+#include <fstream>  
+#include <string.h>  
+#include <conio.h>//用getch();  
 
 using namespace std;
 
@@ -32,11 +35,11 @@ public:
 
 	// 成员变量
 	char name[20];
-	char id[20];
-	int m_Cnum, //C++课程得分  
-		m_Mnum, //汇编课程得分  
-		m_Enum, //嵌入式操作系统课程得分  
-		m_Sum;	//总分      
+	char Id[20];
+	int Cnum, //C++课程得分  
+		Mnum, //汇编课程得分  
+		Enum, //嵌入式操作系统课程得分  
+		sum;	//总分      
 	Student * Next;
 
 
@@ -47,13 +50,26 @@ public:
 
 		//cin操作符 
 		cout << "\t\t请输入学生的姓名：";  cin >> name;
-		cout << "\t\t请输入学生的学号：";  cin >> id;
-		cout << "\t\t请输入C++课程的成绩：";  cin >> m_Cnum;
-		cout << "\t\t请输入汇编课程的成绩：";  cin >> m_Mnum;
-		cout << "\t\t请输入嵌入式操作系统课程的成绩：";  cin >> m_Enum;
-		m_Sum = m_Cnum + m_Mnum + m_Sum;
+		cout << "\t\t请输入学生的学号：";  cin >> Id;
+		cout << "\t\t请输入C++课程的成绩：";  cin >> Cnum;
+		cout << "\t\t请输入汇编课程的成绩：";  cin >> Mnum;
+		cout << "\t\t请输入嵌入式操作系统课程的成绩：";  cin >> Enum;
+		sum = Cnum + Mnum + Enum;
 	}
 
+	void ReadFile(istream & in){
+		in >> name >> Id >> Cnum >> Mnum >> Enum >> sum;
+	}
+
+	void Show()
+	{
+		cout << "姓名:" << name << endl
+			<< "学号:" << Id << endl
+			<< "C++:" << Cnum << endl
+			<< "汇编:" << Mnum << endl
+			<< "嵌入式操作系统：" << Enum << endl
+			<< "总成绩:" << sum << endl << endl << endl;
+	}
 
 };
 
