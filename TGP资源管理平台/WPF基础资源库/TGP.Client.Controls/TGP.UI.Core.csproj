@@ -63,12 +63,6 @@
     <Compile Include="Controls\GButton.xaml.cs">
       <DependentUpon>GButton.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\GTabControl.xaml.cs">
-      <DependentUpon>GTabControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\GTabItem.xaml.cs">
-      <DependentUpon>GTabItem.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Controls\WindowBase.xaml.cs">
       <DependentUpon>WindowBase.xaml</DependentUpon>
     </Compile>
@@ -106,14 +100,6 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="Controls\GButton.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\GTabControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\GTabItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
