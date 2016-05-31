@@ -16,8 +16,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{DDE9F5EB-9842-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TGP.UI.Core", "WPF基础资源库\TGP.Client.Controls\TGP.UI.Core.csproj", "{D7E5B625-DEFB-4BDA-8A19-DBDD33B5A5EE}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TGP.资源管理系统", "TGP.资源管理系统\TGP.资源管理系统.vcxproj", "{76A9BED7-4E08-4A63-98A6-3E57F5C5BA3A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,22 +36,11 @@ Global
 		{D7E5B625-DEFB-4BDA-8A19-DBDD33B5A5EE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{D7E5B625-DEFB-4BDA-8A19-DBDD33B5A5EE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{D7E5B625-DEFB-4BDA-8A19-DBDD33B5A5EE}.Release|Win32.ActiveCfg = Release|Any CPU
-		{76A9BED7-4E08-4A63-98A6-3E57F5C5BA3A}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{76A9BED7-4E08-4A63-98A6-3E57F5C5BA3A}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
-		{76A9BED7-4E08-4A63-98A6-3E57F5C5BA3A}.Debug|Mixed Platforms.Build.0 = Debug|Win32
-		{76A9BED7-4E08-4A63-98A6-3E57F5C5BA3A}.Debug|Win32.ActiveCfg = Debug|Win32
-		{76A9BED7-4E08-4A63-98A6-3E57F5C5BA3A}.Debug|Win32.Build.0 = Debug|Win32
-		{76A9BED7-4E08-4A63-98A6-3E57F5C5BA3A}.Release|Any CPU.ActiveCfg = Release|Win32
-		{76A9BED7-4E08-4A63-98A6-3E57F5C5BA3A}.Release|Mixed Platforms.ActiveCfg = Release|Win32
-		{76A9BED7-4E08-4A63-98A6-3E57F5C5BA3A}.Release|Mixed Platforms.Build.0 = Release|Win32
-		{76A9BED7-4E08-4A63-98A6-3E57F5C5BA3A}.Release|Win32.ActiveCfg = Release|Win32
-		{76A9BED7-4E08-4A63-98A6-3E57F5C5BA3A}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{76A9BED7-4E08-4A63-98A6-3E57F5C5BA3A} = {5359AE82-C483-435A-9845-337DA40C9B96}
 		{D7E5B625-DEFB-4BDA-8A19-DBDD33B5A5EE} = {693C4587-7821-4644-9FA5-B66DE7C7F1E7}
 	EndGlobalSection
 EndGlobal
