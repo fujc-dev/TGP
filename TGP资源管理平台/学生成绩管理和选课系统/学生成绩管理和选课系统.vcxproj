@@ -91,7 +91,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Student.cpp" />
-    <ClCompile Include="Studentmassage.cpp" />
     <ClCompile Include="学生成绩管理和选课系统.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
