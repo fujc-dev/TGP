@@ -1,5 +1,5 @@
 // stdafx.cpp : 只包括标准包含文件的源文件
-// 学生成绩管理和选课系统.pch 将作为预编译头
+// TGP.资源管理系统.pch 将作为预编译头
 // stdafx.obj 将包含预编译类型信息
 
 #include "stdafx.h"
