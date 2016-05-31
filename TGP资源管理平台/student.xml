@@ -1,2 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Root></Root>
+<Root>
+  <Student ID_CARD="513721000000000001" NAME="蒋介石" AGE="20"/>
+  <Student ID_CARD="513721000000000002" NAME="张学良" AGE="20"/>
+  <Student ID_CARD="513721000000000003" NAME="李宗仁" AGE="20"/>
+</Root>
