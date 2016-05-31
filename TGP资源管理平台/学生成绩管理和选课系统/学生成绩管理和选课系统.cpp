@@ -3,18 +3,40 @@
 
 #include "stdafx.h"
 #include "iostream" //使用cout函数 需要引用iostream库函数
+#include "Student.h"
 
 using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	cout << "〓〓〓〓〓〓〓〓〓★ ☆ 1.增加学生成绩 ☆ ★〓〓〓〓〓〓〓〓〓" << endl;
-	cout << "〓〓〓〓〓〓〓〓〓★ ☆ 2.显示学生成绩 ☆ ★〓〓〓〓〓〓〓〓〓" << endl;
-	cout << "〓〓〓〓〓〓〓〓〓★ ☆ 3.排序统计成绩 ☆ ★〓〓〓〓〓〓〓〓〓" << endl;
-	cout << "〓〓〓〓〓〓〓〓〓★ ☆ 4.查找学生成绩 ☆ ★〓〓〓〓〓〓〓〓〓" << endl;
-	cout << "〓〓〓〓〓〓〓〓〓★ ☆ 5.删除学生成绩 ☆ ★〓〓〓〓〓〓〓〓〓" << endl;
-	cout << "〓〓〓〓〓〓〓〓〓★ ☆ 6.修改学生信息 ☆ ★〓〓〓〓〓〓〓〓〓" << endl;
-	cout << "〓〓〓〓〓〓〓〓〓★ ☆ 0.安全退出系统 ☆ ★〓〓〓〓〓〓〓〓〓" << endl;
+	int x, i = 0;
+	bool quit = false;
+	cout << "\t\t§§§§§§§§§§§§§§§§§§§§§§§§§§" << endl;
+	for (i = 0; i<3; i++)
+		cout << "\t\t◎\t\t\t\t\t\t  ◎" << endl;
+	cout << "\t\t◎★★★★【  欢迎进入学生成绩管理系统  】★★★★◎" << endl;
+	for (i = 0; i<3; i++)
+		cout << "\t\t◎\t\t\t\t\t\t  ◎" << endl;
+	cout << "\t\t§§§§§§§§§§§§§§§§§§§§§§§§§§\n" << endl;
+	Studentmassage Grade;
+	cout << "按任意键开始……";
+	getch();
+	while (!quit)
+	{
+		system("cls");
+		Grade.ShowMenu();
+		cin >> x;
+		switch (x)
+		{
+		case 0:quit = true; break;
+		case 1:Grade.AddItem(); break;
+		case 2:Grade.Display(); break;
+		case 3:Grade.Sort(); break;
+		case 4:Grade.Find(); break;
+		case 5:Grade.RemoveItem(); break;
+		case 6:Grade.ModifyItem(); break;
+		}
+	}
 	return 0;
 }
 
