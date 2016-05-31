@@ -1,0 +1,28 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:control="clr-namespace:TGP.UI.Core.Controls"
+		
+		x:Class="TGP.UI.Core.Test"
+        Title="Test" Height="300" Width="300">
+	<Window.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="pack://application:,,,/TGP.UI.Core;component/Styles/Themes/GColor.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/TGP.UI.Core;component/Styles/Themes/GIcon.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/TGP.UI.Core;component/Styles/TabControl.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Window.Resources>
+	<StackPanel>
+		<TabControl Style="{StaticResource DefaultGTopTabControlStyle}">
+            <TabItem Header="列表模式"    FontSize="18" />
+			<TabItem Header="缩略图"   FontSize="18" >
+				<StackPanel Orientation="Horizontal">
+					<TextBlock>123</TextBlock>
+					<TextBlock>abc</TextBlock>
+				</StackPanel>
+			</TabItem>
+		</TabControl>
+	</StackPanel>
+</Window>

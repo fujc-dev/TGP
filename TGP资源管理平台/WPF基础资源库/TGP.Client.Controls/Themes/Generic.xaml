@@ -1,0 +1,7 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="pack://application:,,,/TGP.UI.Core;component/Styles/Themes/GColor.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/TGP.UI.Core;component/Styles/Themes/GIcon.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
