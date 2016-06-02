@@ -24,5 +24,7 @@
 				</StackPanel>
 			</TabItem>
 		</TabControl>
+        
+        <Button Content="测试" Click="Button_Click"/>
 	</StackPanel>
 </Window>

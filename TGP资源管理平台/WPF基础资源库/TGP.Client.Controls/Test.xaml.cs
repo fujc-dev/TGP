@@ -22,5 +22,10 @@ namespace TGP.UI.Core
 		{
 			InitializeComponent();
 		}
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            e.Handled = false;
+        }
 	}
 }
