@@ -11,24 +11,25 @@
     {
         static void Main(string[] args)
         {
-            //ServiceHost mHost = new ServiceHost("Service.CalculatorServiceImp");
+            
             using (ServiceHost mHost = new ServiceHost(typeof(CalculatorServiceImp)))
             {
-                //如何为服务指定AddressHeader
-                String headerValue = "Licensed User";
-                String headerName = "UserType";
-                String headerNameSpace = "http://www.baidu.om";
-                AddressHeader addressHeader = AddressHeader.CreateAddressHeader(headerName, headerNameSpace, headerValue);
+                Uri uri = new Uri("http://localhost:8899/calculatorservice");
+
+                /*
+                 * 创建AddressHeader是 HeaderName不能包含特殊字符，
+                 * 这个HeaderName在配置文件中其实是一个XML的节点名称
+                 */
+                AddressHeader addressHeader = AddressHeader.CreateAddressHeader("UserType", "http://www.baidu.com", "Licensed User");
+                EndpointAddress endpointAddress = new EndpointAddress(uri, addressHeader);
                 //
-                EndpointAddress endpointAddress = new EndpointAddress(
-                    new Uri("http://127.0.0.1:3721/calcutorservice"),
-                    addressHeader);
-                //
-                ServiceEndpoint serviceEndpoint = new ServiceEndpoint(ContractDescription.GetContract(typeof(ICalculator)), new WSHttpBinding(), endpointAddress);
+                ServiceEndpoint serviceEndpoint = new ServiceEndpoint(ContractDescription.GetContract(typeof(ICalculator)),
+                    new WSHttpBinding(),
+                    endpointAddress);
                 //添加终结点
-                //mHost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(SecurityMode.None), "http://127.0.0.1:3721/calcutorservice");
-                mHost.Description.Endpoints.Add(serviceEndpoint);
-                
+                //mHost.Description.Endpoints.Add(serviceEndpoint);
+                mHost.AddServiceEndpoint(serviceEndpoint);
+
                 //检测是否为当前的ServiceHost服务承载了元数据行为
                 if (mHost.Description.Behaviors.Find<ServiceMetadataBehavior>() == null)
                 {

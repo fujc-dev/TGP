@@ -32,6 +32,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hosting", "Hosting\Hosting.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IISClient", "IISClient\IISClient.csproj", "{9F29110E-5178-4FB6-ABFB-FAD2EAFE70F2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{B1B905A7-DF34-40DB-9080-6283A03CC3F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateMySqlTimer", "Foundation\CreateMySqlTimer\CreateMySqlTimer.csproj", "{E82EE555-3A0B-4790-89C0-00DBBC6BA394}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,6 +106,16 @@ Global
 		{9F29110E-5178-4FB6-ABFB-FAD2EAFE70F2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{9F29110E-5178-4FB6-ABFB-FAD2EAFE70F2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{9F29110E-5178-4FB6-ABFB-FAD2EAFE70F2}.Release|Win32.ActiveCfg = Release|Any CPU
+		{E82EE555-3A0B-4790-89C0-00DBBC6BA394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E82EE555-3A0B-4790-89C0-00DBBC6BA394}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E82EE555-3A0B-4790-89C0-00DBBC6BA394}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E82EE555-3A0B-4790-89C0-00DBBC6BA394}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E82EE555-3A0B-4790-89C0-00DBBC6BA394}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{E82EE555-3A0B-4790-89C0-00DBBC6BA394}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E82EE555-3A0B-4790-89C0-00DBBC6BA394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E82EE555-3A0B-4790-89C0-00DBBC6BA394}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E82EE555-3A0B-4790-89C0-00DBBC6BA394}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E82EE555-3A0B-4790-89C0-00DBBC6BA394}.Release|Win32.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -113,5 +127,6 @@ Global
 		{F07A79EA-E219-4272-8029-4830F06694B1} = {5359AE82-C483-435A-9845-337DA40C9B96}
 		{9F29110E-5178-4FB6-ABFB-FAD2EAFE70F2} = {5359AE82-C483-435A-9845-337DA40C9B96}
 		{D7E5B625-DEFB-4BDA-8A19-DBDD33B5A5EE} = {693C4587-7821-4644-9FA5-B66DE7C7F1E7}
+		{E82EE555-3A0B-4790-89C0-00DBBC6BA394} = {B1B905A7-DF34-40DB-9080-6283A03CC3F8}
 	EndGlobalSection
 EndGlobal
