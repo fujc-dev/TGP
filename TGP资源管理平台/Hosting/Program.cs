@@ -45,6 +45,7 @@
                     Console.WriteLine("CalculatorService已启动，按任意键终止服务");
                 };
                 mHost.Open();
+                
                 Console.ReadKey();
             };
         }
