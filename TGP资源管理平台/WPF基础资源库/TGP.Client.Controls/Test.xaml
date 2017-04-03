@@ -10,7 +10,8 @@
 			<ResourceDictionary.MergedDictionaries>
 				<ResourceDictionary Source="pack://application:,,,/TGP.UI.Core;component/Styles/Themes/GColor.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/TGP.UI.Core;component/Styles/Themes/GIcon.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/TGP.UI.Core;component/Styles/TabControl.xaml" />
+				<ResourceDictionary Source="pack://application:,,,/TGP.UI.Core;component/Styles/TabControl.xaml" />
+				<!--<ResourceDictionary Source="pack://application:,,,/TGP.UI.Core;component/Controls/GButton.xaml" />-->
 			</ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>
 	</Window.Resources>
@@ -24,7 +25,6 @@
 				</StackPanel>
 			</TabItem>
 		</TabControl>
-        
-        <Button Content="测试" Click="Button_Click"/>
+		<control:GButton Content="测试" Click="Button_Click" Style="{StaticResource DefaultGButtonStyle}" />
 	</StackPanel>
 </Window>

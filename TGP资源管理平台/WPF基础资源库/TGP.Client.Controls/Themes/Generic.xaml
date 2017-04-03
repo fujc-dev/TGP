@@ -3,5 +3,6 @@
 	<ResourceDictionary.MergedDictionaries>
 		<ResourceDictionary Source="pack://application:,,,/TGP.UI.Core;component/Styles/Themes/GColor.xaml" />
 		<ResourceDictionary Source="pack://application:,,,/TGP.UI.Core;component/Styles/Themes/GIcon.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/TGP.UI.Core;component/Controls/GButton.xaml" />
 	</ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
