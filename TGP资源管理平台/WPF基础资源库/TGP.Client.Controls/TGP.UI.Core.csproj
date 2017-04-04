@@ -56,12 +56,21 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Advert.xaml.cs">
+      <DependentUpon>Advert.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\ControlAttachProperty.cs" />
     <Compile Include="Controls\GButton.xaml.cs">
       <DependentUpon>GButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ModPrivilege.xaml.cs">
+      <DependentUpon>ModPrivilege.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RollImg.xaml.cs">
+      <DependentUpon>RollImg.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\WindowBase.xaml.cs">
       <DependentUpon>WindowBase.xaml</DependentUpon>
@@ -91,15 +100,31 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <Resource Include="images\sprites_privilege_green_01.png" />
     <Resource Include="Resources\iconfont.ttf" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="images\sprites_privilege_green.png" />
+    <Resource Include="images\sprites_privilege_red.png" />
+  </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="Advert.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\GButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ModPrivilege.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\RollImg.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -136,6 +161,22 @@
   <ItemGroup>
     <Resource Include="Resources\logo.ico" />
     <Resource Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\ninja149109685357094.jpg" />
+    <Resource Include="images\ninja149117866132190.jpg" />
+    <Resource Include="images\ninja149117897937143.jpg" />
+    <Resource Include="images\ninja149117926310714.jpg" />
+    <Resource Include="images\ninja149118860857529.jpg" />
+    <Resource Include="images\ninja149118869656826.jpg" />
+    <Resource Include="images\ninja149121042484369.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\sprites_privilege_green_02.png" />
+    <Resource Include="images\sprites_privilege_green_03.png" />
+    <Resource Include="images\sprites_privilege_green_04.png" />
+    <Resource Include="images\sprites_privilege_green_05.png" />
+    <Resource Include="images\sprites_privilege_green_06.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

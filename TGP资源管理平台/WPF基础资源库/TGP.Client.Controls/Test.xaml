@@ -4,12 +4,12 @@
         xmlns:control="clr-namespace:TGP.UI.Core.Controls"
 		
 		x:Class="TGP.UI.Core.Test"
-        Title="Test" Height="300" Width="300">
+        Title="Test" Height="1043.825" Width="1031">
 	<Window.Resources>
 		<ResourceDictionary>
 			<ResourceDictionary.MergedDictionaries>
 				<ResourceDictionary Source="pack://application:,,,/TGP.UI.Core;component/Styles/Themes/GColor.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/TGP.UI.Core;component/Styles/Themes/GIcon.xaml" />
+				<ResourceDictionary Source="pack://application:,,,/TGP.UI.Core;component/Styles/Themes/GIcon.xaml" />
 				<ResourceDictionary Source="pack://application:,,,/TGP.UI.Core;component/Styles/TabControl.xaml" />
 				<!--<ResourceDictionary Source="pack://application:,,,/TGP.UI.Core;component/Controls/GButton.xaml" />-->
 			</ResourceDictionary.MergedDictionaries>
@@ -17,7 +17,7 @@
 	</Window.Resources>
 	<StackPanel>
 		<TabControl Style="{StaticResource DefaultGTopTabControlStyle}">
-            <TabItem Header="列表模式"    FontSize="18" />
+			<TabItem Header="列表模式"    FontSize="18" />
 			<TabItem Header="缩略图"   FontSize="18" >
 				<StackPanel Orientation="Horizontal">
 					<TextBlock>123</TextBlock>
@@ -26,5 +26,8 @@
 			</TabItem>
 		</TabControl>
 		<control:GButton Content="测试" Click="Button_Click" Style="{StaticResource DefaultGButtonStyle}" />
+		<TextBlock Text="---------------------------------------------------------------------------------------------------------分割线---------------------------------------------------------------------------------------------------------"/>
+		<!--<control:RollImg x:Name="rollImg"       Background="Red"        Height="900" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="900" />-->
+		<control:ModPrivilege Style="{StaticResource DefaultGModPrivilegeStyle}" Margin="0,0,868,0" Height="204"></control:ModPrivilege>
 	</StackPanel>
 </Window>
