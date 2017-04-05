@@ -14,34 +14,26 @@
 					<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="13.333"/>
 					<EasingDoubleKeyFrame KeyTime="0:0:1.0" Value="12"/>
 				</DoubleAnimationUsingKeyFrames>
-				<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
-					<EasingDoubleKeyFrame KeyTime="0" Value="0.667"/>
-					<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-0.666"/>
-					<EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.334"/>
-				</DoubleAnimationUsingKeyFrames>
 				<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
-					<EasingDoubleKeyFrame KeyTime="0" Value="25.355"/>
-					<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="12.345"/>
-					<EasingDoubleKeyFrame KeyTime="0:0:1" Value="3.333"/>
+					<EasingDoubleKeyFrame KeyTime="0" Value="25"/>
+					<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="12.5"/>
+					<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
 				</DoubleAnimationUsingKeyFrames>
-				<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image1">
-					<EasingDoubleKeyFrame KeyTime="0" Value="0.667"/>
-					<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.0"/>
-					<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.334"/>
-				</DoubleAnimationUsingKeyFrames>
+
 				<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image1">
-					<EasingDoubleKeyFrame KeyTime="0" Value="-4.667"/>
-					<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-1"/>
-					<EasingDoubleKeyFrame KeyTime="0:0:1" Value="3"/>
+					<EasingDoubleKeyFrame KeyTime="0" Value="-5"/>
+					<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+					<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
 				</DoubleAnimationUsingKeyFrames>
 			</Storyboard>
+
 		</ControlTemplate.Resources>
 		<Border x:Name="gBorder" Background="White" Height="105" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" >
 			<StackPanel x:Name="stackPanel" Height="Auto" Width="Auto" HorizontalAlignment="Stretch">
-				<TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="最高2000人群" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,0" FontSize="8"/>
-				<TextBlock TextWrapping="Wrap" Text="独乐乐 不如众乐乐" Margin="0,2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="8"/>
+				<TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="{TemplateBinding ModTitle}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,0" FontSize="8"/>
+				<TextBlock TextWrapping="Wrap" Text="{TemplateBinding ModContent}" Margin="0,2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="8"/>
 				<Canvas VerticalAlignment="Stretch" Height="70" Width="100">
-					<Image x:Name="image1" Height="55.75" Width="69" VerticalAlignment="Stretch" Source="/TGP.UI.Core;component/images/sprites_privilege_green_03.png" Canvas.Left="15" Canvas.Top="8" RenderTransformOrigin="0.5,0.5">
+					<Image x:Name="image1" Height="55.75" Width="69" VerticalAlignment="Stretch" Source="{TemplateBinding OwnerIcon}" Canvas.Left="15" Canvas.Top="8" RenderTransformOrigin="0.5,0.5">
 						<Image.RenderTransform>
 							<TransformGroup>
 								<ScaleTransform/>
@@ -50,8 +42,8 @@
 								<TranslateTransform/>
 							</TransformGroup>
 						</Image.RenderTransform>
-					</Image>  
-					<Image x:Name="image" Height="20" Width="54" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="/TGP.UI.Core;component/images/sprites_privilege_green_04.png" Canvas.Left="43.75" Canvas.Top="44.5" RenderTransformOrigin="0.5,0.5">
+					</Image>
+					<Image x:Name="image" Height="20" Width="54" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Source="{TemplateBinding ChildIcon}" Canvas.Left="43.75" Canvas.Top="44.5" RenderTransformOrigin="0.5,0.5">
 						<Image.RenderTransform>
 							<TransformGroup>
 								<ScaleTransform/>
@@ -65,6 +57,34 @@
 			</StackPanel>
 		</Border>
 		<ControlTemplate.Triggers>
+			<Trigger Property="IsMouseOver" Value="False">
+				<Setter Property="RenderTransform" TargetName="image1">
+					<Setter.Value>
+						<TransformGroup>
+							<ScaleTransform ScaleX="1" ScaleY="1"/>
+							<SkewTransform/>
+							<RotateTransform/>
+							<TranslateTransform/>
+						</TransformGroup>
+					</Setter.Value>
+				</Setter>
+				<Setter Property="RenderTransform" TargetName="image">
+					<Setter.Value>
+						<TransformGroup>
+							<ScaleTransform ScaleX="1" ScaleY="1"/>
+							<SkewTransform/>
+							<RotateTransform/>
+							<TranslateTransform/>
+						</TransformGroup>
+					</Setter.Value>
+				</Setter>
+				<Setter Property="FontSize" TargetName="textBlock" Value="12"/>
+				<!--<Setter TargetName="textBlock" Property="RenderTransform">
+					<Setter.Value>
+						<RotateTransform Angle="10"></RotateTransform>
+					</Setter.Value>
+				</Setter>-->
+			</Trigger>
 			<EventTrigger RoutedEvent="UIElement.MouseEnter">
 				<BeginStoryboard Storyboard="{StaticResource SpritesPrivilegeStoryboard}"/>
 			</EventTrigger>
