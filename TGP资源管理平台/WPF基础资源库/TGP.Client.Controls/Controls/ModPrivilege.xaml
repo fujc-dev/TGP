@@ -8,10 +8,10 @@
 			<Storyboard x:Key="SpritesPrivilegeStoryboard">
 				<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.FontSize)" Storyboard.TargetName="textBlock">
 					<EasingDoubleKeyFrame KeyTime="0" Value="12"/>
-					<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="13.333"/>
-					<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="14.667" />
-					<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="14.667"/>
-					<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="13.333"/>
+					<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="13"/>
+					<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="14" />
+					<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="14"/>
+					<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="13"/>
 					<EasingDoubleKeyFrame KeyTime="0:0:1.0" Value="12"/>
 				</DoubleAnimationUsingKeyFrames>
 				<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
@@ -21,7 +21,7 @@
 				</DoubleAnimationUsingKeyFrames>
 
 				<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image1">
-					<EasingDoubleKeyFrame KeyTime="0" Value="-5"/>
+					<EasingDoubleKeyFrame KeyTime="0" Value="-1"/>
 					<EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
 					<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
 				</DoubleAnimationUsingKeyFrames>
@@ -61,7 +61,7 @@
 				<Setter Property="RenderTransform" TargetName="image1">
 					<Setter.Value>
 						<TransformGroup>
-							<ScaleTransform ScaleX="1" ScaleY="1"/>
+							<ScaleTransform ScaleY="1"/>
 							<SkewTransform/>
 							<RotateTransform/>
 							<TranslateTransform/>
@@ -71,7 +71,7 @@
 				<Setter Property="RenderTransform" TargetName="image">
 					<Setter.Value>
 						<TransformGroup>
-							<ScaleTransform ScaleX="1" ScaleY="1"/>
+							<ScaleTransform ScaleY="1"/>
 							<SkewTransform/>
 							<RotateTransform/>
 							<TranslateTransform/>
