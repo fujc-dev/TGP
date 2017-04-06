@@ -115,8 +115,7 @@ namespace TGP.UI.Core.Controls
 
 		#region Header 标题栏内容模板，以提高默认模板，可自定义
 
-		public static readonly DependencyProperty HeaderProperty = DependencyProperty.Register(
-			"Header", typeof(ControlTemplate), typeof(WindowBase), new PropertyMetadata(null));
+		public static readonly DependencyProperty HeaderProperty = DependencyProperty.Register("Header", typeof(ControlTemplate), typeof(WindowBase), new PropertyMetadata(null));
 
 		public ControlTemplate Header
 		{
