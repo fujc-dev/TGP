@@ -1,0 +1,25 @@
+﻿<local:GWindowBase x:Class="TGP.WindowDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"  
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TGP.WindowDemo" 
+        mc:Ignorable="d" WindowStyle="None"
+        Title="MainWindow" Height="600" Width="800" 
+                   HeaderEx="{StaticResource  WindowBaseHeaderExtendTemplate}"  
+                   Style="{StaticResource DefaultWindowStyle}"  >
+    <Window.Resources>
+        <ControlTemplate x:Key="MyExtendTemp">
+            <Button Content="测试"/>
+        </ControlTemplate>
+    </Window.Resources>
+	<Grid >
+		<local:GButton Content="我的按钮" Margin="0,399,646,109" Style="{StaticResource  DefaultButtonStyle}"/>
+		<StackPanel Background="Green" Orientation="Horizontal" VerticalAlignment="Stretch" Margin="-3,510,-3,-3">
+			<TextBlock Text="系统时间：" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+			<TextBlock Text="2017-4-7 10:30:55" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+		</StackPanel>
+	</Grid>
+
+</local:GWindowBase>
