@@ -43,7 +43,7 @@
         <StackPanel Margin="28,35,0,0">
             <local:GButton  GIcon="icon/102.ico" Content="我是按钮" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="90" Margin="1" />
             <local:GButton  GIcon="icon/102.ico" Content="我是按钮" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Margin="1"/>
-            <local:GButton  GIcon="icon/102.ico" Content="我是按钮" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="110" Margin="1" GCornerRadius="3"/>
+			<local:GButton  GIcon="icon/102.ico" Content="我是按钮" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="110" Margin="1" GCornerRadius="5" AllowsAnimation="False"/>
         </StackPanel>
     </Grid>
 

@@ -111,6 +111,9 @@
     <Compile Include="Controls\GWindowBase.xaml.cs">
       <DependentUpon>GWindowBase.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Setting.xaml.cs">
+      <DependentUpon>Setting.xaml</DependentUpon>
+    </Compile>
     <Page Include="Controls\GaussianBlur.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -162,6 +165,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+    <Page Include="View\Setting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Themes\Color.xaml">
       <SubType>Designer</SubType>
@@ -215,12 +222,6 @@
     <Resource Include="icon\102.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\tgp_max.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\tgp_max_normal.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Style\" />
   </ItemGroup>
   <ItemGroup>
@@ -228,6 +229,14 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\tgp_closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\tgp_max.png" />
+    <Resource Include="images\tgp_max_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Config\application.xml" />
+    <Resource Include="Config\Config.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
