@@ -6,9 +6,15 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/TGP.WindowDemo;component/GWindowBase.xaml" />
-				<ResourceDictionary Source="pack://application:,,,/TGP.WindowDemo;component/GButton.xaml" />
-			</ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/TGP.WindowDemo;component/Controls/GWindowBase.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/TGP.WindowDemo;component/Controls/GButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/TGP.WindowDemo;component/Controls/GComboBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/TGP.WindowDemo;component/Controls/GScrollViewer.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/TGP.WindowDemo;component/Controls/GRadioButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="{x:Type ScrollBar}" BasedOn="{StaticResource DefaultScrollBar}"></Style>
+            <Style TargetType="{x:Type ScrollViewer}" BasedOn="{StaticResource DefaultScrollViewer}"></Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

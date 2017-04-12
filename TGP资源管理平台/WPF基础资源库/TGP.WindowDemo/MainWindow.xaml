@@ -6,20 +6,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TGP.WindowDemo" 
         mc:Ignorable="d" WindowStyle="None"
-        Title="MainWindow" Height="600" Width="800" 
+        Title="MainWindow" Height="600" Width="800"   BackgroundImg="bg\201005041122.jpg"
                    HeaderEx="{StaticResource  WindowBaseHeaderExtendTemplate}"  
                    Style="{StaticResource DefaultWindowStyle}"  >
+    <!--BackgroundImg="bg\201005041122.jpg"  MaxButtonVisibility="Collapsed"-->
     <Window.Resources>
         <ControlTemplate x:Key="MyExtendTemp">
             <Button Content="测试"/>
         </ControlTemplate>
     </Window.Resources>
-	<Grid >
-		<local:GButton Content="我的按钮" Margin="0,399,646,109" Style="{StaticResource  DefaultButtonStyle}"/>
-		<StackPanel Background="Green" Orientation="Horizontal" VerticalAlignment="Stretch" Margin="-3,510,-3,-3">
-			<TextBlock Text="系统时间：" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
-			<TextBlock Text="2017-4-7 10:30:55" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-		</StackPanel>
-	</Grid>
+    <Grid RenderTransformOrigin="0.5,0.5" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="153*"/>
+            <RowDefinition Height="252*"/>
+            <RowDefinition Height="121*"/>
+        </Grid.RowDefinitions>
+
+        <!--<local:GButton  Content="测试按钮"   GIcon="icon/102.ico" GCornerRadius="0" />-->
+
+        <!--IsEditable="True"-->
+        <local:GComboBox DictName="asdasd"   Style="{StaticResource DefaultComboBoxStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="268" Margin="5,2,0,0" />
+        <Grid Margin="0,0,0,16"/>
+        <StackPanel  Margin="0,10,10,10" Grid.Row="1" HorizontalAlignment="Right" Width="748">
+            <RadioButton Margin="1" Style="{StaticResource DefaultRadioButtonStyle}" Height="30">单选按钮RadioButton</RadioButton>
+            <RadioButton Margin="1" Style="{StaticResource DefaultRadioButtonStyle}" Height="30">单选按钮RadioButton</RadioButton>
+            <RadioButton Margin="1" Style="{StaticResource DefaultRadioButtonStyle}" Height="30">单选按钮RadioButton</RadioButton>
+            <RadioButton Margin="1" IsChecked="True" Style="{StaticResource DefaultRadioButtonStyle}" Height="30">单选按钮RadioButton</RadioButton>
+            <Border>
+                <StackPanel Orientation="Horizontal" Margin="0,0,-260,0">
+                    <RadioButton Margin="1" IsChecked="True" Style="{StaticResource DefaultRadioButtonBoxStyle}" Height="30">单选按钮RadioButton</RadioButton>
+                    <RadioButton Margin="1" IsChecked="False" Style="{StaticResource DefaultRadioButtonBoxStyle}" Height="30">单选按钮RadioButton</RadioButton>
+                    <RadioButton Margin="1" IsChecked="False" Style="{StaticResource DefaultRadioButtonBoxStyle}" Height="30">单选按钮RadioButton</RadioButton>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+        <StackPanel Margin="28,35,0,0">
+            <local:GButton  GIcon="icon/102.ico" Content="我是按钮" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="90" Margin="1" />
+            <local:GButton  GIcon="icon/102.ico" Content="我是按钮" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Margin="1"/>
+            <local:GButton  GIcon="icon/102.ico" Content="我是按钮" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="110" Margin="1" GCornerRadius="3"/>
+        </StackPanel>
+    </Grid>
+
+
 
 </local:GWindowBase>

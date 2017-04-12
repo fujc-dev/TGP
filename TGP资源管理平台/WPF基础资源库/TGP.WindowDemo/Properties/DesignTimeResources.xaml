@@ -3,6 +3,8 @@
                     xmlns:local="clr-namespace:TGP.WindowDemo.Properties">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/TGP.WindowDemo;component/GWindowBase.xaml"/>
+        <ResourceDictionary Source="/TGP.WindowDemo;component/GComboBox.xaml"/>
+        <ResourceDictionary Source="/TGP.WindowDemo;component/Controls/GComboBox.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>

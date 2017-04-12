@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace TGP.WindowDemo
 {
     /// <summary>
-    /// 
+    /// 自定义头部扩展  by dane
     /// </summary>
     public partial class GHeaderEx : Control
     {

@@ -5,66 +5,72 @@
                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
                     >
-
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/TGP.WindowDemo;component/Themes/Color.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/TGP.WindowDemo;component/Controls/GButton.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/TGP.WindowDemo;component/Themes/Share.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <!--头部扩展-->
     <ControlTemplate x:Key="WindowBaseHeaderExtendTemplate" TargetType="{x:Type tgp:GHeaderEx }">
         <StackPanel Orientation="Horizontal">
-            <Button Content="扩展按钮1" >
-                <!--<i:Interaction.Triggers>
+            <tgp:GButton Style="{StaticResource DefaultGeometryNoAnimationButtonStyle}" GeometryIcon="{StaticResource DefaultBaragnosis}"  >
+                <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
                         <i:InvokeCommandAction Command="{Binding Path=ClickCommand,RelativeSource={RelativeSource TemplatedParent}}" CommandParameter="扩展按钮1"/>
                     </i:EventTrigger>
-                </i:Interaction.Triggers>-->
-            </Button>
-            <Button Content="扩展按钮2" >
-                <!--<i:Interaction.Triggers>
+                </i:Interaction.Triggers>
+            </tgp:GButton>
+            <tgp:GButton Style="{StaticResource DefaultGeometryButtonStyle}" GeometryIcon="{StaticResource DefaultSetting}">
+                <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">
-                        <i:InvokeCommandAction Command="{Binding Path=ClickCommand,RelativeSource={RelativeSource TemplatedParent}}" CommandParameter="扩展按钮2"/>
+                        <i:InvokeCommandAction Command="{Binding Path=ClickCommand,RelativeSource={RelativeSource TemplatedParent}}" CommandParameter="扩展按钮1"/>
                     </i:EventTrigger>
-                </i:Interaction.Triggers>-->
-            </Button>
-            <Button Content="扩展按钮3" >
-				<!--<i:Interaction.Triggers>
-					<i:EventTrigger EventName="Click">
-						<i:InvokeCommandAction Command="{Binding Path=ClickCommand,RelativeSource={RelativeSource TemplatedParent}}" CommandParameter="扩展按钮1"/>
-					</i:EventTrigger>
-				</i:Interaction.Triggers>-->
-			</Button>
+                </i:Interaction.Triggers>
+            </tgp:GButton>
         </StackPanel>
     </ControlTemplate>
-
     <!--自定义窗体包含 顶部 底部 中部三部分，顶部包含图标、最大化、最小化、关闭按钮，以及扩展部分，中部是内容部分，底部是状态部分-->
     <ControlTemplate x:Key="WindowBaseTemplate" TargetType="{x:Type tgp:GWindowBase}">
-        <Grid Margin="6">
-            <Border BorderThickness="0" SnapsToDevicePixels="True" CornerRadius="0" BorderBrush="#FF9E6767">
-            	<Border.Effect>
-            		<BlurEffect Radius="1" RenderingBias="Quality"/>
-            	</Border.Effect>
+        <Grid Margin="0" Background="Transparent" VerticalAlignment="Stretch">
+            <Border BorderThickness="0" x:Name="PART_Bg" >
                 <Border.Background>
-                    <ImageBrush ImageSource="bg/葡萄红棱形.jpg" TileMode="FlipXY"/>
+                    <ImageBrush ImageSource="../bg/葡萄红棱形.jpg"/>
                 </Border.Background>
             </Border>
-            <Border x:Name="PART_Border" CornerRadius="0" BorderThickness="0" SnapsToDevicePixels="True" Margin="0" BorderBrush="#FFE8DDDD">
+            <Border x:Name="PART_Inner" CornerRadius="0" BorderThickness="0"  >
+                <Border.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF9B9696" Offset="0"/>
+                        <GradientStop Color="#FFB6B1B1" Offset="0.2"/>
+                        <GradientStop Color="#FFCBC6C6" Offset="0.4"/>
+                        <GradientStop Color="#FFE4E2E2" Offset="0.6"/>
+                        <GradientStop Color="#FFF0EAEA" Offset="0.8"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
                 <Grid x:Name="PART_TemplateContent" Opacity="0.9" Background="Transparent">
                     <Grid.RowDefinitions>
                         <!--顶部-->
                         <RowDefinition Height="30"/>
                         <!--内容部分-->
                         <RowDefinition Height="*"/>
+                        <!--底部状态栏-->
+                        <RowDefinition Height="30"/>
                     </Grid.RowDefinitions>
-                    <Grid Grid.Row="0" Background="Transparent" VerticalAlignment="Stretch" Margin="0" >
+                    <Grid Grid.Row="0" Background="Transparent" VerticalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition  Width="200"/>
                             <ColumnDefinition  Width="*"/>
-                            <ColumnDefinition Width="120" />
+                            <ColumnDefinition Width="100" />
                         </Grid.ColumnDefinitions>
-                        <!--<i:Interaction.Triggers>
+                        <i:Interaction.Triggers>
                             <i:EventTrigger EventName="MouseLeftButtonDown">
                                 <i:InvokeCommandAction Command="{Binding Path=DragCommand,RelativeSource={RelativeSource TemplatedParent}}"/>
                             </i:EventTrigger>
-                        </i:Interaction.Triggers>-->
+                        </i:Interaction.Triggers>
                         <Rectangle Fill="Transparent" HorizontalAlignment="Stretch" Cursor="Hand" Grid.ColumnSpan="3"></Rectangle>
                         <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center" Orientation="Horizontal">
-                            <Image Source="{TemplateBinding GIcon}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,2,0,2"/>
+                            <Image Source="{TemplateBinding GIcon}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,5,0,5"/>
                             <TextBlock Text="{TemplateBinding GTitle}" Margin="5,0,0,0" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
                         </StackPanel>
                         <!-- 头部扩展模板部分 -->
@@ -73,15 +79,15 @@
                         </Grid>
                         <!--窗体基本控制部分-->
                         <StackPanel Orientation="Horizontal" Grid.Column="2" HorizontalAlignment="Right">
-                            <Button Content="最小化" Visibility="{TemplateBinding MinButtonVisibility}" >
-                                <!--<i:Interaction.Triggers>
+                            <tgp:GButton x:Name="PART_Min"  Style="{StaticResource DefaultMinButtonStyle}" Width="30" Visibility="{TemplateBinding MinButtonVisibility}" >
+                                <i:Interaction.Triggers>
                                     <i:EventTrigger EventName="Click">
                                         <i:InvokeCommandAction Command="{Binding Path=MinCommand,RelativeSource={RelativeSource TemplatedParent}}"/>
                                     </i:EventTrigger>
-                                </i:Interaction.Triggers>-->
-                            </Button>
-                            <Button Content="最大化" Visibility="{TemplateBinding MaxButtonVisibility}" Command="{Binding Path=MaxCommand,RelativeSource={RelativeSource TemplatedParent}}"/>
-                            <Button Content="关闭" Visibility="{TemplateBinding CloseButtonVisibility}" Command="{Binding Path=CloseCommand,RelativeSource={RelativeSource TemplatedParent}}" Margin="0,0,5,0"/>
+                                </i:Interaction.Triggers>
+                            </tgp:GButton>
+                            <tgp:GButton x:Name="PART_Max" Style="{StaticResource DefaultMaxButtonStyle}" Width="30" Visibility="{TemplateBinding MaxButtonVisibility}" Command="{Binding Path=MaxCommand,RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <tgp:GButton x:Name="PART_Close" Style="{StaticResource DefaultClosedButtonStyle}" Width="30" Visibility="{TemplateBinding CloseButtonVisibility}" Command="{Binding Path=CloseCommand,RelativeSource={RelativeSource TemplatedParent}}"/>
                         </StackPanel>
                     </Grid>
                     <!--内容部分-->
@@ -90,6 +96,11 @@
                             <ContentControl Content="{ TemplateBinding Content}"/>
                         </AdornerDecorator>
                     </Grid>
+                    <!--状态栏部分-->
+                    <StackPanel Grid.Row="2" Background="Green" Orientation="Horizontal" VerticalAlignment="Stretch">
+                        <TextBlock Text="系统时间：" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <TextBlock Text="2017-4-7 10:30:55" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </StackPanel>
                 </Grid>
             </Border>
         </Grid>
@@ -99,10 +110,7 @@
         <Setter Property="BorderBrush" Value="Red"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="SnapsToDevicePixels" Value="True"/>
-		<Setter Property="Padding" Value="3"/>
         <!--设置窗体自定义模板-->
         <Setter Property="Template" Value="{StaticResource WindowBaseTemplate}"/>
     </Style>
-
-
 </ResourceDictionary>
