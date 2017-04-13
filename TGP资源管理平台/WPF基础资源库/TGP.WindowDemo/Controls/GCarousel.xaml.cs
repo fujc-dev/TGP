@@ -237,27 +237,17 @@ namespace TGP.WindowDemo
 					rightGrid.Height = this.Height;
 					rightGrid.Width = this.MainWidth;
 					rightGrid.Children[1].Opacity = 0;
-					//显示右侧的图片
+					//4、显示右侧的图片
 					Grid rightGridToCenter = null;
-					if (this.CurrentIndex == this.GridList.Count - 1)
-					{
-						rightGridToCenter = this.GridList[1];
-					}
-					else if (this.CurrentIndex == this.GridList.Count - 2)
-					{
-						rightGridToCenter = this.GridList[2];
-					}
-					else
-					{
-						rightGridToCenter = this.GridList[this.CurrentIndex + 2];
-					}
+					if (this.CurrentIndex == this.GridList.Count - 1) { rightGridToCenter = this.GridList[1]; }
+					else if (this.CurrentIndex == this.GridList.Count - 2) { rightGridToCenter = this.GridList[0]; }
+					else { rightGridToCenter = this.GridList[this.CurrentIndex + 2]; }
 					rightGridToCenter.Visibility = Visibility.Visible;
 					rightGridToCenter.SetValue(Canvas.LeftProperty, (Double)GridCanvasRight);
 					rightGridToCenter.SetValue(Canvas.TopProperty, (Double)30);
 					if (this.CurrentIndex == this.GridList.Count - 1) this.CurrentIndex = 0; else this.CurrentIndex++;
 				}
 			}
-
 		}
 		private void OnPressedRightButton(object sender, RoutedEventArgs e)
 		{
