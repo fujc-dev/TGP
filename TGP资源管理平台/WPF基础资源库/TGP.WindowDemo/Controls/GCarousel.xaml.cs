@@ -128,6 +128,7 @@ namespace TGP.WindowDemo
 					this.GridList[1].SetValue(Canvas.LeftProperty, (Double)GridCanvasRight);
 					this.GridList[1].SetValue(Canvas.TopProperty, (Double)30);
 					this.PART_Left.Click += OnPressedLeftButton;
+					this.PART_Right.Click += OnPressedRightButton;
 				}
 			}
 			base.OnApplyTemplate();
@@ -251,7 +252,51 @@ namespace TGP.WindowDemo
 		}
 		private void OnPressedRightButton(object sender, RoutedEventArgs e)
 		{
+			lock (lockObj)
+			{
+				if (this.CurrentIndex > -1)
+				{
+					//获取右侧的Grid使其影藏
+					Grid rightGridToHide = this.CurrentIndex == this.GridList.Count - 1 ? this.GridList[0] : this.GridList[this.CurrentIndex + 1];
+					rightGridToHide.Visibility = Visibility.Collapsed;
+					rightGridToHide.SetValue(Panel.ZIndexProperty, -999);
+					//获取中间显示的Grid设置为默认高度、宽度设置为默认宽度并将位置移动到右侧，并设置其Opacity
+					Grid mainGridToRight = this.GridList[this.CurrentIndex];
+					mainGridToRight.Visibility = System.Windows.Visibility.Visible;
+					mainGridToRight.SetValue(Canvas.LeftProperty, (Double)GridCanvasRight);
+					mainGridToRight.SetValue(Canvas.TopProperty, (Double)30);
+					mainGridToRight.SetValue(Panel.ZIndexProperty, -999);
+					mainGridToRight.Children[1].Opacity = 0.8;
+					//将最左侧的Grid显示在中间
+					Grid leftGridToCenter = this.CurrentIndex == 0 ? this.GridList[this.GridList.Count - 1] : this.GridList[this.CurrentIndex - 1];
+					leftGridToCenter.Visibility = Visibility.Visible;
+					leftGridToCenter.SetValue(Canvas.LeftProperty, (Double)GridCanvasLeft);
+					leftGridToCenter.SetValue(Canvas.TopProperty, (Double)0);
+					leftGridToCenter.SetValue(Panel.ZIndexProperty, 1);
+					leftGridToCenter.Height = this.Height;
+					leftGridToCenter.Width = this.MainWidth;
+					leftGridToCenter.Children[1].Opacity = 0;
+					//获取下一个Grid显示在左侧
+					Grid leftGridToLeft = null;
+					if (this.CurrentIndex == 0)
+					{
+						leftGridToLeft = this.GridList[this.GridList.Count - 2];
+					}
+					else if (this.CurrentIndex == 1)
+					{
+						leftGridToLeft = this.GridList[this.GridList.Count - 1];
+					}
+					else
+					{
+						leftGridToLeft = this.GridList[this.CurrentIndex - 2];
+					}
+					leftGridToLeft.Visibility = Visibility.Visible;
+					leftGridToLeft.SetValue(Canvas.LeftProperty, (Double)0);
+					leftGridToLeft.SetValue(Canvas.TopProperty, (Double)30);
+					if (this.CurrentIndex == 0) this.CurrentIndex = this.GridList.Count - 1; else this.CurrentIndex--;
+				}
 
+			}
 		}
 		/// <summary>
 		/// 创建从右到中动画
