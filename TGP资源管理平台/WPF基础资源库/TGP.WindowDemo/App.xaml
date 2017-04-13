@@ -11,6 +11,8 @@
                 <ResourceDictionary Source="pack://application:,,,/TGP.WindowDemo;component/Controls/GComboBox.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/TGP.WindowDemo;component/Controls/GScrollViewer.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/TGP.WindowDemo;component/Controls/GRadioButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/TGP.WindowDemo;component/Controls/GCheckBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/TGP.WindowDemo;component/Controls/GCarousel.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
             <Style TargetType="{x:Type ScrollBar}" BasedOn="{StaticResource DefaultScrollBar}"></Style>

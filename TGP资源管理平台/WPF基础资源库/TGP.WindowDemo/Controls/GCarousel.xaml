@@ -1,0 +1,72 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:tgp="clr-namespace:TGP.WindowDemo"
+                    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"  
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+                    >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/TGP.WindowDemo;component/Themes/Color.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <ControlTemplate x:Key="CarouselBaseTemplate" TargetType="{x:Type tgp:GCarousel}">
+        <ControlTemplate.Resources>
+            <!--从右到左动画-->
+            <Storyboard x:Key="CarouselRightToCenterStoryboard">
+                <!--<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="PART_RightGrid">
+                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="129.076"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
+                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="PART_RightGrid">
+                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="180"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="PART_RightGrid">
+                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+                </DoubleAnimationUsingKeyFrames>-->
+            </Storyboard>
+            <!--从中到左动画-->
+            <Storyboard x:Key="CarouselCenterToLeftStoryboard">
+                <!--<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="PART_CenterGrid">
+                    <EasingDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="30"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="PART_CenterGrid">
+                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="asdadasdad">
+                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.8"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="PART_CenterGrid">
+                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="150"/>
+                </DoubleAnimationUsingKeyFrames>-->
+            </Storyboard>
+        </ControlTemplate.Resources>
+        <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Background="#FF6ADE6A">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="28"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="28"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="79*"/>
+                <RowDefinition Height="58*"/>
+                <RowDefinition Height="58*"/>
+                <RowDefinition Height="30.001"/>
+            </Grid.RowDefinitions>
+			<Canvas x:Name="PART_Inner" Grid.ColumnSpan="3" Margin="0" Grid.RowSpan="4" Width="Auto" Height="Auto" />
+			<Button x:Name="PART_Left" Content="左" Margin="0" VerticalAlignment="Stretch" Grid.Row="1" Width="Auto"/>
+            <Button x:Name="PART_Right" Content="右" Margin="0" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Stretch" Width="Auto"/>
+            <Border Height="Auto" Grid.Row="3" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Stretch" Grid.Column="0" Margin="0,0,0,0" Grid.ColumnSpan="3" HorizontalAlignment="Stretch">
+                <StackPanel x:Name="PART_Navigation" HorizontalAlignment="Center" Margin="0" Width="Auto" Orientation="Horizontal" VerticalAlignment="Bottom">
+					<tgp:GButton GIconMargin="0" BorderThickness="3"  Style="{StaticResource DefaultImageButtonStyle}" GIcon="/TGP.WindowDemo;component/Carousel/201703231056_1180x500.jpg" Margin="0" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+				</StackPanel>
+            </Border>
+        </Grid>
+    </ControlTemplate>
+    <!--默认的轮播控件样式-->
+    <Style x:Key="DefaultCarouselStyle" TargetType="{x:Type tgp:GCarousel}">
+        <Setter Property="Template" Value="{StaticResource CarouselBaseTemplate}"/>
+    </Style>
+</ResourceDictionary>

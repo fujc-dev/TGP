@@ -1,0 +1,80 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:tgp="clr-namespace:TGP.WindowDemo"
+                    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"  
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+                    >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/TGP.WindowDemo;component/Themes/Color.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    <Style x:Key="DefaultCheckBoxStyle" TargetType="{x:Type CheckBox}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{StaticResource TextForeground}"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="tgp:GCheckBox.GIconMargin" Value="1, 1, 3, 1"/>
+        <Setter Property="FontSize" Value="{StaticResource FontSize}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource CheckBoxUnCheckedBorderBrush}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type CheckBox}">
+                    <Grid x:Name="grid" Margin="{TemplateBinding tgp:GCheckBox.GIconMargin}" VerticalAlignment="Center">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <Grid>
+                                <!--CheckBox外边框-->
+                                <Border x:Name="PART_bg" BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="3" CornerRadius="1" 
+                                    Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+                                    <Path x:Name="PART_Icon" Data="{StaticResource DefaultCheckBoxSelected}"
+                                          Fill="{StaticResource DefaultRadioButtonFillBrush }" 
+                                          HorizontalAlignment="Center" Stretch="Fill" 
+                                          Stroke="{StaticResource DefaultRadioButtonStrokeBrush}"
+                                          VerticalAlignment="Center" Width="Auto" Height="Auto" Visibility="Collapsed"
+                                          >
+                                    </Path>
+                                </Border>
+                                <Rectangle Fill="Transparent" HorizontalAlignment="Stretch" Height="Auto" Stroke="Transparent" VerticalAlignment="Stretch" Width="Auto" StrokeThickness="0"/>
+                            </Grid>
+                            <ContentPresenter  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="3,0,0,1"/>
+                        </StackPanel>
+                    </Grid>
+                    <!--触发器：设置选中状态符号-->
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Visibility" Value="Visible" TargetName="PART_Icon" ></Setter>
+                            <Setter TargetName="PART_bg" Property="BorderBrush" Value="{StaticResource CheckBoxCheckedBorderBrush}"/>
+                            <Setter Property="Foreground" Value="{StaticResource CheckBoxCheckedForeground}"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="PART_bg" Property="BorderBrush" Value="{StaticResource CheckBoxMouseOverBorderBrush}"/>
+                            <Setter Property="Foreground" Value="{StaticResource MouseOverForeground}"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <!--改变边框颜色，字体颜色-->
+                            <Setter Property="Foreground" Value="{StaticResource CheckBoxEnableForeground}"></Setter>
+                            <Setter Property="BorderBrush" Value="{StaticResource CheckBoxEnableBorderBrush}" TargetName="PART_bg"/>
+                            <Setter Property="Opacity" Value="{StaticResource DisableOpacity}" TargetName="grid" ></Setter>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True"/>
+                                <Condition Property="IsMouseOver" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="PART_bg" Property="BorderBrush" Value="{StaticResource CheckBoxCheckedBorderBrush}"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsEnabled" Value="False"/>
+                                <Condition Property="IsChecked" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Foreground" Value="{StaticResource CheckBoxEnableForeground}"></Setter>
+                            <Setter Property="BorderBrush" Value="{StaticResource CheckBoxEnableBorderBrush}" TargetName="PART_bg"/>
+                            <Setter Property="Opacity" Value="{StaticResource DisableOpacity}" TargetName="grid" ></Setter>
+                            <Setter Property="Fill" Value="Red" TargetName="PART_Icon" ></Setter>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

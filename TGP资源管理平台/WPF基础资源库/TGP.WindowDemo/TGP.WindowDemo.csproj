@@ -62,9 +62,6 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Utility">
-      <HintPath>..\Libs\System.Utility.dll</HintPath>
-    </Reference>
     <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libs\System.Windows.Interactivity.dll</HintPath>
@@ -86,6 +83,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CompositeControls\LinkedComboBox.cs" />
+    <Compile Include="Controls\GCheckBox.xaml.cs">
+      <DependentUpon>GCheckBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\GRadioButton.xaml.cs">
       <DependentUpon>GRadioButton.xaml</DependentUpon>
     </Compile>
@@ -111,6 +112,9 @@
     <Compile Include="Controls\GWindowBase.xaml.cs">
       <DependentUpon>GWindowBase.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\GCarousel.xaml.cs">
+      <DependentUpon>GCarousel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Setting.xaml.cs">
       <DependentUpon>Setting.xaml</DependentUpon>
     </Compile>
@@ -121,6 +125,10 @@
     <Page Include="Controls\GButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\GCheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\GComboBox.xaml">
       <SubType>Designer</SubType>
@@ -141,6 +149,10 @@
     <Page Include="Controls\GTabControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\GCarousel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -237,6 +249,14 @@
   <ItemGroup>
     <Resource Include="Config\application.xml" />
     <Resource Include="Config\Config.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Carousel\201703211700_1180x500.jpg" />
+    <Resource Include="Carousel\201703231056_1180x500.jpg" />
+    <Resource Include="Carousel\201703280934_1180x500.jpg" />
+    <Resource Include="Carousel\201704011731_1180x500.jpg" />
+    <Resource Include="Carousel\201704051917_1180x500.jpg" />
+    <Resource Include="Carousel\201704101655_1180x500.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

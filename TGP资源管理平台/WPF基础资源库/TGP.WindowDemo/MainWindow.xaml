@@ -6,44 +6,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TGP.WindowDemo" 
         mc:Ignorable="d" WindowStyle="None"
-        Title="MainWindow" Height="600" Width="800"   BackgroundImg="bg\201005041122.jpg"
+        Title="MainWindow" Height="661" Width="846"   BackgroundImg="bg\201005041122.jpg"
                    HeaderEx="{StaticResource  WindowBaseHeaderExtendTemplate}"  
                    Style="{StaticResource DefaultWindowStyle}"  >
     <!--BackgroundImg="bg\201005041122.jpg"  MaxButtonVisibility="Collapsed"-->
-    <Window.Resources>
+    <!--<Window.Resources>
         <ControlTemplate x:Key="MyExtendTemp">
             <Button Content="测试"/>
         </ControlTemplate>
-    </Window.Resources>
+    </Window.Resources>-->
     <Grid RenderTransformOrigin="0.5,0.5" >
         <Grid.RowDefinitions>
-            <RowDefinition Height="153*"/>
-            <RowDefinition Height="252*"/>
-            <RowDefinition Height="121*"/>
+            <RowDefinition Height="246*"/>
+            <RowDefinition Height="188*"/>
+            <RowDefinition Height="411*"/>
         </Grid.RowDefinitions>
 
         <!--<local:GButton  Content="测试按钮"   GIcon="icon/102.ico" GCornerRadius="0" />-->
 
         <!--IsEditable="True"-->
-        <local:GComboBox DictName="asdasd"   Style="{StaticResource DefaultComboBoxStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="268" Margin="5,2,0,0" />
-        <Grid Margin="0,0,0,16"/>
-        <StackPanel  Margin="0,10,10,10" Grid.Row="1" HorizontalAlignment="Right" Width="748">
+        <StackPanel  Margin="5,2,0,0"  Orientation="Horizontal" >
+            <!--<local:LinkedComboBox DictName="asdasdad" Style="{StaticResource DefaultComboBoxStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,2,5,0" Width="196" />-->
+            <local:LinkedComboBox x:Name="GcProvince" ChildrenName="GcCity" LinkageGrade="Constraint"  DictName="asdasd"   Style="{StaticResource DefaultComboBoxStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200"  />
+            <local:LinkedComboBox x:Name="GcCity" ChildrenName="GcCounty" DictName="asdasd"   Style="{StaticResource DefaultComboBoxStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200"/>
+            <local:LinkedComboBox x:Name="GcCounty" DictName="asdasd"   Style="{StaticResource DefaultComboBoxStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200"/>
+        </StackPanel>
+       
+        <StackPanel  Margin="28,10,10,0" Grid.Row="1">
             <RadioButton Margin="1" Style="{StaticResource DefaultRadioButtonStyle}" Height="30">单选按钮RadioButton</RadioButton>
             <RadioButton Margin="1" Style="{StaticResource DefaultRadioButtonStyle}" Height="30">单选按钮RadioButton</RadioButton>
             <RadioButton Margin="1" Style="{StaticResource DefaultRadioButtonStyle}" Height="30">单选按钮RadioButton</RadioButton>
             <RadioButton Margin="1" IsChecked="True" Style="{StaticResource DefaultRadioButtonStyle}" Height="30">单选按钮RadioButton</RadioButton>
             <Border>
-                <StackPanel Orientation="Horizontal" Margin="0,0,-260,0">
+                <StackPanel Orientation="Horizontal" Height="36">
                     <RadioButton Margin="1" IsChecked="True" Style="{StaticResource DefaultRadioButtonBoxStyle}" Height="30">单选按钮RadioButton</RadioButton>
                     <RadioButton Margin="1" IsChecked="False" Style="{StaticResource DefaultRadioButtonBoxStyle}" Height="30">单选按钮RadioButton</RadioButton>
                     <RadioButton Margin="1" IsChecked="False" Style="{StaticResource DefaultRadioButtonBoxStyle}" Height="30">单选按钮RadioButton</RadioButton>
                 </StackPanel>
             </Border>
         </StackPanel>
-        <StackPanel Margin="28,35,0,0">
-            <local:GButton  GIcon="icon/102.ico" Content="我是按钮" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="90" Margin="1" />
+		<StackPanel Margin="28,35,0,0">
+            <local:GButton Style="{StaticResource DefaultNoImageButtonStyle}" Content="我是按钮" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="90" Margin="1" />
             <local:GButton  GIcon="icon/102.ico" Content="我是按钮" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="100" Margin="1"/>
-			<local:GButton  GIcon="icon/102.ico" Content="我是按钮" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="110" Margin="1" GCornerRadius="5" AllowsAnimation="False"/>
+            <local:GButton AllowsAnimation="False" GIcon="icon/102.ico" Content="我是按钮" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="110" Margin="1" GCornerRadius="3"/>
+            <local:GButton  GIcon="icon/102.ico" Style="{StaticResource DefaultImageButtonStyle}" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="27" Margin="1,1,0,1"/>
+        </StackPanel>
+		<StackPanel Margin="5,10,-5,0" Grid.Row="2" Height="30" VerticalAlignment="Top">
+            <Border>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox Height="30" IsChecked="True" Style="{StaticResource DefaultCheckBoxStyle}">多选按钮CheckBox</CheckBox>
+                    <CheckBox Height="30" Style="{StaticResource DefaultCheckBoxStyle}">多选按钮CheckBox</CheckBox>
+                    <CheckBox Height="30" Style="{StaticResource DefaultCheckBoxStyle}">多选按钮CheckBox</CheckBox>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+		  <StackPanel Margin="0,56,0,0" Grid.Row="2" RenderTransformOrigin="0.5,0.5">
+            <local:GCarousel Style="{StaticResource DefaultCarouselStyle}" Height="225"  Width="750"/>
         </StackPanel>
     </Grid>
 

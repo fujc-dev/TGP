@@ -22,7 +22,7 @@ namespace TGP.WindowDemo
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
     }
 }
