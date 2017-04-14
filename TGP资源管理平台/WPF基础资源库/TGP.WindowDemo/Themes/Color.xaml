@@ -1,0 +1,106 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:local="clr-namespace:TGP.WindowDemo">
+
+    <!--可扩展颜色值 create by dane-->
+    <!---->
+    <!--基础设置-->
+    <FontFamily x:Key="FontFamily" >Microsoft YaHei</FontFamily>
+    <sys:Double x:Key="FontSize">13</sys:Double>
+    <sys:Double x:Key="DisableOpacity">0.8</sys:Double>
+    <sys:Double x:Key="ReadonlyOpacity">0.88</sys:Double>
+    <sys:Double x:Key="WatermarkOpacity">0.6</sys:Double>
+    <sys:String x:Key="DateFormat">yyyy-MM-dd</sys:String>
+    <sys:String x:Key="DateTimeFormat">yyyy-MM-dd HH:mm:ss</sys:String>
+
+    <!--Window窗体-->
+    <SolidColorBrush x:Key="WindowBackground">#FFFFFF</SolidColorBrush>
+    <SolidColorBrush x:Key="WindowInnerBackground">Transparent</SolidColorBrush>
+    <SolidColorBrush x:Key="WindowBorderBrush">#2E7AE6</SolidColorBrush>
+
+    <!--组合控件WaitingBox-->
+    <SolidColorBrush x:Key="WaitingBoxBackground">#921692</SolidColorBrush>
+
+    <!--ItemsControl:DataGrid,Tree,ComboBox等-->
+    <SolidColorBrush x:Key="ItemForeground">#423E42</SolidColorBrush>
+    <SolidColorBrush x:Key="ItemSelectedForeground">White</SolidColorBrush>
+    <SolidColorBrush x:Key="ItemSelectedBackground" >#2E7AE6</SolidColorBrush>
+    <SolidColorBrush x:Key="ItemMouseOverBackground" >#F7B63E</SolidColorBrush>
+    <SolidColorBrush x:Key="ItemMouseOverForeground" >White</SolidColorBrush>
+
+    <!--ScrollBar-->
+    <SolidColorBrush x:Key="ScrollBarForeround" >#877F7F</SolidColorBrush>
+    <SolidColorBrush x:Key="ScrollBarBackground">#3E3E42</SolidColorBrush>
+    <SolidColorBrush x:Key="ScrollBarMouseOverForeground">#877F7F</SolidColorBrush>
+    <SolidColorBrush x:Key="ScrollBarPressedForeground">#877F7F</SolidColorBrush>
+    <!--CheckBox-->
+    <SolidColorBrush x:Key="CheckBoxEnableStateBorderBrush" >#D9D9D9</SolidColorBrush>
+    <SolidColorBrush x:Key="CheckBoxUnCheckedBorderBrush" >#2E7AE6</SolidColorBrush>
+    <SolidColorBrush x:Key="CheckBoxMouseOverBorderBrush" Color="#F7B63E"></SolidColorBrush>
+    <SolidColorBrush x:Key="CheckBoxCheckedBorderBrush" Color="#2E7AE6"></SolidColorBrush>
+    <SolidColorBrush x:Key="CheckBoxEnableBorderBrush" Color="#D8DADD"></SolidColorBrush>
+    <SolidColorBrush x:Key="CheckBoxEnableForeground">#D8DADD</SolidColorBrush>
+    <SolidColorBrush x:Key="CheckBoxCheckedForeground">#000</SolidColorBrush>
+    <!--RadioButton基础颜色-->
+    <SolidColorBrush x:Key="DefaultRadioButtonBorderBrush">#D9D9D9</SolidColorBrush>
+    <SolidColorBrush x:Key="DefaultRadioButtonFillBrush">#2E7AE6</SolidColorBrush>
+    <SolidColorBrush x:Key="DefaultRadioButtonStrokeBrush">#2E7AE6</SolidColorBrush>
+    <SolidColorBrush x:Key="RadioButtonCheckedFillBrush">#2E7AE6</SolidColorBrush>
+    <SolidColorBrush x:Key="RadioCheckedButtonStrokeBrush">#2E7AE6</SolidColorBrush>
+    <SolidColorBrush x:Key="RadioCheckedButtonBorderBrush">#2E7AE6</SolidColorBrush>
+    <!--按钮-->
+    <SolidColorBrush x:Key="DefaultButtonBackground">White</SolidColorBrush>
+    <SolidColorBrush x:Key="DefaultButtonForeground">#000</SolidColorBrush>
+    <SolidColorBrush x:Key="DefaultButtonBorderBrush">#2E7AE6</SolidColorBrush>
+    <SolidColorBrush x:Key="ButtonMouseOverBackground">White</SolidColorBrush>
+    <SolidColorBrush x:Key="ButtonMouseOverForeround">#000</SolidColorBrush>
+    <SolidColorBrush x:Key="ButtonMouseOverBorderBrush">Orange</SolidColorBrush>
+    <SolidColorBrush x:Key="ButtonPressedBackground">White</SolidColorBrush>
+    <SolidColorBrush x:Key="ButtonPressedForeround">#000</SolidColorBrush>
+    <SolidColorBrush x:Key="ButtonPressedBorderBrush">#2E7AE6</SolidColorBrush>
+
+    <!--可编辑的组件的文本(TextBox)样式，如ComboBox、TextBox、DataGrid、RadioButton、CheckBox中的文本编辑等所有包含文本编辑控件的基础颜色-->
+    <SolidColorBrush x:Key="TextForeground">Black</SolidColorBrush>
+    <SolidColorBrush x:Key="TextBackground" >White</SolidColorBrush>
+    <SolidColorBrush x:Key="TextSelectionBrush" >#8F8787</SolidColorBrush>
+    <!--当编辑文本包含水印时背景颜色-->
+    <SolidColorBrush x:Key="TextLabelBackground" >#508AB6</SolidColorBrush>
+    <SolidColorBrush x:Key="TextBoxDefaultBorderBrush" >#8F8F8F</SolidColorBrush>
+    <SolidColorBrush x:Key="ControlBorderBrush">#2E7AE6</SolidColorBrush>
+
+    <!--Popup,ComboBox-->
+    <SolidColorBrush x:Key="DefaultPopupBackground">#D8EEF9</SolidColorBrush>
+    <SolidColorBrush x:Key="DefaultComboBoxControlLoadingFillBrush">#2E7AE6</SolidColorBrush>
+    <SolidColorBrush x:Key="DefaultComboBoxControlLoadingStrokeBrush">#2E7AE6</SolidColorBrush>
+    <SolidColorBrush x:Key="ComboBoxControlPopupBackground">#066EB3</SolidColorBrush>
+    <SolidColorBrush x:Key="ComboBoxControlLoginPopupBackground" >#F0EFF0</SolidColorBrush>
+    <SolidColorBrush x:Key="ComboBoxControlFocusBorderBrush">#2E7AE6</SolidColorBrush>
+    <SolidColorBrush x:Key="ComboBoxControlLoginBorderBrush">#DFDFDF</SolidColorBrush>
+    <SolidColorBrush x:Key="ComboBoxControlBorderBrush">#2E7AE6</SolidColorBrush>
+    <SolidColorBrush x:Key="ComboBoxControlPagerBorderBrush">#2E7AE6</SolidColorBrush>
+    <SolidColorBrush x:Key="ComboBoxControlConditionBorderBrush">#8F8F8F</SolidColorBrush>
+    <SolidColorBrush x:Key="ComboBoxControlDefaultWatermarkForeground">#2E7AE6</SolidColorBrush>
+    <SolidColorBrush x:Key="ComboBoxControlPagerWatermarkForeground">#2E7AE6</SolidColorBrush>
+    <SolidColorBrush x:Key="ComboBoxControlMouseOverForeground">#2E7AE6</SolidColorBrush>
+    <SolidColorBrush x:Key="ComboBoxControlPressedForeground">DarkOrange</SolidColorBrush>
+
+    <!--Control 基础颜色-->
+    <SolidColorBrush x:Key="CheckedForeground" >#000000</SolidColorBrush>
+    <SolidColorBrush x:Key="MouseOverForeground">#000000</SolidColorBrush>
+    <SolidColorBrush x:Key="PressedForeground" >#D8EEF9</SolidColorBrush>
+    <SolidColorBrush x:Key="LinkForeground">#0816BB</SolidColorBrush>
+    <SolidColorBrush x:Key="FocusBackground" >#365080</SolidColorBrush>
+    <SolidColorBrush x:Key="FocusBorderBrush" >#066EB3</SolidColorBrush>
+    <SolidColorBrush x:Key="WatermarkForeground" >Red</SolidColorBrush>
+    <SolidColorBrush x:Key="MouseOverBorderBrush">#F6D1D1</SolidColorBrush>
+
+    <!--ToggleButton切换按钮基础颜色-->
+    <SolidColorBrush x:Key="DefaultToggleButtonFillBrush" >White</SolidColorBrush>
+    <SolidColorBrush x:Key="DefaultButtonStrokeBrush" >#2E7AE6</SolidColorBrush>
+    <SolidColorBrush x:Key="MouseOverToggleButtonFillBrush" >White</SolidColorBrush>
+    <SolidColorBrush x:Key="MouseOverButtonStrokeBrush" >#2E7AE6</SolidColorBrush>
+    <SolidColorBrush x:Key="PressedToggleButtonFillBrush" >White</SolidColorBrush>
+    <SolidColorBrush x:Key="PressedButtonStrokeBrush" >#2E7AE6</SolidColorBrush>
+
+</ResourceDictionary>
