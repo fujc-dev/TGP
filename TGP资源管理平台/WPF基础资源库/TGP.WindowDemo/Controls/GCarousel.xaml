@@ -10,58 +10,28 @@
     </ResourceDictionary.MergedDictionaries>
 
     <ControlTemplate x:Key="CarouselBaseTemplate" TargetType="{x:Type tgp:GCarousel}">
-        <ControlTemplate.Resources>
-            <!--从右到左动画-->
-            <Storyboard x:Key="CarouselRightToCenterStoryboard">
-                <!--<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="PART_RightGrid">
-                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="129.076"/>
-                </DoubleAnimationUsingKeyFrames>
-                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle">
-                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
-                </DoubleAnimationUsingKeyFrames>
-                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="PART_RightGrid">
-                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="180"/>
-                </DoubleAnimationUsingKeyFrames>
-                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="PART_RightGrid">
-                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
-                </DoubleAnimationUsingKeyFrames>-->
-            </Storyboard>
-            <!--从中到左动画-->
-            <Storyboard x:Key="CarouselCenterToLeftStoryboard">
-                <!--<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="PART_CenterGrid">
-                    <EasingDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
-                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="30"/>
-                </DoubleAnimationUsingKeyFrames>
-                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="PART_CenterGrid">
-                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0"/>
-                </DoubleAnimationUsingKeyFrames>
-                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="asdadasdad">
-                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.8"/>
-                </DoubleAnimationUsingKeyFrames>
-                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="PART_CenterGrid">
-                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="150"/>
-                </DoubleAnimationUsingKeyFrames>-->
-            </Storyboard>
-        </ControlTemplate.Resources>
-        <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Background="#FF6ADE6A">
+        <Grid Background="Transparent" VerticalAlignment="Stretch" Height="Auto">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="28"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="28"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="79*"/>
-                <RowDefinition Height="58*"/>
-                <RowDefinition Height="58*"/>
-                <RowDefinition Height="30.001"/>
+                <RowDefinition Height="64*"/>
+                <RowDefinition Height="47*"/>
+                <RowDefinition Height="43*"/>
+                <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
-			<Canvas x:Name="PART_Inner" Grid.ColumnSpan="3" Margin="0" Grid.RowSpan="4" Width="Auto" Height="Auto" />
-			<Button x:Name="PART_Left" Content="左" Margin="0" VerticalAlignment="Stretch" Grid.Row="1" Width="Auto"/>
-            <Button x:Name="PART_Right" Content="右" Margin="0" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Stretch" Width="Auto"/>
-            <Border Height="Auto" Grid.Row="3" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Stretch" Grid.Column="0" Margin="0,0,0,0" Grid.ColumnSpan="3" HorizontalAlignment="Stretch">
+            <Rectangle Grid.Column="0" Fill="Black" HorizontalAlignment="Stretch" Margin="0" Stroke="Black" Width="Auto" Grid.ColumnSpan="3" Grid.RowSpan="4" Opacity="0.8"/>
+            <Canvas x:Name="PART_Inner" Grid.ColumnSpan="3" Margin="0" Grid.RowSpan="4" ClipToBounds="True"/>
+            <tgp:GButton AllowsAnimation="False" x:Name="PART_Left"  Width="Auto" Grid.Row="1" Style="{StaticResource DefaultGeometryButtonStyle}" GeometryIcon="{StaticResource DefaultLeftCarousel}" Margin="0,0,0,-2" d:LayoutOverrides="HorizontalAlignment, Width"/>
+            <!--<Button x:Name="PART_Left" Content="左" Margin="0" VerticalAlignment="Stretch" Grid.Row="1" d:LayoutOverrides="Height, LeftMargin, RightMargin, TopMargin, BottomMargin" Width="Auto"/>-->
+            <tgp:GButton AllowsAnimation="False" x:Name="PART_Right"  Width="Auto" Grid.Column="2" Grid.Row="1" Style="{StaticResource DefaultGeometryButtonStyle}" GeometryIcon="{StaticResource DefaultRightCarousel}" Margin="0" d:LayoutOverrides="Width" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <!--<Button x:Name="PART_Right" Content="右" Margin="0" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="1" d:LayoutOverrides="Height, LeftMargin, RightMargin, TopMargin, BottomMargin" HorizontalAlignment="Stretch" Width="Auto"/>-->
+            <Border Height="Auto" Grid.Row="3" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Stretch" Grid.Column="0" Margin="0,0,0,0" Grid.ColumnSpan="3" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
                 <StackPanel x:Name="PART_Navigation" HorizontalAlignment="Center" Margin="0" Width="Auto" Orientation="Horizontal" VerticalAlignment="Bottom">
-					<tgp:GButton GIconMargin="0" BorderThickness="3"  Style="{StaticResource DefaultImageButtonStyle}" GIcon="/TGP.WindowDemo;component/Carousel/201703231056_1180x500.jpg" Margin="0" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
-				</StackPanel>
+                    <!--<tgp:GButton x:Name="gButton" Content="GButton" Style="{StaticResource DefaultImageButtonStyle  }" GIcon="/TGP.WindowDemo;component/Carousel/201703231056_1180x500.jpg"  Height="Auto" Width="Auto" BorderThickness="0"  />-->
+                </StackPanel>
             </Border>
         </Grid>
     </ControlTemplate>

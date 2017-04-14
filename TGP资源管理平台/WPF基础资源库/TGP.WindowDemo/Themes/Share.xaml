@@ -24,8 +24,8 @@
 
 
     <PathGeometry x:Key="DefaultCheckBoxSelected">M417.6 575.04l320.704-320.704 92.992 93.056-414.72 418.688-1.92-1.984-2.048 1.984-220.032-224 96-96L417.6 575.04z</PathGeometry>
-    
-    
+    <PathGeometry x:Key="DefaultLeftCarousel">M732.62277 192.494129 416.616606 508.498246 732.62277 824.50134l0 131.442658L285.174971 508.498246 732.62277 61.049424 732.62277 192.494129z</PathGeometry>
+    <PathGeometry x:Key="DefaultRightCarousel">M288.081161 196.047048l315.095421 315.095421L288.081161 826.235844l0 131.064035 446.159456-446.157409L288.081161 64.983014 288.081161 196.047048z</PathGeometry>
     <Style TargetType="{x:Type ToggleButton}" x:Key="ComboToggleButton">
         <Setter Property="Foreground" Value="{StaticResource TextForeground}" />
         <Setter Property="SnapsToDevicePixels" Value="True" />

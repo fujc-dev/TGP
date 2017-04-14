@@ -51,14 +51,14 @@
     <SolidColorBrush x:Key="RadioCheckedButtonBorderBrush">#2E7AE6</SolidColorBrush>
     <!--按钮-->
     <SolidColorBrush x:Key="DefaultButtonBackground">White</SolidColorBrush>
-    <SolidColorBrush x:Key="DefaultButtonForeground">#000</SolidColorBrush>
+    <SolidColorBrush x:Key="DefaultButtonForeground">#2E7AE6</SolidColorBrush>
     <SolidColorBrush x:Key="DefaultButtonBorderBrush">#2E7AE6</SolidColorBrush>
     <SolidColorBrush x:Key="ButtonMouseOverBackground">White</SolidColorBrush>
     <SolidColorBrush x:Key="ButtonMouseOverForeround">#000</SolidColorBrush>
     <SolidColorBrush x:Key="ButtonMouseOverBorderBrush">Orange</SolidColorBrush>
     <SolidColorBrush x:Key="ButtonPressedBackground">White</SolidColorBrush>
     <SolidColorBrush x:Key="ButtonPressedForeround">#000</SolidColorBrush>
-    <SolidColorBrush x:Key="ButtonPressedBorderBrush">#2E7AE6</SolidColorBrush>
+    <SolidColorBrush x:Key="ButtonPressedBorderBrush">Orange</SolidColorBrush>
 
     <!--可编辑的组件的文本(TextBox)样式，如ComboBox、TextBox、DataGrid、RadioButton、CheckBox中的文本编辑等所有包含文本编辑控件的基础颜色-->
     <SolidColorBrush x:Key="TextForeground">Black</SolidColorBrush>
