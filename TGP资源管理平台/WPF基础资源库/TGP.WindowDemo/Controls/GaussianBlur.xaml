@@ -1,0 +1,14 @@
+﻿<Window x:Class="TGP.WindowDemo.GaussianBlur"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TGP.WindowDemo"
+        mc:Ignorable="d"
+        Title="高斯模糊" Height="552" Width="774">
+    <Grid>
+        <Image x:Name="PART_Gsmh" HorizontalAlignment="Left" Height="306" Margin="10,206,0,0" VerticalAlignment="Top" Width="746" Source="../bg/葡萄红棱形.jpg" Stretch="Fill" StretchDirection="Both"/>
+        <Slider x:Name="slider" Value="{Binding GaussianValue}"  HorizontalAlignment="Left" Margin="118,53,0,0" VerticalAlignment="Top" Width="629" Maximum="255"/>
+        <Label x:Name="label" Content="高斯模糊半径：" HorizontalAlignment="Left" Margin="19,53,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

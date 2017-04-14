@@ -84,6 +84,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="CompositeControls\LinkedComboBox.cs" />
+    <Compile Include="Controls\GaussianBlur.xaml.cs">
+      <DependentUpon>GaussianBlur.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GButton.xaml.cs">
+      <DependentUpon>GButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\GCheckBox.xaml.cs">
       <DependentUpon>GCheckBox.xaml</DependentUpon>
     </Compile>
@@ -93,16 +99,13 @@
     <Compile Include="Controls\GScrollViewer.xaml.cs">
       <DependentUpon>GScrollViewer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\GTabControl.xaml.cs">
+      <DependentUpon>GTabControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Data\Entitys\Simple.cs" />
     <Compile Include="Data\LocalDB.cs" />
     <Compile Include="Extession\ControlExtession.cs" />
     <Compile Include="Extession\EffectExtession.cs" />
-    <Compile Include="Controls\GaussianBlur.xaml.cs">
-      <DependentUpon>GaussianBlur.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\GButton.xaml.cs">
-      <DependentUpon>GButton.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Controls\GComboBox.xaml.cs">
       <DependentUpon>GComboBox.xaml</DependentUpon>
     </Compile>
@@ -138,6 +141,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\GCarousel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\GRadioButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -150,10 +157,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\GCarousel.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -161,9 +164,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Controls\GTabControl.xaml.cs">
-      <DependentUpon>GTabControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -220,6 +220,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="bg\201005041122.jpg" />
+    <Resource Include="images\tgp_closed.png" />
+    <Resource Include="images\tgp_max.png" />
+    <Resource Include="images\tgp_max_normal.png" />
+    <Resource Include="images\tgp_min.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="bg\柳树.jpg" />
@@ -235,16 +239,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Style\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\tgp_min.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\tgp_closed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\tgp_max.png" />
-    <Resource Include="images\tgp_max_normal.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Config\application.xml" />
