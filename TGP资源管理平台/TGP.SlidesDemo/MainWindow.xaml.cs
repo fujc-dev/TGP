@@ -24,4 +24,24 @@ namespace TGP.SlidesDemo
 			InitializeComponent();
 		}
 	}
+
+	public class DataGridExtession
+	{
+
+
+		public static Object GetMyHeader(DependencyObject obj)
+		{
+			return (Object)obj.GetValue(MyHeaderProperty);
+		}
+
+		public static void SetMyHeader(DependencyObject obj, Object value)
+		{
+			obj.SetValue(MyHeaderProperty, value);
+		}
+
+
+		public static readonly DependencyProperty MyHeaderProperty = DependencyProperty.RegisterAttached("MyHeader", typeof(Object), typeof(DataGridExtession), new PropertyMetadata("111"));
+
+
+	}
 }

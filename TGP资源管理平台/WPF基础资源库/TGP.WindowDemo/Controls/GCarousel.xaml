@@ -5,38 +5,34 @@
                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
                     >
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/TGP.WindowDemo;component/Themes/Color.xaml" />
-    </ResourceDictionary.MergedDictionaries>
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="pack://application:,,,/TGP.WindowDemo;component/Themes/Color.xaml" />
+	</ResourceDictionary.MergedDictionaries>
 
-    <ControlTemplate x:Key="CarouselBaseTemplate" TargetType="{x:Type tgp:GCarousel}">
-        <Grid Background="Transparent" VerticalAlignment="Stretch" Height="Auto">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="28"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="28"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="64*"/>
-                <RowDefinition Height="47*"/>
-                <RowDefinition Height="43*"/>
-                <RowDefinition Height="30"/>
-            </Grid.RowDefinitions>
-            <Rectangle Grid.Column="0" Fill="Black" HorizontalAlignment="Stretch" Margin="0" Stroke="Black" Width="Auto" Grid.ColumnSpan="3" Grid.RowSpan="4" Opacity="0.8"/>
-            <Canvas x:Name="PART_Inner" Grid.ColumnSpan="3" Margin="0" Grid.RowSpan="4" ClipToBounds="True"/>
-            <tgp:GButton AllowsAnimation="False" x:Name="PART_Left"  Width="Auto" Grid.Row="1" Style="{StaticResource DefaultGeometryButtonStyle}" GeometryIcon="{StaticResource DefaultLeftCarousel}" Margin="0,0,0,-2" d:LayoutOverrides="HorizontalAlignment, Width"/>
-            <!--<Button x:Name="PART_Left" Content="左" Margin="0" VerticalAlignment="Stretch" Grid.Row="1" d:LayoutOverrides="Height, LeftMargin, RightMargin, TopMargin, BottomMargin" Width="Auto"/>-->
-            <tgp:GButton AllowsAnimation="False" x:Name="PART_Right"  Width="Auto" Grid.Column="2" Grid.Row="1" Style="{StaticResource DefaultGeometryButtonStyle}" GeometryIcon="{StaticResource DefaultRightCarousel}" Margin="0" d:LayoutOverrides="Width" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <!--<Button x:Name="PART_Right" Content="右" Margin="0" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="1" d:LayoutOverrides="Height, LeftMargin, RightMargin, TopMargin, BottomMargin" HorizontalAlignment="Stretch" Width="Auto"/>-->
-            <Border Height="Auto" Grid.Row="3" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Stretch" Grid.Column="0" Margin="0,0,0,0" Grid.ColumnSpan="3" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
-                <StackPanel x:Name="PART_Navigation" HorizontalAlignment="Center" Margin="0" Width="Auto" Orientation="Horizontal" VerticalAlignment="Bottom">
-                    <!--<tgp:GButton x:Name="gButton" Content="GButton" Style="{StaticResource DefaultImageButtonStyle  }" GIcon="/TGP.WindowDemo;component/Carousel/201703231056_1180x500.jpg"  Height="Auto" Width="Auto" BorderThickness="0"  />-->
-                </StackPanel>
-            </Border>
-        </Grid>
-    </ControlTemplate>
-    <!--默认的轮播控件样式-->
-    <Style x:Key="DefaultCarouselStyle" TargetType="{x:Type tgp:GCarousel}">
-        <Setter Property="Template" Value="{StaticResource CarouselBaseTemplate}"/>
-    </Style>
+	<ControlTemplate x:Key="CarouselBaseTemplate" TargetType="{x:Type tgp:GCarousel}">
+		<Grid Background="Transparent" VerticalAlignment="Stretch" Height="Auto">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="28"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="28"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="64*"/>
+				<RowDefinition Height="47*"/>
+				<RowDefinition Height="43*"/>
+				<RowDefinition Height="30"/>
+			</Grid.RowDefinitions>
+			<Rectangle Grid.Column="0" Fill="Black" HorizontalAlignment="Stretch" Margin="0" Stroke="Black" Width="Auto" Grid.ColumnSpan="3" Grid.RowSpan="4" Opacity="0.8"/>
+			<Canvas x:Name="PART_Inner" Grid.ColumnSpan="3" Margin="0" Grid.RowSpan="4" ClipToBounds="True"/>
+			<tgp:GButton AllowsAnimation="False" x:Name="PART_Left"  Width="Auto" Grid.Row="1" Style="{StaticResource DefaultGeometryButtonStyle}" GeometryIcon="{StaticResource DefaultLeftCarousel}"  />
+			<tgp:GButton AllowsAnimation="False" x:Name="PART_Right"  Width="Auto" Grid.Column="2" Grid.Row="1" Style="{StaticResource DefaultGeometryButtonStyle}" GeometryIcon="{StaticResource DefaultRightCarousel}" Margin="0" d:LayoutOverrides="Width" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+			<Border Height="Auto" Grid.Row="3" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Stretch" Grid.Column="0" Margin="0,0,0,0" Grid.ColumnSpan="3">
+				<StackPanel x:Name="PART_Navigation" HorizontalAlignment="Center" Margin="0" Width="Auto" Orientation="Horizontal" VerticalAlignment="Bottom"/>
+			</Border>
+		</Grid>
+	</ControlTemplate>
+	<!--默认的轮播控件样式-->
+	<Style x:Key="DefaultCarouselStyle" TargetType="{x:Type tgp:GCarousel}">
+		<Setter Property="Template" Value="{StaticResource CarouselBaseTemplate}"/>
+	</Style>
 </ResourceDictionary>

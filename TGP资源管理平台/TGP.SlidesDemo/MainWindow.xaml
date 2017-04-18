@@ -1,8 +1,28 @@
 ﻿<Window x:Class="TGP.SlidesDemo.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:tgp="clr-namespace:TGP.SlidesDemo"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+	<Grid>
+		<DataGrid>
+			<DataGrid.Columns>
+				<DataGridTemplateColumn tgp:DataGridExtession.MyHeader="测试">
+					<DataGridTemplateColumn.HeaderStyle>
+						<Style TargetType="{x:Type DataGridColumnHeader}">
+							<Setter Property="Template">
+								<Setter.Value>
+									<ControlTemplate>
+										<Grid>
+											<!--<ContentPresenter Content="{TemplateBinding tgp:DataGridExtession.MyHeader }"></ContentPresenter>-->
+											<ContentPresenter Content="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type DataGridTemplateColumn},AncestorLevel=3},Path=(tgp:DataGridExtession.MyHeader)  }"></ContentPresenter>
+										</Grid>
+									</ControlTemplate>
+								</Setter.Value>
+							</Setter>
+						</Style>
+					</DataGridTemplateColumn.HeaderStyle>
+				</DataGridTemplateColumn>
+			</DataGrid.Columns>
+		</DataGrid>
+	</Grid>
 </Window>

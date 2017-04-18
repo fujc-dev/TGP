@@ -61,7 +61,7 @@
             </Border>
         </StackPanel>
 		  <StackPanel Margin="0,56,0,0" Grid.Row="2" RenderTransformOrigin="0.5,0.5">
-            <local:GCarousel Style="{StaticResource DefaultCarouselStyle}" Height="225"  Width="750"/>
+            <local:GCarousel Style="{StaticResource DefaultCarouselStyle}" Height="225" Margin="41,0,167,0"/>
         </StackPanel>
     </Grid>
 
