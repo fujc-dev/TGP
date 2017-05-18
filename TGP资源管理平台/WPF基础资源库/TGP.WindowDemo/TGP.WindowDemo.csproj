@@ -105,14 +105,14 @@
     <Compile Include="Controls\GTabControl.xaml.cs">
       <DependentUpon>GTabControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\GWindowBase.xaml.cs">
+      <DependentUpon>GWindowBase.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Data\Entitys\Simple.cs" />
     <Compile Include="Data\LocalDB.cs" />
     <Compile Include="Extession\ControlExtession.cs" />
     <Compile Include="Controls\GHeaderEx.xaml.cs">
       <DependentUpon>GHeaderEx.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\GWindowBase.xaml.cs">
-      <DependentUpon>GWindowBase.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\GCarousel.xaml.cs">
       <DependentUpon>GCarousel.xaml</DependentUpon>
@@ -157,6 +157,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\GWindowBase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -169,10 +173,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Controls\GWindowBase.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Properties\DesignTimeResources.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

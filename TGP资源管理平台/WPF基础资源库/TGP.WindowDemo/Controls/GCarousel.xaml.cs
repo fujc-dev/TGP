@@ -36,6 +36,16 @@ namespace TGP.WindowDemo
 		 * 中间显示图片
 		 * 加载方式：从右到左
 		 * 位置区域A:B:C
+         * 
+         * 
+         * 根据依赖属性的优先级原则（ https://msdn.microsoft.com/zh-cn/library/ms743230(v=vs.110).aspx ）动画的优先级非常高。
+         * 因此，当一个TimeLine（动画）‘拥有’一个依赖属性，手动设置依赖属性是不起作用的。一个简单的解决办法就是断开动画和依赖属性的关联：
+         *
+         * private void test2_Click(object sender, RoutedEventArgs e)
+         * {
+         *      box.BeginAnimation(Canvas.LeftProperty, null);
+         *      Canvas.SetLeft(box, 50);
+         * }
 		 */
 
         #region 数据源
@@ -131,24 +141,23 @@ namespace TGP.WindowDemo
                     this.GridCanvasRight = this.GridCanvasLeft + this.GridWidth - gridRightWidth;
 
                     //设置第一个显示值
-                    this.GridList[this.GridList.Count - 1].Visibility = Visibility.Visible;
                     this.GridList[this.GridList.Count - 1].SetValue(Canvas.LeftProperty, (Double)0);
                     this.GridList[this.GridList.Count - 1].SetValue(Canvas.TopProperty, (Double)30);
-
+                    this.GridList[this.GridList.Count - 1].Tag = "1";
                     //设置中间显示
-                    this.GridList[0].Visibility = Visibility.Visible;
                     this.GridList[0].SetValue(Canvas.LeftProperty, (Double)this.GridCanvasLeft);
                     this.GridList[0].SetValue(Canvas.TopProperty, (Double)0);
                     this.GridList[0].SetValue(Panel.ZIndexProperty, (Int32)3);
                     this.GridList[0].Height = this.Height;
                     this.GridList[0].Width = this.GridWidth;
                     this.GridList[0].Children[1].Opacity = 0;
+                    this.GridList[0].Tag = "1";
                     //设置标签集合的第一项为选中项
                     this.PART_Navigation.Children[0].Focus();
                     //设置最右边显示值
-                    this.GridList[1].Visibility = Visibility.Visible;
                     this.GridList[1].SetValue(Canvas.LeftProperty, (Double)GridCanvasRight);
                     this.GridList[1].SetValue(Canvas.TopProperty, (Double)30);
+                    this.GridList[1].Tag = "1";
                     this.PART_Left.Click += OnPressedLeftButton;
                     this.PART_Right.Click += OnPressedRightButton;
                 }
@@ -218,7 +227,7 @@ namespace TGP.WindowDemo
                 _Grid.Children.Add(_Rectangle);
                 _Grid.SetValue(Canvas.LeftProperty, -this.GridWidth);
                 _Grid.SetValue(Canvas.TopProperty, 30D);
-                _Grid.Visibility = Visibility.Collapsed;
+                _Grid.Tag = "0";
                 _Grid.SetValue(Panel.ZIndexProperty, -999);
                 this.PART_Inner.Children.Add(_Grid);
                 this.GridList.Add(_Grid);
@@ -248,18 +257,21 @@ namespace TGP.WindowDemo
                 //当前索引不能超过总数
                 if (CurrentIndex < this.GridList.Count)
                 {
-                    //获取未被显示的图像，将未被显示的图像放置在右侧位置
-                    //foreach (var o in this.GridList)
-                    //{
-                    //    if (o.Visibility == Visibility.Collapsed)
-                    //    {
-                    //        o.SetValue(Canvas.LeftProperty, this.CanvasWidth);
-                    //        o.SetValue(Canvas.TopProperty, 0D);
-                    //    }
-                    //}
+                    foreach (var o in this.GridList)
+                    {
+                        if (o.Tag.ToString() == "0")
+                        {
+                            //o.SetValue(Panel.ZIndexProperty, -999);
+                            o.BeginAnimation(Canvas.LeftProperty, null);
+                            o.BeginAnimation(Canvas.TopProperty, null);
+                            o.SetValue(Canvas.LeftProperty, this.CanvasWidth);  //Canvas宽度
+                            o.SetValue(Canvas.TopProperty, 30D);
+                        }
+                    }
                     //将当前中间显示Grid高度设置为默认高度、宽度设置为默认宽度并将位置移动到左上角，并设置其Opacity
                     Grid manGrid = this.GridList[this.CurrentIndex];
-                    this.CreateCarouselCenterToLeftStoryboard(manGrid).Begin();
+                    var sb1 = this.CreateCarouselCenterToLeftStoryboard(manGrid);
+                    sb1.Begin();
                     //将右侧的Grid显示为中间
                     Grid rightGrid = null;
                     if (this.CurrentIndex == this.GridList.Count - 1)
@@ -272,21 +284,30 @@ namespace TGP.WindowDemo
                         this.PART_Navigation.Children[this.CurrentIndex + 1].Focus();
                         rightGrid = this.GridList[this.CurrentIndex + 1];
                     }
-                    this.CreateCarouselRightToCenterStoryboard(rightGrid).Begin();
+                    var sb2 = this.CreateCarouselRightToCenterStoryboard(rightGrid);
+                    sb2.Begin();
                     //显示右侧的图片
                     Grid zeroToTightGrid = null;
                     if (this.CurrentIndex == this.GridList.Count - 1) { zeroToTightGrid = this.GridList[1]; }
                     else if (this.CurrentIndex == this.GridList.Count - 2) { zeroToTightGrid = this.GridList[0]; }
                     else { zeroToTightGrid = this.GridList[this.CurrentIndex + 2]; }
-                    this.CreateZeroToRightStoryboard(zeroToTightGrid).Begin();
+                    var sb3 = this.CreateZeroToRightStoryboard(zeroToTightGrid);
+                    sb3.Begin();
                     //将当前左侧的Grid影藏
-
                     Grid leftGrid = this.CurrentIndex == 0 ? this.GridList[this.GridList.Count - 1] : this.GridList[this.CurrentIndex - 1];
                     leftGrid.SetValue(Panel.ZIndexProperty, -999);
-                    leftGrid.SetValue(Canvas.LeftProperty, this.CanvasWidth);
-                    leftGrid.SetValue(Canvas.TopProperty, 0D);
-                    leftGrid.Visibility = Visibility.Collapsed;
-
+                    Task.Factory.StartNew(() =>
+                    {
+                        Thread.Sleep(1000);
+                        this.Dispatcher.Invoke(new Action(() =>
+                        {
+                            leftGrid.Tag = "0";
+                            leftGrid.BeginAnimation(Canvas.LeftProperty, null);
+                            leftGrid.BeginAnimation(Canvas.TopProperty, null);
+                            leftGrid.SetValue(Canvas.LeftProperty, this.CanvasWidth);  //Canvas宽度
+                            leftGrid.SetValue(Canvas.TopProperty, 30D);
+                        }));
+                    });
                     //移动到下一个选中项
                     if (this.CurrentIndex == this.GridList.Count - 1) this.CurrentIndex = 0; else this.CurrentIndex++;
                 }
@@ -303,6 +324,17 @@ namespace TGP.WindowDemo
             {
                 if (this.CurrentIndex > -1)
                 {
+                    foreach (var o in this.GridList)
+                    {
+                        if (o.Tag.ToString() == "0")
+                        {
+                            //o.SetValue(Panel.ZIndexProperty, -999);
+                            o.BeginAnimation(Canvas.LeftProperty, null);
+                            o.BeginAnimation(Canvas.TopProperty, null);
+                            o.SetValue(Canvas.LeftProperty, -this.GridWidth);  //Canvas宽度
+                            o.SetValue(Canvas.TopProperty, 30D);
+                        }
+                    }
                     //获取中间显示的Grid设置为默认高度、宽度设置为默认宽度并将位置移动到右侧，并设置其Opacity
                     Grid mainGridToRight = this.GridList[this.CurrentIndex];  //获取当前中间显示的图片
                     this.CreateCarouselCenterToRightStoryboard(mainGridToRight).Begin();
@@ -336,8 +368,19 @@ namespace TGP.WindowDemo
                     this.CreateZeroToLeftStoryboard(leftGridToLeft).Begin();
                     //获取右侧的Grid使其影藏
                     Grid rightGridToHide = this.CurrentIndex == this.GridList.Count - 1 ? this.GridList[0] : this.GridList[this.CurrentIndex + 1];
-                    rightGridToHide.Visibility = Visibility.Collapsed;
                     rightGridToHide.SetValue(Panel.ZIndexProperty, -999);
+                    Task.Factory.StartNew(() =>
+                    {
+                        Thread.Sleep(1000);
+                        this.Dispatcher.Invoke(new Action(() =>
+                        {
+                            rightGridToHide.Tag = "0";
+                            rightGridToHide.BeginAnimation(Canvas.LeftProperty, null);
+                            rightGridToHide.BeginAnimation(Canvas.TopProperty, null);
+                            rightGridToHide.SetValue(Canvas.LeftProperty, -this.GridWidth);  //Canvas宽度
+                            rightGridToHide.SetValue(Canvas.TopProperty, 30D);
+                        }));
+                    });
                     if (this.CurrentIndex == 0) this.CurrentIndex = this.GridList.Count - 1; else this.CurrentIndex--;
                 }
             }
@@ -351,7 +394,6 @@ namespace TGP.WindowDemo
         private Storyboard CreateCarouselRightToCenterStoryboard(Grid targetSource)
         {
             //设置当前控件为显示状态
-            targetSource.Visibility = Visibility.Visible;
             /**
              * 1、设置Canvas.LeftProperty值为 (Double)GridCanvasLeft；
              * 2、设置Canvas.TopProperty值为 (Double)0；
@@ -360,6 +402,7 @@ namespace TGP.WindowDemo
              * 5、设置其宽度为中间显示宽度，为正常宽度+150(默认后面可能会调整)
              * 6、设置Grid控件中的Rectangle的透明度为透明
              */
+            targetSource.Tag = "1";
             targetSource.Width = this.GridWidth;
             targetSource.SetValue(Panel.ZIndexProperty, 3);
             Storyboard carouselRightToCenterStoryboard = new Storyboard();            //创建画板，目标一个从右边到中间运动的
@@ -398,7 +441,7 @@ namespace TGP.WindowDemo
         /// </summary>
         private Storyboard CreateCarouselCenterToLeftStoryboard(Grid targetSource)
         {
-            targetSource.Visibility = Visibility.Visible;
+            targetSource.Tag = "1";
             targetSource.Width = this.GridWidth;
             targetSource.SetValue(Panel.ZIndexProperty, 2);
             Storyboard carouselCenterToLeftStoryboard = new Storyboard();
@@ -436,7 +479,7 @@ namespace TGP.WindowDemo
         /// <returns></returns>
         private Storyboard CreateZeroToRightStoryboard(Grid targetSource)
         {
-            targetSource.Visibility = Visibility.Visible;
+            targetSource.Tag = "1";
             targetSource.SetValue(Panel.ZIndexProperty, 2);
             Storyboard carouselZeroToRightStoryboard = new Storyboard();
             //
@@ -457,7 +500,6 @@ namespace TGP.WindowDemo
         private Storyboard CreateLeftToZeroStoryboard(Grid targetSource)
         {
             targetSource.SetValue(Panel.ZIndexProperty, -999);
-            targetSource.Visibility = Visibility.Collapsed;
             Storyboard carouselLeftToZeroStoryboard = new Storyboard();
             var A = new DoubleAnimationUsingKeyFrames();
             A.KeyFrames.Add(new EasingDoubleKeyFrame(0, TimeSpan.FromSeconds(0)));
@@ -486,6 +528,7 @@ namespace TGP.WindowDemo
              * 5、设置控件的高度为当前控件的高度this.Height
              * 6、设置当前图片为顶层图像
              * */
+            targetSource.Tag = "1";
             targetSource.Width = this.GridWidth;
             targetSource.SetValue(Panel.ZIndexProperty, 3);
             Storyboard carouselAToBStoryboard = new Storyboard();            //创建画板，A区域向B区域移动动画
@@ -522,7 +565,7 @@ namespace TGP.WindowDemo
 
         private Storyboard CreateCarouselCenterToRightStoryboard(Grid targetSource)
         {
-            targetSource.Visibility = Visibility.Visible;
+            targetSource.Tag = "1";
             targetSource.Width = this.GridWidth;
             targetSource.SetValue(Panel.ZIndexProperty, 2);
             Storyboard carouselBToCStoryboard = new Storyboard();
@@ -556,7 +599,7 @@ namespace TGP.WindowDemo
 
         private Storyboard CreateZeroToLeftStoryboard(Grid targetSource)
         {
-            targetSource.Visibility = Visibility.Visible;
+            targetSource.Tag = "1";
             targetSource.SetValue(Panel.ZIndexProperty, 2);
             Storyboard carouselZeroToRightStoryboard = new Storyboard();
             //
