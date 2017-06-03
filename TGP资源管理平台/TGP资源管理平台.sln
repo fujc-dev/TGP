@@ -16,7 +16,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TGP.UI.Core", "WPF基础资
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "File", "File", "{0FEDD8FA-5EB4-4FC5-91E9-00B7F01C1D1E}"
 	ProjectSection(SolutionItems) = preProject
-		Readme.txt = Readme.txt
 		网络通信.txt = 网络通信.txt
 	EndProjectSection
 EndProject
