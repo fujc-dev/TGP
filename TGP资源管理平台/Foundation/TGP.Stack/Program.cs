@@ -52,6 +52,8 @@ namespace TGP.Stack
 			++x;
 			Console.WriteLine(x);
 
+
+
 		}
 
 		public static void Go3(Animal pointer)
