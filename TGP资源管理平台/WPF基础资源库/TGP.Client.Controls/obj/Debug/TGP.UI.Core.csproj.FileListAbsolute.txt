@@ -1,6 +1,5 @@
 C:\Users\dane\TGP\TGP资源管理平台\WPF基础资源库\TGP.Client.Controls\bin\Debug\TGP.UI.Core.exe
 C:\Users\dane\TGP\TGP资源管理平台\WPF基础资源库\TGP.Client.Controls\bin\Debug\TGP.UI.Core.pdb
-C:\Users\dane\TGP\TGP资源管理平台\WPF基础资源库\TGP.Client.Controls\obj\Debug\TGP.UI.Core.csprojResolveAssemblyReference.cache
 C:\Users\dane\TGP\TGP资源管理平台\WPF基础资源库\TGP.Client.Controls\obj\Debug\Advert.baml
 C:\Users\dane\TGP\TGP资源管理平台\WPF基础资源库\TGP.Client.Controls\obj\Debug\Controls\RollImg.baml
 C:\Users\dane\TGP\TGP资源管理平台\WPF基础资源库\TGP.Client.Controls\obj\Debug\Styles\Themes\GColor.baml

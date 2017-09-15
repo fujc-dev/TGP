@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TGP.WindowDemo" 
         mc:Ignorable="d" WindowStyle="None"
-        Title="MainWindow" Height="800" Width="1024"   BackgroundImg="bg\201005041122.jpg"
+        Title="MainWindow" Height="600" Width="1024"   BackgroundImg="bg\201005041122.jpg"
                    HeaderEx="{StaticResource  WindowBaseHeaderExtendTemplate}"  
                    Style="{StaticResource DefaultWindowStyle}"  >
 	<!--BackgroundImg="bg\201005041122.jpg"  MaxButtonVisibility="Collapsed"-->

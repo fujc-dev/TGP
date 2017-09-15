@@ -27,8 +27,8 @@
 		</TabControl>
 		<control:GButton Content="测试" Click="Button_Click" Style="{StaticResource DefaultGButtonStyle}" />
 		<TextBlock Text="---------------------------------------------------------------------------------------------------------分割线---------------------------------------------------------------------------------------------------------"/>
-		<!--<control:RollImg x:Name="rollImg"       Background="Red"        Height="900" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="900" />-->
-		<!--<control:ModPrivilege 
+		<control:RollImg x:Name="rollImg"       Background="Red"        Height="900" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="900" />
+		<control:ModPrivilege 
 		ModTitle="最高2000人群" 
 		ModContent="独乐乐 不如众乐乐" 
 		OwnerIcon="/TGP.UI.Core;component/images/sprites_privilege_green_03.png" 
@@ -45,7 +45,7 @@
 		ModContent="漫游聊天 记忆无间" 
 		OwnerIcon="/TGP.UI.Core;component/images/sprites_privilege_green_05.png" 
 		ChildIcon="/TGP.UI.Core;component/images/sprites_privilege_green_06.png" 
-		Style="{StaticResource DefaultGModPrivilegeStyle}" Margin="0,0,912,0" Height="148.667"/>-->
+		Style="{StaticResource DefaultGModPrivilegeStyle}" Margin="0,0,912,0" Height="148.667"/>
 
 		<control:GButton GIcon="&#xe60f;"/>
 	</StackPanel>
