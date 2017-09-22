@@ -1,0 +1,12 @@
+C:\Users\dane\TGP\TGP资源管理平台\TGP.InstrumentationDemo\bin\Debug\TGP.InstrumentationDemo.exe
+C:\Users\dane\TGP\TGP资源管理平台\TGP.InstrumentationDemo\bin\Debug\TGP.InstrumentationDemo.pdb
+C:\Users\dane\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\MainWindow.g.cs
+C:\Users\dane\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\App.g.cs
+C:\Users\dane\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\TGP.InstrumentationDemo_MarkupCompile.cache
+C:\Users\dane\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\TGP.InstrumentationDemo_MarkupCompile.lref
+C:\Users\dane\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\MainWindow.baml
+C:\Users\dane\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\TGP.InstrumentationDemo.g.resources
+C:\Users\dane\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\TGP.InstrumentationDemo.Properties.Resources.resources
+C:\Users\dane\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\TGP.InstrumentationDemo.csproj.GenerateResource.Cache
+C:\Users\dane\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\TGP.InstrumentationDemo.exe
+C:\Users\dane\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\TGP.InstrumentationDemo.pdb

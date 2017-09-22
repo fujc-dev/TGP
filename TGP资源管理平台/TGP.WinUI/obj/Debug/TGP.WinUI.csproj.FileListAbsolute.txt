@@ -1,0 +1,9 @@
+C:\Users\dane\TGP\TGP资源管理平台\TGP.WinUI\bin\Debug\TGP.WinUI.exe.config
+C:\Users\dane\TGP\TGP资源管理平台\TGP.WinUI\bin\Debug\TGP.WinUI.exe
+C:\Users\dane\TGP\TGP资源管理平台\TGP.WinUI\bin\Debug\TGP.WinUI.pdb
+C:\Users\dane\TGP\TGP资源管理平台\TGP.WinUI\obj\Debug\TGP.WinUI.csprojResolveAssemblyReference.cache
+C:\Users\dane\TGP\TGP资源管理平台\TGP.WinUI\obj\Debug\TGP.WinUI.Form1.resources
+C:\Users\dane\TGP\TGP资源管理平台\TGP.WinUI\obj\Debug\TGP.WinUI.Properties.Resources.resources
+C:\Users\dane\TGP\TGP资源管理平台\TGP.WinUI\obj\Debug\TGP.WinUI.csproj.GenerateResource.Cache
+C:\Users\dane\TGP\TGP资源管理平台\TGP.WinUI\obj\Debug\TGP.WinUI.exe
+C:\Users\dane\TGP\TGP资源管理平台\TGP.WinUI\obj\Debug\TGP.WinUI.pdb

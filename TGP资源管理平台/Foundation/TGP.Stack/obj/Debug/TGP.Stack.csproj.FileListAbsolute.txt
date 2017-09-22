@@ -1,0 +1,6 @@
+C:\Users\dane\TGP\TGP资源管理平台\Foundation\TGP.Stack\bin\Debug\TGP.Stack.exe.config
+C:\Users\dane\TGP\TGP资源管理平台\Foundation\TGP.Stack\bin\Debug\TGP.Stack.exe
+C:\Users\dane\TGP\TGP资源管理平台\Foundation\TGP.Stack\bin\Debug\TGP.Stack.pdb
+C:\Users\dane\TGP\TGP资源管理平台\Foundation\TGP.Stack\obj\Debug\TGP.Stack.csprojResolveAssemblyReference.cache
+C:\Users\dane\TGP\TGP资源管理平台\Foundation\TGP.Stack\obj\Debug\TGP.Stack.exe
+C:\Users\dane\TGP\TGP资源管理平台\Foundation\TGP.Stack\obj\Debug\TGP.Stack.pdb

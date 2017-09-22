@@ -1,0 +1,9 @@
+C:\Users\dane\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\bin\Debug\CreateMySqlTimer.exe.config
+C:\Users\dane\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\bin\Debug\CreateMySqlTimer.exe
+C:\Users\dane\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\bin\Debug\CreateMySqlTimer.pdb
+C:\Users\dane\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\bin\Debug\AutoMapper.dll
+C:\Users\dane\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\bin\Debug\MySql.Data.dll
+C:\Users\dane\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\bin\Debug\AutoMapper.xml
+C:\Users\dane\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\obj\Debug\CreateMySqlTimer.csprojResolveAssemblyReference.cache
+C:\Users\dane\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\obj\Debug\CreateMySqlTimer.exe
+C:\Users\dane\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\obj\Debug\CreateMySqlTimer.pdb

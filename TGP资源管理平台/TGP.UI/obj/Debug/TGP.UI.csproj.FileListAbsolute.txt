@@ -1,0 +1,12 @@
+C:\Users\dane\TGP\TGP资源管理平台\TGP.UI\bin\Debug\TGP.UI.exe
+C:\Users\dane\TGP\TGP资源管理平台\TGP.UI\bin\Debug\TGP.UI.pdb
+C:\Users\dane\TGP\TGP资源管理平台\TGP.UI\obj\Debug\TGP.UI.csprojResolveAssemblyReference.cache
+C:\Users\dane\TGP\TGP资源管理平台\TGP.UI\obj\Debug\MainWindow.baml
+C:\Users\dane\TGP\TGP资源管理平台\TGP.UI\obj\Debug\MainWindow.g.cs
+C:\Users\dane\TGP\TGP资源管理平台\TGP.UI\obj\Debug\App.g.cs
+C:\Users\dane\TGP\TGP资源管理平台\TGP.UI\obj\Debug\TGP.UI_MarkupCompile.cache
+C:\Users\dane\TGP\TGP资源管理平台\TGP.UI\obj\Debug\TGP.UI.g.resources
+C:\Users\dane\TGP\TGP资源管理平台\TGP.UI\obj\Debug\TGP.UI.Properties.Resources.resources
+C:\Users\dane\TGP\TGP资源管理平台\TGP.UI\obj\Debug\TGP.UI.csproj.GenerateResource.Cache
+C:\Users\dane\TGP\TGP资源管理平台\TGP.UI\obj\Debug\TGP.UI.exe
+C:\Users\dane\TGP\TGP资源管理平台\TGP.UI\obj\Debug\TGP.UI.pdb
