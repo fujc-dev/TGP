@@ -46,6 +46,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3D", "3D", "{2669E6A4-4350-
 		3d.md = 3d.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIS.ClientUI", "信息管理系统界面\MIS.ClientUI\MIS.ClientUI.csproj", "{DF7D43C5-52D8-4779-9668-83E8E5B89817}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "信息管理系统界面", "信息管理系统界面", "{8F85EAFB-DD74-4851-9455-879CBB3F9351}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -178,6 +182,18 @@ Global
 		{70C967C2-C4AE-4ED9-B716-853035865514}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{70C967C2-C4AE-4ED9-B716-853035865514}.Release|Win32.ActiveCfg = Release|Any CPU
 		{70C967C2-C4AE-4ED9-B716-853035865514}.Release|x86.ActiveCfg = Release|Any CPU
+		{DF7D43C5-52D8-4779-9668-83E8E5B89817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF7D43C5-52D8-4779-9668-83E8E5B89817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF7D43C5-52D8-4779-9668-83E8E5B89817}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{DF7D43C5-52D8-4779-9668-83E8E5B89817}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{DF7D43C5-52D8-4779-9668-83E8E5B89817}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{DF7D43C5-52D8-4779-9668-83E8E5B89817}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DF7D43C5-52D8-4779-9668-83E8E5B89817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF7D43C5-52D8-4779-9668-83E8E5B89817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF7D43C5-52D8-4779-9668-83E8E5B89817}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{DF7D43C5-52D8-4779-9668-83E8E5B89817}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{DF7D43C5-52D8-4779-9668-83E8E5B89817}.Release|Win32.ActiveCfg = Release|Any CPU
+		{DF7D43C5-52D8-4779-9668-83E8E5B89817}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -193,5 +209,6 @@ Global
 		{E82EE555-3A0B-4790-89C0-00DBBC6BA394} = {B1B905A7-DF34-40DB-9080-6283A03CC3F8}
 		{B4FFB14F-71C1-4595-9F49-830D7B3C3290} = {7253E36E-01CC-4553-B62F-63285411DF17}
 		{70C967C2-C4AE-4ED9-B716-853035865514} = {2669E6A4-4350-4630-8EAF-33E6C9C5E912}
+		{DF7D43C5-52D8-4779-9668-83E8E5B89817} = {8F85EAFB-DD74-4851-9455-879CBB3F9351}
 	EndGlobalSection
 EndGlobal

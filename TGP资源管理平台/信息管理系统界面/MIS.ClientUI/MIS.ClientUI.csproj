@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF7D43C5-52D8-4779-9668-83E8E5B89817}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MIS.ClientUI</RootNamespace>
+    <AssemblyName>MIS.ClientUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\001.jpg" />
+    <Resource Include="images\404.png" />
+    <Resource Include="images\add.png" />
+    <Resource Include="images\btnbg.png" />
+    <Resource Include="images\btnbg1.png" />
+    <Resource Include="images\btnbg2.png" />
+    <Resource Include="images\buttonbg.png" />
+    <Resource Include="images\c01.png" />
+    <Resource Include="images\c02.png" />
+    <Resource Include="images\c03.png" />
+    <Resource Include="images\cbg.png" />
+    <Resource Include="images\clist.png" />
+    <Resource Include="images\close.png" />
+    <Resource Include="images\close1.png" />
+    <Resource Include="images\cloud.png" />
+    <Resource Include="images\d01.png" />
+    <Resource Include="images\d02.png" />
+    <Resource Include="images\d03.png" />
+    <Resource Include="images\d04.png" />
+    <Resource Include="images\d05.png" />
+    <Resource Include="images\d06.png" />
+    <Resource Include="images\d07.png" />
+    <Resource Include="images\diskbg.png" />
+    <Resource Include="images\dp.png" />
+    <Resource Include="images\f01.png" />
+    <Resource Include="images\f02.png" />
+    <Resource Include="images\f03.png" />
+    <Resource Include="images\f04.png" />
+    <Resource Include="images\f05.png" />
+    <Resource Include="images\f06.png" />
+    <Resource Include="images\help.png" />
+    <Resource Include="images\i01.png" />
+    <Resource Include="images\i02.png" />
+    <Resource Include="images\i03.png" />
+    <Resource Include="images\i04.png" />
+    <Resource Include="images\i05.png" />
+    <Resource Include="images\i06.png" />
+    <Resource Include="images\i07.png" />
+    <Resource Include="images\i08.png" />
+    <Resource Include="images\i09.png" />
+    <Resource Include="images\iadd.png" />
+    <Resource Include="images\ibtnbg.png" />
+    <Resource Include="images\ico01.png" />
+    <Resource Include="images\ico02.png" />
+    <Resource Include="images\ico03.png" />
+    <Resource Include="images\ico04.png" />
+    <Resource Include="images\ico05.png" />
+    <Resource Include="images\ico06.png" />
+    <Resource Include="images\icon01.png" />
+    <Resource Include="images\icon02.png" />
+    <Resource Include="images\icon03.png" />
+    <Resource Include="images\icon04.png" />
+    <Resource Include="images\icon05.png" />
+    <Resource Include="images\icon06.png" />
+    <Resource Include="images\img01.png" />
+    <Resource Include="images\img02.png" />
+    <Resource Include="images\img03.png" />
+    <Resource Include="images\img04.png" />
+    <Resource Include="images\img05.png" />
+    <Resource Include="images\img06.png" />
+    <Resource Include="images\img07.png" />
+    <Resource Include="images\img08.png" />
+    <Resource Include="images\img09.png" />
+    <Resource Include="images\img10.png" />
+    <Resource Include="images\img11.png" />
+    <Resource Include="images\img12.png" />
+    <Resource Include="images\img13.png" />
+    <Resource Include="images\img14.png" />
+    <Resource Include="images\img15.png" />
+    <Resource Include="images\inputbg.gif" />
+    <Resource Include="images\itabbg.png" />
+    <Resource Include="images\itabbg1.png" />
+    <Resource Include="images\leftico.png" />
+    <Resource Include="images\leftico01.png" />
+    <Resource Include="images\leftico02.png" />
+    <Resource Include="images\leftico03.png" />
+    <Resource Include="images\leftico04.png" />
+    <Resource Include="images\leftline.gif" />
+    <Resource Include="images\leftmenubg.gif" />
+    <Resource Include="images\lefttop.gif" />
+    <Resource Include="images\libg.png" />
+    <Resource Include="images\light.png" />
+    <Resource Include="images\line.gif" />
+    <Resource Include="images\line1.png" />
+    <Resource Include="images\list.gif" />
+    <Resource Include="images\list1.gif" />
+    <Resource Include="images\list2.png" />
+    <Resource Include="images\loginbg1.png" />
+    <Resource Include="images\loginbg2.png" />
+    <Resource Include="images\loginbg3.png" />
+    <Resource Include="images\logininfo.png" />
+    <Resource Include="images\loginlogo.png" />
+    <Resource Include="images\loginpassword.png" />
+    <Resource Include="images\loginsj.png" />
+    <Resource Include="images\loginuser.png" />
+    <Resource Include="images\logo.png" />
+    <Resource Include="images\msg.png" />
+    <Resource Include="images\navbg.png" />
+    <Resource Include="images\next.gif" />
+    <Resource Include="images\pre.gif" />
+    <Resource Include="images\px.gif" />
+    <Resource Include="images\righttop.gif" />
+    <Resource Include="images\rlist.gif" />
+    <Resource Include="images\search.png" />
+    <Resource Include="images\sj.png" />
+    <Resource Include="images\sun.png" />
+    <Resource Include="images\t01.png" />
+    <Resource Include="images\t02.png" />
+    <Resource Include="images\t03.png" />
+    <Resource Include="images\t04.png" />
+    <Resource Include="images\t05.png" />
+    <Resource Include="images\tbg.png" />
+    <Resource Include="images\tcbg.gif" />
+    <Resource Include="images\th.gif" />
+    <Resource Include="images\ticon.png" />
+    <Resource Include="images\time.png" />
+    <Resource Include="images\toolbg.gif" />
+    <Resource Include="images\topbg.gif" />
+    <Resource Include="images\topleft.jpg" />
+    <Resource Include="images\topright.jpg" />
+    <Resource Include="images\ub1.png" />
+    <Resource Include="images\uew_icon.png" />
+    <Resource Include="images\uew_icon_hover.png" />
+    <Resource Include="images\ulist.png" />
+    <Resource Include="images\user.png" />
+    <Resource Include="images\userbg.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
