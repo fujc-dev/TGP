@@ -186,7 +186,7 @@
                 </DrawingImage>
             </Image.Source>
         </Image>
-        <Image Width="100" Height="100">
+        <Image Width="100" Height="100" Margin="208.5,0">
             <Image.Source>
                 <DrawingImage>
                     <DrawingImage.Drawing>
@@ -195,24 +195,12 @@
                                 <Pen Brush="Black" Thickness="1"/>
                             </GeometryDrawing.Pen>
                             <GeometryDrawing.Geometry>
-                                <CombinedGeometry GeometryCombineMode="Exclude">
-                                    <CombinedGeometry.Geometry1>
-                                        <PathGeometry>
-                                            <PathFigure IsClosed="True" StartPoint="0,-50">
-                                                <LineSegment Point="-43.3,25"/>
-                                                <LineSegment Point="43.3,25"/>
-                                            </PathFigure>
-                                        </PathGeometry>
-                                    </CombinedGeometry.Geometry1>
+                                <CombinedGeometry GeometryCombineMode="Exclude" Geometry1="M0,-50 L-43.3,25 L43.3,25 z">
                                     <CombinedGeometry.Geometry2>
-                                        <PathGeometry>
+                                        <PathGeometry Figures="M0,-50 L-43.3,25 L43.3,25 z">
                                             <PathGeometry.Transform>
                                                 <RotateTransform Angle="180"/>
                                             </PathGeometry.Transform>
-                                            <PathFigure IsClosed="True" StartPoint="0,-50">
-                                                <LineSegment Point="-43.3,25"/>
-                                                <LineSegment Point="43.3,25"/>
-                                            </PathFigure>
                                         </PathGeometry>
                                     </CombinedGeometry.Geometry2>
                                 </CombinedGeometry>
