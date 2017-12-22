@@ -45,6 +45,7 @@
                     <TextBlock TextWrapping="Wrap" Text="工作台" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" TextDecorations="Underline" />
 				</StackPanel>
     		</Grid>
+    		<Grid/>
     	</Grid>
     	<TextBlock TextWrapping="Wrap" Text="Copyright @2018-2025 仅供学习交流，勿用于任何商业用途 QQ：328969111" Margin="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         
