@@ -1,0 +1,13 @@
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\bin\Debug\MIS.ClientUI.exe.config
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\bin\Debug\MIS.ClientUI.exe
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\bin\Debug\MIS.ClientUI.pdb
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MainWindow.baml
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MainWindow.g.cs
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\App.g.cs
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MIS.ClientUI_MarkupCompile.cache
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MIS.ClientUI.g.resources
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MIS.ClientUI.Properties.Resources.resources
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MIS.ClientUI.csproj.GenerateResource.Cache
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MIS.ClientUI.exe
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MIS.ClientUI.pdb
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MIS.ClientUI.csprojResolveAssemblyReference.cache

@@ -1,0 +1,15 @@
+C:\Users\dane\TGP\TGP资源管理平台\TGP.Win3DDemo\bin\Debug\TGP.Win3DDemo.exe.config
+C:\Users\dane\TGP\TGP资源管理平台\TGP.Win3DDemo\bin\Debug\TGP.Win3DDemo.exe
+C:\Users\dane\TGP\TGP资源管理平台\TGP.Win3DDemo\bin\Debug\TGP.Win3DDemo.pdb
+C:\Users\dane\TGP\TGP资源管理平台\TGP.Win3DDemo\obj\Debug\TGP.Win3DDemo.csprojResolveAssemblyReference.cache
+C:\Users\dane\TGP\TGP资源管理平台\TGP.Win3DDemo\obj\Debug\MainWindow.baml
+C:\Users\dane\TGP\TGP资源管理平台\TGP.Win3DDemo\obj\Debug\MainWindow.g.cs
+C:\Users\dane\TGP\TGP资源管理平台\TGP.Win3DDemo\obj\Debug\App.g.cs
+C:\Users\dane\TGP\TGP资源管理平台\TGP.Win3DDemo\obj\Debug\TGP.Win3DDemo_MarkupCompile.cache
+C:\Users\dane\TGP\TGP资源管理平台\TGP.Win3DDemo\obj\Debug\TGP.Win3DDemo.g.resources
+C:\Users\dane\TGP\TGP资源管理平台\TGP.Win3DDemo\obj\Debug\TGP.Win3DDemo.Properties.Resources.resources
+C:\Users\dane\TGP\TGP资源管理平台\TGP.Win3DDemo\obj\Debug\TGP.Win3DDemo.csproj.GenerateResource.Cache
+C:\Users\dane\TGP\TGP资源管理平台\TGP.Win3DDemo\obj\Debug\TGP.Win3DDemo.exe
+C:\Users\dane\TGP\TGP资源管理平台\TGP.Win3DDemo\obj\Debug\TGP.Win3DDemo.pdb
+C:\Users\dane\TGP\TGP资源管理平台\TGP.Win3DDemo\obj\Debug\Window1.baml
+C:\Users\dane\TGP\TGP资源管理平台\TGP.Win3DDemo\obj\Debug\Window1.g.cs
