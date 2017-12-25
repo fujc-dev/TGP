@@ -70,6 +70,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\MISLoginTextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\NavigationUIItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -88,6 +92,9 @@
     </Compile>
     <Compile Include="Controls\ExpanderUIItem.xaml.cs">
       <DependentUpon>ExpanderUIItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MISLoginTextBox.xaml.cs">
+      <DependentUpon>MISLoginTextBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\NavigationUIItem.xaml.cs">
       <DependentUpon>NavigationUIItem.xaml</DependentUpon>
