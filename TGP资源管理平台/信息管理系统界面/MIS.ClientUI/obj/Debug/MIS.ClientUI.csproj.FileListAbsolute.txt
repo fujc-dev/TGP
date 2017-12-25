@@ -1,13 +1,18 @@
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\bin\Debug\MIS.ClientUI.exe.config
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\bin\Debug\MIS.ClientUI.exe
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\bin\Debug\MIS.ClientUI.pdb
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\bin\Debug\WPF.Themes.dll
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\bin\Debug\WPFToolkit.dll
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\ExpanderUI.baml
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\NavigationUIItemDemo.baml
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\Themes\CustomAccordion.baml
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\App.baml
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\ExpanderUI.g.cs
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MainWindow.g.cs
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\NavigationUIItemDemo.g.cs
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\App.g.cs
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MIS.ClientUI_Content.g.cs
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MIS.ClientUI_MarkupCompile.cache
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MIS.ClientUI_MarkupCompile.lref
@@ -18,4 +23,7 @@ C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\ob
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MIS.ClientUI.csproj.GenerateResource.Cache
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MIS.ClientUI.exe
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MIS.ClientUI.pdb
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\Controls\ExpanderUIItem.baml
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MIS.ClientUI.csprojResolveAssemblyReference.cache
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MISLogin.baml
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MISLogin.g.cs
