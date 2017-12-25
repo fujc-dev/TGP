@@ -1,53 +1,114 @@
-﻿<Window x:Class="MIS.ClientUI.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="542" Width="798.725" WindowStyle="None">
-	<!-- 主界面布局 -->
+        xmlns:mis="clr-namespace:MIS.ClientUI.Controls" x:Class="MIS.ClientUI.MainWindow"
+        Title="MainWindow" Height="542" Width="1103.725" WindowStyle="None" ResizeMode="NoResize">
+    <!-- 主界面布局 -->
     <Grid>
-		<!---->
-    	<Grid.RowDefinitions>
-    		<RowDefinition Height="85"/>
-    		<RowDefinition Height="29*"/>
-    		<RowDefinition Height="4*"/>
-    	</Grid.RowDefinitions>
-    	<Grid Margin="0" Height="88">
-    		<Grid.Background>
-    			<ImageBrush ImageSource="images/topbg.gif"/>
-    		</Grid.Background>
-    		<Grid.ColumnDefinitions>
-    			<ColumnDefinition Width="146*"/>
-    			<ColumnDefinition Width="371*"/>
-    		</Grid.ColumnDefinitions>
-    		<Image Source="images/logo.png" Height="56"/>
-    		<Grid Grid.Column="1" Margin="0"/>
-    	</Grid>
-    	<Grid Margin="0" Grid.Row="1">
-    		<Grid.ColumnDefinitions>
-    			<ColumnDefinition Width="59*"/>
-    			<ColumnDefinition Width="200*"/>
-    		</Grid.ColumnDefinitions>
-    		<Grid Grid.Column="1" Margin="0">
-    			<Grid.RowDefinitions>
-    				<RowDefinition Height="40"/>
-    				<RowDefinition Height="*"/>
-    			</Grid.RowDefinitions>
-    			<StackPanel Orientation="Horizontal">
-    				<StackPanel.Background>
-    					<ImageBrush ImageSource="images/righttop.gif"/>
-    				</StackPanel.Background>
-    				<TextBlock TextWrapping="Wrap" Text="位置：" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold"/>
-                    <TextBlock TextWrapping="Wrap" Text="首页" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" TextDecorations="Underline" />
-					<Image Source="images/rlist.gif">
-						<Image.OpacityMask>
-							<ImageBrush ImageSource="images/rlist.gif" Stretch="None"/>
-						</Image.OpacityMask>
-					</Image>
-                    <TextBlock TextWrapping="Wrap" Text="工作台" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" TextDecorations="Underline" />
+        <!---->
+		<Grid.RowDefinitions>
+			<RowDefinition Height="88"/>
+			<RowDefinition/>
+			<RowDefinition Height="20"/>
+		</Grid.RowDefinitions>
+		<Grid Margin="0" Height="88">
+			<Grid.Background>
+				<ImageBrush ImageSource="images/topbg.gif"/>
+			</Grid.Background>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="300"/>
+				<ColumnDefinition Width="417*"/>
+    		
+			</Grid.ColumnDefinitions>
+			<Image Source="images/logo.png" Height="56" Margin="0,16"/>
+			<Grid Grid.Column="1" Margin="0" Grid.ColumnSpan="2">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="74*"/>
+					<ColumnDefinition Width="175"/>
+				</Grid.ColumnDefinitions>
+				<StackPanel Margin="0" Orientation="Horizontal">
+					<mis:NavigationUIItem  Style="{StaticResource DefaultNavigationUIItemStyle}"  Content="工作台" Height="88" Margin="0" HorizontalAlignment="Left" Width="87"/>
+                    <mis:NavigationUIItem  Style="{StaticResource DefaultNavigationUIItemStyle}" NavigationModuleIcon="images/icon02.png" Content="模块管理" Height="88" Margin="0" HorizontalAlignment="Left" Width="87"/>
+                    <mis:NavigationUIItem  Style="{StaticResource DefaultNavigationUIItemStyle}" NavigationModuleIcon="images/icon03.png" Content="模块设计" Height="88" Margin="0" HorizontalAlignment="Left" Width="87"/>
+                    <mis:NavigationUIItem  Style="{StaticResource DefaultNavigationUIItemStyle}" NavigationModuleIcon="images/icon04.png" Content="常用工具" Height="88" Margin="0" HorizontalAlignment="Left" Width="87"/>
+                    <mis:NavigationUIItem  Style="{StaticResource DefaultNavigationUIItemStyle}" NavigationModuleIcon="images/icon05.png" Content="文件管理" Height="88" Margin="0" HorizontalAlignment="Left" Width="87"/>
+                    <mis:NavigationUIItem  Style="{StaticResource DefaultNavigationUIItemStyle}" NavigationModuleIcon="images/icon06.png" Content="系统设置" Height="88" Margin="0" HorizontalAlignment="Left" Width="87"/>
 				</StackPanel>
-    		</Grid>
-    		<Grid/>
-    	</Grid>
-    	<TextBlock TextWrapping="Wrap" Text="Copyright @2018-2025 仅供学习交流，勿用于任何商业用途 QQ：328969111" Margin="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+				<StackPanel Margin="0" Grid.Column="1">
+					<StackPanel.Background>
+						<ImageBrush ImageSource="images/topright.jpg"/>
+					</StackPanel.Background>
+					<StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
+						<Label Content="帮助" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+						<Label Content="关于" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+						<Label Content="退出" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+					</StackPanel>
+					<StackPanel Height="30" Orientation="Horizontal">
+						<Border BorderBrush="Black" BorderThickness="0" Width="173" CornerRadius="12">
+							<Border.Background>
+								<ImageBrush ImageSource="images/ub1.png"/>
+							</Border.Background>
+							<Grid>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="9"/>
+									<ColumnDefinition Width="15"/>
+									<ColumnDefinition/>
+									<ColumnDefinition Width="15"/>
+									<ColumnDefinition Width="9"/>
+								</Grid.ColumnDefinitions>
+								<Image Grid.Column="1" Margin="0" Source="images/user.png" VerticalAlignment="Center" HorizontalAlignment="Center" Height="10"/>
+								<TextBlock Margin="0" TextWrapping="Wrap" Text="8" Foreground="White" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="4,0" Height="15.24" Width="15.036" IsEnabled="False">
+									<TextBlock.Background>
+										<ImageBrush ImageSource="images/msg.png"/>
+									</TextBlock.Background>
+								</TextBlock>
+								<Label Content="ailsabe@126.com" Margin="0" Foreground="White" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+							</Grid>
+						</Border>
+					</StackPanel>
+				</StackPanel>
+			</Grid>
+		</Grid>
+		<Grid Margin="0" Grid.Row="1">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="186"/>
+				<ColumnDefinition Width="200*"/>
+			</Grid.ColumnDefinitions>
+			<Grid Grid.Column="1" Margin="0">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="40"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+				<StackPanel Orientation="Horizontal">
+					<StackPanel.Background>
+						<ImageBrush ImageSource="images/righttop.gif"/>
+					</StackPanel.Background>
+					<TextBlock TextWrapping="Wrap" Text="位置：" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold"/>
+					<TextBlock TextWrapping="Wrap" Text="首页" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" TextDecorations="Underline" />
+					<Path  Fill="#BFBFBF" Data="M360.273264 62.597891 160.272775 62.597891 593.747737 496.060983 160.272775 963.003378l199.994349 0L793.747203 496.060983 360.273264 62.597891z" Stretch="Fill" Width="5" Height="6" Margin="5,0,0,0"/>
+					<TextBlock TextWrapping="Wrap" Text="工作台" Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" TextDecorations="Underline" />
+				</StackPanel>
+			</Grid>
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="40"/>
+					<RowDefinition/>
+				</Grid.RowDefinitions>
+				<Border>
+					<Border.Background>
+						<ImageBrush ImageSource="images/lefttop.gif"/>
+					</Border.Background>
+					<TextBlock TextWrapping="Wrap" Text="通讯录" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+				</Border>
+				<Expander Header="管理信息" Margin="0" Grid.Row="1">
+					<Grid Background="#FFE5E5E5"/>
+				</Expander>
+			</Grid>
+		</Grid>
+		<StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <TextBlock TextWrapping="Wrap" Text="Copyright @2018-2025 仅供学习交流，勿用于任何商业用途 QQ：" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock TextWrapping="Wrap" Text="328969111" TextDecorations="Underline" Foreground="#FF002EFF"/>
+        </StackPanel>
         
-    </Grid>
+	</Grid>
 </Window>
