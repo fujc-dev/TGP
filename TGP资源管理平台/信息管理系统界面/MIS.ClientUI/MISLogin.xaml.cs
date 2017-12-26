@@ -12,16 +12,40 @@ using System.Windows.Shapes;
 
 namespace MIS.ClientUI
 {
-	/// <summary>
-	/// MISLogin.xaml 的交互逻辑
-	/// </summary>
-	public partial class MISLogin : Window
-	{
-		public MISLogin()
-		{
-			this.InitializeComponent();
-			
-			// 在此点之下插入创建对象所需的代码。
-		}
-	}
+    public partial class MISLogin : Window
+    {
+        public MISLogin()
+        {
+            this.InitializeComponent();
+            this.DataContext = this;
+            this._BindCommand();
+        }
+
+        public ICommand ExitCommand { get; private set; }
+        public ICommand ForgetPasswordCommand { get; private set; }
+        public ICommand HelpCommand { get; private set; }
+        public ICommand LoginCommand { get; private set; }
+
+
+        private void BindCommand(UIElement @ui, ICommand com, Action<object, ExecutedRoutedEventArgs> call)
+        {
+            var bind = new CommandBinding(com);
+            bind.Executed += new ExecutedRoutedEventHandler(call);
+            @ui.CommandBindings.Add(bind);
+        }
+
+        private void _BindCommand()
+        {
+            this.ExitCommand = new RoutedUICommand();
+            this.ForgetPasswordCommand = new RoutedUICommand();
+            this.HelpCommand = new RoutedUICommand();
+            this.LoginCommand = new RoutedUICommand();
+            this.BindCommand(this, this.LoginCommand, (sender, eventArgs) => { new MainWindow().Show(); this.Close(); });
+            this.BindCommand(this, this.ForgetPasswordCommand, (sender, eventArgs) => { });
+            this.BindCommand(this, this.HelpCommand, (sender, eventArgs) => { });
+            //绑定命令
+            this.BindCommand(this, this.ExitCommand, (s, e) => { Application.Current.Shutdown(); });
+        }
+
+    }
 }

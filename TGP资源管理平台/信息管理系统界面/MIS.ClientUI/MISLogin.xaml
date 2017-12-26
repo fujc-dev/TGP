@@ -51,7 +51,7 @@
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="1" Margin="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="196.068"/>
+                        <ColumnDefinition Width="190"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
@@ -64,12 +64,12 @@
                     <Grid.Background>
                         <ImageBrush ImageSource="images/logininfo.png"/>
                     </Grid.Background>
-                    <Controls:MISLoginTextBox Style="{StaticResource MISLoginTextBoxStyle}"  Grid.Column="1" Height="35" Margin="0" Grid.Row="1" TextWrapping="Wrap"  Width="250" HorizontalAlignment="Left"/>
-                    <PasswordBox Style="{StaticResource MISLoginPasswordBoxStyle}" Grid.Column="1" Height="35" Margin="0" Grid.Row="2" Width="250" HorizontalAlignment="Left"/>
-                    <StackPanel Grid.Column="1" Margin="0" Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center">
-                        <Button Style="{DynamicResource MISDefaultButtonType1Style}" Content="Button" HorizontalAlignment="Left" Height="30"  Margin="0,0,0,4.573" VerticalAlignment="Center" Width="111"/>
+                    <Controls:MISLoginTextBox Style="{StaticResource MISLoginTextBoxStyle}"  Grid.Column="1" Height="Auto" Margin="0,7.5" Grid.Row="1" TextWrapping="Wrap"  Width="250" HorizontalAlignment="Left"/>
+                    <PasswordBox Style="{StaticResource MISLoginPasswordBoxStyle}" Grid.Column="1" Height="Auto" Margin="0,7.5" Grid.Row="2" Width="250" HorizontalAlignment="Left"/>
+                    <StackPanel Grid.Column="1" Margin="0" Orientation="Horizontal" Grid.Row="3">
+                        <Button Command="{Binding LoginCommand}" Style="{DynamicResource MISDefaultButtonType1Style}" Content="Button" HorizontalAlignment="Left" Height="30"  Margin="0,0,0,4.573" VerticalAlignment="Center" Width="111"/>
                         <CheckBox Content="记住密码" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
-                        <Controls:MISLinkButton  Content="忘记密码？" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Style="{DynamicResource DefaultLinkButtonStyle}"/>
+                        <Controls:MISLinkButton ToolTip="忘记密码？" Command="{Binding ForgetPasswordCommand}" Content="忘记密码？" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" Style="{DynamicResource DefaultLinkButtonStyle}"/>
                     </StackPanel>
                 </Grid>
                 <!--<Grid.Background>
@@ -80,7 +80,7 @@
         <Grid Margin="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="100"/>
             </Grid.ColumnDefinitions>
             <Grid.Background>
                 <ImageBrush ImageSource="images/loginbg1.png"/>
@@ -96,11 +96,9 @@
                     </i:Interaction.Behaviors>
                 </Rectangle>
             </Grid>
-
-            <StackPanel Orientation="Horizontal" Margin="0,0,20,0" Grid.Column="1" HorizontalAlignment="Right" Width="174">
-                <Label Content="回首页" Margin="10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
-                <Label Content="帮助" Margin="10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
-                <Label Content="关于" Margin="10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+            <StackPanel Orientation="Horizontal" Margin="0" Grid.Column="1">
+                <Controls:MISLinkButton Command="{Binding HelpCommand}" Style="{DynamicResource DefaultLinkButtonStyle}" Content="帮助" LBForeground="White" Margin="10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                <Controls:MISLinkButton Command="{Binding ExitCommand}" CommandParameter="1" LBForeground="White" Style="{DynamicResource DefaultLinkButtonStyle}" Content="退出" Margin="10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
             </StackPanel>
         </Grid>
     </Grid>
