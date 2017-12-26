@@ -274,6 +274,48 @@
         		</Setter.Value>
         	</Setter>
         </Style>
+        <Style x:Key="DefaultImageButtonStyle" TargetType="{x:Type Button}">
+        	<Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+        	<Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+        	<Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+        	<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        	<Setter Property="BorderThickness" Value="1"/>
+        	<Setter Property="HorizontalContentAlignment" Value="Center"/>
+        	<Setter Property="VerticalContentAlignment" Value="Center"/>
+        	<Setter Property="Padding" Value="1"/>
+        	<Setter Property="Template">
+        		<Setter.Value>
+        			<ControlTemplate TargetType="{x:Type Button}">
+        				<Border x:Name="border" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true" BorderBrush="#FFD3DBDE" Background="#FFF1F5F7">
+        					<StackPanel Margin="0" Orientation="Horizontal">
+        						<Image HorizontalAlignment="Center" Height="Auto" Margin="5,2" VerticalAlignment="Center" Source="images/t01.png" Stretch="Uniform"/>
+        						<TextBlock x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="0" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Width="Auto" Height="Auto" Text="{TemplateBinding Content}"/>
+        					</StackPanel>
+        				</Border>
+        				<ControlTemplate.Triggers>
+        					<Trigger Property="IsDefaulted" Value="true">
+        						<Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+        					</Trigger>
+        					<Trigger Property="IsMouseOver" Value="true">
+        						<Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+        						<Setter Property="BorderBrush" TargetName="border" Value="#FF00B0DF"/>
+        						<Setter Property="Foreground" TargetName="contentPresenter" Value="#FF00B0DF"/>
+        					</Trigger>
+        					<Trigger Property="IsPressed" Value="true">
+        						<Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+        						<Setter Property="Foreground" TargetName="contentPresenter" Value="#FF00B0DF"/>
+        						<Setter Property="BorderBrush" TargetName="border" Value="#FF00B0DF"/>
+        					</Trigger>
+        					<Trigger Property="IsEnabled" Value="false">
+        						<Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+        						<Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+        						<Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+        					</Trigger>
+        				</ControlTemplate.Triggers>
+        			</ControlTemplate>
+        		</Setter.Value>
+        	</Setter>
+        </Style>
     </Window.Resources>
 
 	<Grid x:Name="LayoutRoot">
@@ -285,7 +327,8 @@
 		<TextBox Margin="188.5,53.907,193.5,360.093" TextWrapping="Wrap" Text="TextBox" Width="250" Height="35" Style="{DynamicResource MISLoginTextBoxStyle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 		<PasswordBox HorizontalAlignment="Left" Password="221312" Height="35" Margin="188.5,101.34,0,0" VerticalAlignment="Top" Width="250" Style="{DynamicResource MISLoginPasswordBoxStyle}"/>
 		<Button Content="Button" HorizontalAlignment="Left" Height="35" Margin="93.5,189,0,0" VerticalAlignment="Top" Width="111" Style="{DynamicResource MISDefaultButtonType1Style}"/>
-		<Button Content="Button" HorizontalAlignment="Left" Height="23" Margin="281,224,0,0" VerticalAlignment="Top" Width="157.5" Style="{DynamicResource DefaultLinkButtonStyle}"/>
+		<Button Content="Button" HorizontalAlignment="Left" Height="23" Margin="235,196.523,0,0" VerticalAlignment="Top" Width="157.5" Style="{DynamicResource DefaultLinkButtonStyle}"/>
+		<Button Content="添加新的快捷功能" HorizontalAlignment="Left" Height="23" Margin="427,196.523,0,0" VerticalAlignment="Top" Width="159" Style="{DynamicResource DefaultImageButtonStyle}"/>
 
 
 	</Grid>
