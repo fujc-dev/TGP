@@ -1,0 +1,13 @@
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\bin\Debug\MIS.AutoUpdate.exe.config
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\bin\Debug\MIS.AutoUpdate.exe
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\bin\Debug\MIS.AutoUpdate.pdb
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MIS.AutoUpdate.csprojResolveAssemblyReference.cache
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MainWindow.baml
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MainWindow.g.cs
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\App.g.cs
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MIS.AutoUpdate_MarkupCompile.cache
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MIS.AutoUpdate.g.resources
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MIS.AutoUpdate.Properties.Resources.resources
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MIS.AutoUpdate.csproj.GenerateResource.Cache
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MIS.AutoUpdate.exe
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MIS.AutoUpdate.pdb
