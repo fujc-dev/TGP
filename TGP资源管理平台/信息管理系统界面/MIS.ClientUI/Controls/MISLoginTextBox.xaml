@@ -6,4 +6,74 @@
              xmlns:mis="clr-namespace:MIS.ClientUI.Controls"
              mc:Ignorable="d" >
 
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Themes/Corlors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="MISLoginTextBoxStyle" TargetType="{x:Type mis:MISLoginTextBox}">
+        <Setter Property="Width" Value="250"/>
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource TextBox.Static.Border}"/>
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="AllowDrop" Value="true"/>
+        <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type mis:MISLoginTextBox}">
+                    <Border x:Name="border" SnapsToDevicePixels="True" CornerRadius="3" Margin="0" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" VerticalAlignment="Stretch" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="../images/loginuser.png" Stretch="Fill"/>
+                        </Border.Background>
+                        <Grid Background="{x:Null}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="22"/>
+                                <RowDefinition Height="1*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="27"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Grid.ColumnSpan="1" Grid.Column="1" Grid.Row="1" Margin="0" Height="Auto"  VerticalAlignment="Center" d:IsHidden="True"/>
+                            <!-- 水印部分 -->
+                            <Border Grid.ColumnSpan="1" Grid.Column="1" Grid.Row="1">
+                                <TextBlock x:Name="Watermark"  Padding="0" Visibility="Collapsed"  Focusable="False" Text="请输入登录用户名！"  Foreground="#C6833D" IsHitTestVisible="False"  Opacity="1" VerticalAlignment="Center" Margin="2,0,0,0" />
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Value="">
+                            <Setter TargetName="Watermark" Property="Visibility" Value="Visible" />
+                        </DataTrigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="BorderThickness" TargetName="border" Value="1"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="#83ACE6"/>
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="true">
+                            <Setter Property="BorderThickness" TargetName="border" Value="1"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="#83ACE6"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                    <Condition Property="IsSelectionActive" Value="false"/>
+                </MultiTrigger.Conditions>
+                <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
 </ResourceDictionary>

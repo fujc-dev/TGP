@@ -41,6 +41,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Assets\References\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assets\References\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -70,7 +74,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\MISLinkButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\MISLoginButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MISLoginPassword.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -94,11 +106,18 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Behaviors\MouseDragFrameworkElementBehavior.cs" />
     <Compile Include="Controls\ExpanderUIItem.xaml.cs">
       <DependentUpon>ExpanderUIItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MISLinkButton.xaml.cs">
+      <DependentUpon>MISLinkButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\MISLoginButton.xaml.cs">
       <DependentUpon>MISLoginButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MISLoginPassword.xaml.cs">
+      <DependentUpon>MISLoginPassword.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\MISLoginTextBox.xaml.cs">
       <DependentUpon>MISLoginTextBox.xaml</DependentUpon>
@@ -120,6 +139,10 @@
     <Page Include="NavigationUIItemDemo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Corlors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Themes\CustomAccordion.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -288,7 +311,15 @@
     <Resource Include="images\userbg.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\References\Microsoft.Expression.Controls.dll" />
+    <Content Include="Assets\References\Microsoft.Expression.Drawing.dll" />
+    <Content Include="Assets\References\Microsoft.Expression.Effects.dll" />
+    <Content Include="Assets\References\Microsoft.Expression.Interactions.dll" />
+    <Content Include="Assets\References\Microsoft.Expression.Prototyping.Interactivity.dll" />
+    <Content Include="Assets\References\Microsoft.Windows.Shell.dll" />
+    <Content Include="Assets\References\System.Utility.dll" />
     <Content Include="Assets\References\System.Windows.Controls.Layout.Toolkit.dll" />
+    <Content Include="Assets\References\System.Windows.Interactivity.dll" />
     <Content Include="Assets\References\WPF.Themes.dll" />
     <Content Include="Assets\References\WPFToolkit.dll" />
   </ItemGroup>

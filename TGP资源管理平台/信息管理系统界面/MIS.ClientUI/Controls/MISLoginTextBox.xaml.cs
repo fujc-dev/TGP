@@ -16,13 +16,10 @@ using System.Windows.Shapes;
 namespace MIS.ClientUI.Controls
 {
     /// <summary>
-    /// MISLoginTextBox.xaml 的交互逻辑
+    /// 普通文本输入框、密码输入框等
     /// </summary>
-    public partial class MISLoginTextBox : UserControl
+    public partial class MISLoginTextBox : TextBox
     {
-        public MISLoginTextBox()
-        {
-            InitializeComponent();
-        }
+ 
     }
 }

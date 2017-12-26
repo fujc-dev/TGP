@@ -8,7 +8,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/references/microsoft.expression.controls.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/references/microsoft.expression.drawing.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/references/microsoft.expression.effects.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/references/microsoft.expression.interactions.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/references/microsoft.expression.prototyping.interactivity.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/references/microsoft.windows.shell.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/references/system.utility.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/references/system.windows.controls.layout.toolkit.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/references/system.windows.interactivity.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/references/wpf.themes.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/references/wpftoolkit.dll")]
 

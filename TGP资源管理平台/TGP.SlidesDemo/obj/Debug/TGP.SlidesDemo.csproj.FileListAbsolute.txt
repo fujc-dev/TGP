@@ -1,6 +1,5 @@
 C:\Users\dane\TGP\TGP资源管理平台\TGP.SlidesDemo\bin\Debug\TGP.SlidesDemo.exe
 C:\Users\dane\TGP\TGP资源管理平台\TGP.SlidesDemo\bin\Debug\TGP.SlidesDemo.pdb
-C:\Users\dane\TGP\TGP资源管理平台\TGP.SlidesDemo\obj\Debug\TGP.SlidesDemo.csprojResolveAssemblyReference.cache
 C:\Users\dane\TGP\TGP资源管理平台\TGP.SlidesDemo\obj\Debug\MainWindow.g.cs
 C:\Users\dane\TGP\TGP资源管理平台\TGP.SlidesDemo\obj\Debug\App.g.cs
 C:\Users\dane\TGP\TGP资源管理平台\TGP.SlidesDemo\obj\Debug\GeneratedInternalTypeHelper.g.cs

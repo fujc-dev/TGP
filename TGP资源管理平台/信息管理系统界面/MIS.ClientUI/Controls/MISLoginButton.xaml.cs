@@ -18,11 +18,8 @@ namespace MIS.ClientUI.Controls
     /// <summary>
     /// MISLoginButton.xaml 的交互逻辑
     /// </summary>
-    public partial class MISLoginButton : UserControl
+    public partial class MISLoginButton : Button
     {
-        public MISLoginButton()
-        {
-            InitializeComponent();
-        }
+
     }
 }

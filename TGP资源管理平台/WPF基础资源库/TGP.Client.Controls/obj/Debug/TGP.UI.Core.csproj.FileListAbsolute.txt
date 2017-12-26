@@ -23,4 +23,3 @@ C:\Users\dane\TGP\TGP资源管理平台\WPF基础资源库\TGP.Client.Controls\o
 C:\Users\dane\TGP\TGP资源管理平台\WPF基础资源库\TGP.Client.Controls\obj\Debug\TGP.UI.Core.csproj.GenerateResource.Cache
 C:\Users\dane\TGP\TGP资源管理平台\WPF基础资源库\TGP.Client.Controls\obj\Debug\TGP.UI.Core.exe
 C:\Users\dane\TGP\TGP资源管理平台\WPF基础资源库\TGP.Client.Controls\obj\Debug\TGP.UI.Core.pdb
-C:\Users\dane\TGP\TGP资源管理平台\WPF基础资源库\TGP.Client.Controls\obj\Debug\TGP.UI.Core.csprojResolveAssemblyReference.cache
