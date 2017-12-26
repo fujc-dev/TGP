@@ -1,0 +1,4 @@
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.DB\bin\Debug\MIS.DB.dll
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.DB\bin\Debug\MIS.DB.pdb
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.DB\obj\Debug\MIS.DB.dll
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.DB\obj\Debug\MIS.DB.pdb

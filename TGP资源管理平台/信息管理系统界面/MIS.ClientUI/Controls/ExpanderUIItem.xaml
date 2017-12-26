@@ -21,12 +21,28 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="true" Background="#FFF0F9FD">
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0">
-                            <Path  Fill="Black" Data="M-29.27-24.289v1074.948l643.806-543.184-643.806-531.764z" Stretch="Fill" Width="5" Height="6" Margin="5,0"/>
-                            <TextBlock x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}"  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Width="100" Text="{TemplateBinding Content}"/>
-                        </StackPanel>
-                    </Border>
+                    <Grid Height="Auto" Width="Auto">
+                    	<Grid.ColumnDefinitions>
+                    		<ColumnDefinition Width="*"/>
+                    		<ColumnDefinition Width="6"/>
+                    	</Grid.ColumnDefinitions>
+                		<Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="true" Background="#FFF0F9FD" Grid.ColumnSpan="2">
+                			<StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,0">
+                				<Path  Fill="Black" Data="M-29.27-24.289v1074.948l643.806-543.184-643.806-531.764z" Stretch="Fill" Width="5" Height="6" Margin="5,0"/>
+                				<TextBlock x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}"  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Width="100" Text="{TemplateBinding Content}"/>
+                			</StackPanel>
+                		</Border>
+                		<Image x:Name="image" HorizontalAlignment="Right" Height="11" VerticalAlignment="Stretch" Width="6" RenderTransformOrigin="0.5,0.5" Margin="0" Grid.Column="1">
+                			<Image.RenderTransform>
+                				<TransformGroup>
+                					<ScaleTransform/>
+                					<SkewTransform/>
+                					<RotateTransform/>
+                					<TranslateTransform/>
+                				</TransformGroup>
+                			</Image.RenderTransform>
+                		</Image>
+                	</Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsDefaulted" Value="true">
                             <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
@@ -37,13 +53,32 @@
                         </Trigger>
                         <Trigger Property="IsFocused" Value="true">
                             <Setter Property="Foreground" TargetName="contentPresenter" Value="#FFF"/>
-                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
                             <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
                             <Setter Property="Background" TargetName="border">
                                 <Setter.Value>
                                     <ImageBrush ImageSource="../images/libg.png"/>
                                 </Setter.Value>
                             </Setter>
+                            <Setter Property="Grid.Column" TargetName="image" Value="1"/>
+                            <Setter Property="Grid.ColumnSpan" TargetName="image" Value="1"/>
+                            <Setter Property="RenderTransform" TargetName="image">
+                            	<Setter.Value>
+                            		<TransformGroup>
+                            			<ScaleTransform ScaleX="-1"/>
+                            			<SkewTransform/>
+                            			<RotateTransform Angle="180"/>
+                            			<TranslateTransform X="0"/>
+                            		</TransformGroup>
+                            	</Setter.Value>
+                            </Setter>
+                            <Setter Property="Margin" TargetName="image" Value="0"/>
+                            <Setter Property="Source" TargetName="image" Value="/MIS.ClientUI;component/images/sj.png"/>
+                            <Setter Property="StretchDirection" TargetName="image" Value="Both"/>
+                            <Setter Property="Width" TargetName="image" Value="6"/>
+                            <Setter Property="Height" TargetName="image" Value="11"/>
+                            <Setter Property="VerticalAlignment" TargetName="image" Value="Center"/>
+                            <Setter Property="HorizontalAlignment" TargetName="image" Value="Stretch"/>
+                            <Setter Property="Stretch" TargetName="image" Value="Fill"/>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>

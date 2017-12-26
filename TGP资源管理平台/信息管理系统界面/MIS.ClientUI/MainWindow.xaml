@@ -93,122 +93,135 @@
 					<TextBlock TextWrapping="Wrap" Text="工作台" Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" TextDecorations="Underline" />
 				</StackPanel>
 			</Grid>
-			<Border BorderBrush="#FFB7D5DF" BorderThickness="1">
-				<Grid Margin="0">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="20*"/>
+					<RowDefinition Height="197*"/>
+				</Grid.RowDefinitions>
+				<StackPanel Orientation="Horizontal">
+					<StackPanel.Background>
+						<ImageBrush ImageSource="images/lefttop.gif"/>
+					</StackPanel.Background>
+					<Image Height="21" Source="images/leftico.png" Width="20" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,0,0"/>
+					<TextBlock TextWrapping="Wrap" Text="工作台" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="14.667" FontWeight="Bold"/>
+				</StackPanel>
+				<Border BorderBrush="#FFB7D5DF" BorderThickness="1" Grid.Row="1">
+					<Grid Margin="0">
                 <!--左侧手风琴导航部分-->
-					<toolkit:Accordion 
-						x:Name="MainNavigationAccordion"
-						Margin="0" 
-						HorizontalAlignment="Stretch" VerticalAlignment="Top"
+						<toolkit:Accordion 
+							x:Name="MainNavigationAccordion"
+							Margin="0" 
+							HorizontalAlignment="Stretch" VerticalAlignment="Top"
                     >
             <!--管理信息-->
-						<toolkit:AccordionItem >
-							<toolkit:AccordionItem.Header>
-								<Grid HorizontalAlignment="Stretch" Margin="0 0 0 4">
-									<Grid.ColumnDefinitions>
-										<ColumnDefinition Width="*" />
-										<ColumnDefinition Width="*" />
-									</Grid.ColumnDefinitions>
-									<TextBlock 
-										Text="管理信息"
-										Grid.Column="0" VerticalAlignment="Center" />
-									<Image 
-										Grid.Column="1" 
-										Height="16" VerticalAlignment="Center" 
-										HorizontalAlignment="Right" 
-										Source="images/leftico01.png" />
-								</Grid>
-							</toolkit:AccordionItem.Header>
-							<StackPanel>
-								<mis:ExpanderUIItem Height="30" Content="首页模版" Style="{StaticResource DefaultExpanderUIItem}"/>
-								<mis:ExpanderUIItem Height="30" Content="数据列表" Style="{StaticResource DefaultExpanderUIItem}"/>
-								<mis:ExpanderUIItem Height="30" Content="图片数据表" Style="{StaticResource DefaultExpanderUIItem}"/>
-								<mis:ExpanderUIItem Height="30" Content="添加编辑" Style="{StaticResource DefaultExpanderUIItem}"/>
-								<mis:ExpanderUIItem Height="30" Content="图片列表" Style="{StaticResource DefaultExpanderUIItem}"/>
-								<mis:ExpanderUIItem Height="30" Content="自定义" Style="{StaticResource DefaultExpanderUIItem}"/>
-								<mis:ExpanderUIItem Height="30" Content="常用工具" Style="{StaticResource DefaultExpanderUIItem}"/>
-								<mis:ExpanderUIItem Height="30" Content="信息管理" Style="{StaticResource DefaultExpanderUIItem}"/>
-								<mis:ExpanderUIItem Height="30" Content="Tab页面" Style="{StaticResource DefaultExpanderUIItem}"/>
-								<mis:ExpanderUIItem Height="30" Content="404页面" Style="{StaticResource DefaultExpanderUIItem}"/>    
-							</StackPanel>
-						</toolkit:AccordionItem>
+							<toolkit:AccordionItem >
+								<toolkit:AccordionItem.Header>
+									<Grid HorizontalAlignment="Stretch" Margin="0 0 0 4">
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition Width="*" />
+											<ColumnDefinition Width="*" />
+										</Grid.ColumnDefinitions>
+										<TextBlock 
+											Text="管理信息"
+											Grid.Column="0" VerticalAlignment="Center" />
+										<Image 
+											Grid.Column="1" 
+											Height="16" VerticalAlignment="Center" 
+											HorizontalAlignment="Right" 
+											Source="images/leftico01.png" />
+									</Grid>
+								</toolkit:AccordionItem.Header>
+								<StackPanel>
+									<Controls:ExpanderUIItem Height="30" Content="首页模版" Style="{StaticResource DefaultExpanderUIItem}"/>
+									<Controls:ExpanderUIItem Height="30" Content="数据列表" Style="{StaticResource DefaultExpanderUIItem}"/>
+									<Controls:ExpanderUIItem Height="30" Content="图片数据表" Style="{StaticResource DefaultExpanderUIItem}"/>
+									<Controls:ExpanderUIItem Height="30" Content="添加编辑" Style="{StaticResource DefaultExpanderUIItem}"/>
+									<Controls:ExpanderUIItem Height="30" Content="图片列表" Style="{StaticResource DefaultExpanderUIItem}"/>
+									<Controls:ExpanderUIItem Height="30" Content="自定义" Style="{StaticResource DefaultExpanderUIItem}"/>
+									<Controls:ExpanderUIItem Height="30" Content="常用工具" Style="{StaticResource DefaultExpanderUIItem}"/>
+									<Controls:ExpanderUIItem Height="30" Content="信息管理" Style="{StaticResource DefaultExpanderUIItem}"/>
+									<Controls:ExpanderUIItem Height="30" Content="Tab页面" Style="{StaticResource DefaultExpanderUIItem}"/>
+									<Controls:ExpanderUIItem Height="30" Content="404页面" Style="{StaticResource DefaultExpanderUIItem}"/>    
+								</StackPanel>
+							</toolkit:AccordionItem>
             <!--其他设置-->
-						<toolkit:AccordionItem>
-							<toolkit:AccordionItem.Header>
-								<Grid HorizontalAlignment="Stretch" Margin="0 0 0 4">
-									<Grid.ColumnDefinitions>
-										<ColumnDefinition Width="*" />
-										<ColumnDefinition Width="*" />
-									</Grid.ColumnDefinitions>
-									<TextBlock 
-										Text="其他设置"
-										Grid.Column="0" VerticalAlignment="Center" />
-									<Image 
-										Grid.Column="1" 
-										Height="16" 
-										HorizontalAlignment="Right" 
-										Source="images/leftico02.png" />
-								</Grid>
-							</toolkit:AccordionItem.Header>
-							<StackPanel>
-								<mis:ExpanderUIItem Height="30" Content="编辑内容" Style="{StaticResource DefaultExpanderUIItem}"/>
-								<mis:ExpanderUIItem Height="30" Content="发布信息" Style="{StaticResource DefaultExpanderUIItem}"/>
-								<mis:ExpanderUIItem Height="30" Content="档案列表显示" Style="{StaticResource DefaultExpanderUIItem}"/>
-							</StackPanel>
-						</toolkit:AccordionItem>
+							<toolkit:AccordionItem>
+								<toolkit:AccordionItem.Header>
+									<Grid HorizontalAlignment="Stretch" Margin="0 0 0 4">
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition Width="*" />
+											<ColumnDefinition Width="*" />
+										</Grid.ColumnDefinitions>
+										<TextBlock 
+											Text="其他设置"
+											Grid.Column="0" VerticalAlignment="Center" />
+										<Image 
+											Grid.Column="1" 
+											Height="16" 
+											HorizontalAlignment="Right" 
+											Source="images/leftico02.png" />
+									</Grid>
+								</toolkit:AccordionItem.Header>
+								<StackPanel>
+									<Controls:ExpanderUIItem Height="30" Content="编辑内容" Style="{StaticResource DefaultExpanderUIItem}"/>
+									<Controls:ExpanderUIItem Height="30" Content="发布信息" Style="{StaticResource DefaultExpanderUIItem}"/>
+									<Controls:ExpanderUIItem Height="30" Content="档案列表显示" Style="{StaticResource DefaultExpanderUIItem}"/>
+								</StackPanel>
+							</toolkit:AccordionItem>
             <!--编辑器-->
-						<toolkit:AccordionItem>
-							<toolkit:AccordionItem.Header>
-								<Grid HorizontalAlignment="Stretch" Margin="0 0 0 4">
-									<Grid.ColumnDefinitions>
-										<ColumnDefinition Width="*" />
-										<ColumnDefinition Width="*" />
-									</Grid.ColumnDefinitions>
-									<TextBlock 
-										Text="编辑器"
-										Grid.Column="0" VerticalAlignment="Center" />
-									<Image 
-										Grid.Column="1" 
-										Height="16" 
-										HorizontalAlignment="Right" 
-										Source="images/leftico03.png" />
-								</Grid>
-							</toolkit:AccordionItem.Header>
-							<StackPanel>
-								<mis:ExpanderUIItem Height="30" Content="自定义" Style="{StaticResource DefaultExpanderUIItem}"/>
-								<mis:ExpanderUIItem Height="30" Content="常用资料" Style="{StaticResource DefaultExpanderUIItem}"/>
-								<mis:ExpanderUIItem Height="30" Content="信息列表" Style="{StaticResource DefaultExpanderUIItem}"/>
-								<mis:ExpanderUIItem Width="186" Height="30" Content="其他" Style="{StaticResource DefaultExpanderUIItem}"/>
-							</StackPanel>
-						</toolkit:AccordionItem>
+							<toolkit:AccordionItem>
+								<toolkit:AccordionItem.Header>
+									<Grid HorizontalAlignment="Stretch" Margin="0 0 0 4">
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition Width="*" />
+											<ColumnDefinition Width="*" />
+										</Grid.ColumnDefinitions>
+										<TextBlock 
+											Text="编辑器"
+											Grid.Column="0" VerticalAlignment="Center" />
+										<Image 
+											Grid.Column="1" 
+											Height="16" 
+											HorizontalAlignment="Right" 
+											Source="images/leftico03.png" />
+									</Grid>
+								</toolkit:AccordionItem.Header>
+								<StackPanel>
+									<Controls:ExpanderUIItem Height="30" Content="自定义" Style="{StaticResource DefaultExpanderUIItem}"/>
+									<Controls:ExpanderUIItem Height="30" Content="常用资料" Style="{StaticResource DefaultExpanderUIItem}"/>
+									<Controls:ExpanderUIItem Height="30" Content="信息列表" Style="{StaticResource DefaultExpanderUIItem}"/>
+									<Controls:ExpanderUIItem Width="186" Height="30" Content="其他" Style="{StaticResource DefaultExpanderUIItem}"/>
+								</StackPanel>
+							</toolkit:AccordionItem>
             <!--日期管理-->
-						<toolkit:AccordionItem>
-							<toolkit:AccordionItem.Header>
-								<Grid HorizontalAlignment="Stretch" Margin="0 0 0 4">
-									<Grid.ColumnDefinitions>
-										<ColumnDefinition Width="*" />
-										<ColumnDefinition Width="*" />
-									</Grid.ColumnDefinitions>
-									<TextBlock 
-										Text="日期管理"
-										Grid.Column="0" VerticalAlignment="Center" />
-									<Image 
-										Grid.Column="1" 
-										Height="16" 
-										HorizontalAlignment="Right" 
-										Source="images/leftico04.png" />
-								</Grid>
-							</toolkit:AccordionItem.Header>
-							<StackPanel>
-								<mis:ExpanderUIItem Height="30" Content="自定义" Style="{StaticResource DefaultExpanderUIItem}"/>
-								<mis:ExpanderUIItem Height="30" Content="常用资料" Style="{StaticResource DefaultExpanderUIItem}"/>
-								<mis:ExpanderUIItem Height="30" Content="信息列表" Style="{StaticResource DefaultExpanderUIItem}"/>
-								<mis:ExpanderUIItem Height="30" Content="其他" Style="{StaticResource DefaultExpanderUIItem}"/>
-							</StackPanel>
-						</toolkit:AccordionItem>
-					</toolkit:Accordion>
-				</Grid>
-			</Border>
+							<toolkit:AccordionItem>
+								<toolkit:AccordionItem.Header>
+									<Grid HorizontalAlignment="Stretch" Margin="0 0 0 4">
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition Width="*" />
+											<ColumnDefinition Width="*" />
+										</Grid.ColumnDefinitions>
+										<TextBlock 
+											Text="日期管理"
+											Grid.Column="0" VerticalAlignment="Center" />
+										<Image 
+											Grid.Column="1" 
+											Height="16" 
+											HorizontalAlignment="Right" 
+											Source="images/leftico04.png" />
+									</Grid>
+								</toolkit:AccordionItem.Header>
+								<StackPanel>
+									<Controls:ExpanderUIItem Height="30" Content="自定义" Style="{StaticResource DefaultExpanderUIItem}"/>
+									<Controls:ExpanderUIItem Height="30" Content="常用资料" Style="{StaticResource DefaultExpanderUIItem}"/>
+									<Controls:ExpanderUIItem Height="30" Content="信息列表" Style="{StaticResource DefaultExpanderUIItem}"/>
+									<Controls:ExpanderUIItem Height="30" Content="其他" Style="{StaticResource DefaultExpanderUIItem}"/>
+								</StackPanel>
+							</toolkit:AccordionItem>
+						</toolkit:Accordion>
+					</Grid>
+				</Border>
+			</Grid>
 		</Grid>
 		<StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" >
 			<TextBlock TextWrapping="Wrap" Text="Copyright @2018-2025 仅供学习交流，勿用于任何商业用途 QQ：" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
