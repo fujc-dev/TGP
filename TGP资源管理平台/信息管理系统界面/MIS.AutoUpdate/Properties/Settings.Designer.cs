@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MIS.YTIM.Properties
+namespace MIS.AutoUpdate.Properties
 {
 
 

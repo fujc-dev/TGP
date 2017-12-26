@@ -32,3 +32,4 @@ C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\ob
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MIS.ClientUI.pdb
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\Themes\Corlors.baml
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\MIS.ClientUI.csprojResolveAssemblyReference.cache

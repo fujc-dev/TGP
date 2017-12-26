@@ -74,6 +74,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Controls\MISImageButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\MISLinkButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -109,6 +113,9 @@
     <Compile Include="Behaviors\MouseDragFrameworkElementBehavior.cs" />
     <Compile Include="Controls\ExpanderUIItem.xaml.cs">
       <DependentUpon>ExpanderUIItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MISImageButton.xaml.cs">
+      <DependentUpon>MISImageButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\MISLinkButton.xaml.cs">
       <DependentUpon>MISLinkButton.xaml</DependentUpon>
@@ -322,6 +329,9 @@
     <Content Include="Assets\References\System.Windows.Interactivity.dll" />
     <Content Include="Assets\References\WPF.Themes.dll" />
     <Content Include="Assets\References\WPFToolkit.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Plugins\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

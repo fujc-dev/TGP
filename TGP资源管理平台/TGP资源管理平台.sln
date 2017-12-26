@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIS.DB", "信息管理系�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIS.YTIM", "信息管理系统界面\MIS.YTIM\MIS.YTIM.csproj", "{3497A390-9825-48A8-80F1-0112F2487319}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MIS.AutoUpdate", "信息管理系统界面\MIS.AutoUpdate\MIS.AutoUpdate.csproj", "{05E63468-604D-4A24-8EAB-4BF08697A876}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -239,6 +241,18 @@ Global
 		{3497A390-9825-48A8-80F1-0112F2487319}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{3497A390-9825-48A8-80F1-0112F2487319}.Release|Win32.ActiveCfg = Release|Any CPU
 		{3497A390-9825-48A8-80F1-0112F2487319}.Release|x86.ActiveCfg = Release|Any CPU
+		{05E63468-604D-4A24-8EAB-4BF08697A876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05E63468-604D-4A24-8EAB-4BF08697A876}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05E63468-604D-4A24-8EAB-4BF08697A876}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{05E63468-604D-4A24-8EAB-4BF08697A876}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{05E63468-604D-4A24-8EAB-4BF08697A876}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{05E63468-604D-4A24-8EAB-4BF08697A876}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{05E63468-604D-4A24-8EAB-4BF08697A876}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05E63468-604D-4A24-8EAB-4BF08697A876}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05E63468-604D-4A24-8EAB-4BF08697A876}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{05E63468-604D-4A24-8EAB-4BF08697A876}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{05E63468-604D-4A24-8EAB-4BF08697A876}.Release|Win32.ActiveCfg = Release|Any CPU
+		{05E63468-604D-4A24-8EAB-4BF08697A876}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -258,5 +272,6 @@ Global
 		{3C1813C4-6CDC-4C62-B12B-473C333A961A} = {8F85EAFB-DD74-4851-9455-879CBB3F9351}
 		{66FF11F3-FE94-48C9-A103-6D45D134EE31} = {8F85EAFB-DD74-4851-9455-879CBB3F9351}
 		{3497A390-9825-48A8-80F1-0112F2487319} = {8F85EAFB-DD74-4851-9455-879CBB3F9351}
+		{05E63468-604D-4A24-8EAB-4BF08697A876} = {8F85EAFB-DD74-4851-9455-879CBB3F9351}
 	EndGlobalSection
 EndGlobal

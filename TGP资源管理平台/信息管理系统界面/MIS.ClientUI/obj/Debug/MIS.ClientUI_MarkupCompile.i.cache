@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\App.xaml
-121143548375
+13-29659775
 11-348159996
-19-1524933741
+201114034642
 16543035948
-Controls\ExpanderUIItem.xaml;Controls\MISLinkButton.xaml;Controls\MISLoginButton.xaml;Controls\MISLoginPassword.xaml;Controls\MISLoginTextBox.xaml;Controls\NavigationUIItem.xaml;ExpanderUI.xaml;MainWindow.xaml;MISLogin.xaml;NavigationUIItemDemo.xaml;Themes\Corlors.xaml;Themes\CustomAccordion.xaml;
+Controls\ExpanderUIItem.xaml;Controls\MISImageButton.xaml;Controls\MISLinkButton.xaml;Controls\MISLoginButton.xaml;Controls\MISLoginPassword.xaml;Controls\MISLoginTextBox.xaml;Controls\NavigationUIItem.xaml;ExpanderUI.xaml;MainWindow.xaml;MISLogin.xaml;NavigationUIItemDemo.xaml;Themes\Corlors.xaml;Themes\CustomAccordion.xaml;
 
 False
 

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3497A390-9825-48A8-80F1-0112F2487319}</ProjectGuid>
+    <ProjectGuid>{05E63468-604D-4A24-8EAB-4BF08697A876}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MIS.YTIM</RootNamespace>
-    <AssemblyName>MIS.YTIM</AssemblyName>
+    <RootNamespace>MIS.AutoUpdate</RootNamespace>
+    <AssemblyName>MIS.AutoUpdate</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
