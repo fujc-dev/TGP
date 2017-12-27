@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\dane\TGP\TGP资源管理平台\WPF基础资源库\TGP.Client.Controls\obj\Debug\
+E:\Github\TGP\TGP资源管理平台\WPF基础资源库\TGP.Client.Controls\obj\Debug\
 TGP.UI.Core
 none
 false
 DEBUG;TRACE
-C:\Users\dane\TGP\TGP资源管理平台\WPF基础资源库\TGP.Client.Controls\App.xaml
+E:\Github\TGP\TGP资源管理平台\WPF基础资源库\TGP.Client.Controls\App.xaml
 101149013
 
-12-612218099
+12-1851436626
 121654848548
 Advert.xaml;Controls\GButton.xaml;Controls\ModPrivilege.xaml;Controls\RollImg.xaml;Controls\WindowBase.xaml;Styles\TabControl.xaml;Styles\Themes\GColor.xaml;Styles\Themes\GIcon.xaml;Test.xaml;Themes\Generic.xaml;
 
-False
+True
 

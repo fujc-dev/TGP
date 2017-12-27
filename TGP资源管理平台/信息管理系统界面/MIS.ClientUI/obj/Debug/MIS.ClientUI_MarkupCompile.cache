@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\
+E:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\obj\Debug\
 MIS.ClientUI
 none
 false
 DEBUG;TRACE
-C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\App.xaml
+E:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.ClientUI\App.xaml
 14-47080884
 11-348159996
 17-230323320
-17-1371221322
+171632050335
 Controls\ExpanderUIItem.xaml;Controls\MISImageButton.xaml;Controls\MISLinkButton.xaml;Controls\MISLoginButton.xaml;Controls\MISLoginPassword.xaml;Controls\MISLoginTextBox.xaml;Controls\NavigationUIItem.xaml;ExpanderUI.xaml;MainWindow.xaml;MISLogin.xaml;NavigationUIItemDemo.xaml;Themes\Corlors.xaml;Themes\CustomAccordion.xaml;Views\MISIndex.xaml;
 
 False

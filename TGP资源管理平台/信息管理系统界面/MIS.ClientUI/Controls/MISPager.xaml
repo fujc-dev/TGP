@@ -1,0 +1,28 @@
+﻿<ResourceDictionary               
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mis="clr-namespace:MIS.ClientUI.Controls"
+             mc:Ignorable="d" >
+
+	<!--系统默认的分页控件-->
+	<Style x:Key="MISDefaultDataPagerStyle" TargetType="{x:Type mis:MISPager}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type mis:MISPager}">
+				<!--
+					1、当总页码小于10页，显示1、2、3、4、5、6、7、8、9
+					2、当页面大于10页，显示1、2、3、4、5、...、10
+					3、当点击2时、取消1显示，界面显示为2、3、4、5、6、...、11，以此类推点击3(x)取消3(x)之前的数字显示，后续追加3(x)+4，最后一个控件显示为3+5+5
+					4、当点击数字为6时，6+3显示6、7、8、9、10、...、最后一位(10)+5
+					5、				
+				-->
+
+				
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+</ResourceDictionary>

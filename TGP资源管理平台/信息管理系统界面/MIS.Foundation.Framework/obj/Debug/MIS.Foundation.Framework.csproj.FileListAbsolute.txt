@@ -3,3 +3,7 @@ C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.Foundation.
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.Foundation.Framework\obj\Debug\MIS.Foundation.Framework.dll
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.Foundation.Framework\obj\Debug\MIS.Foundation.Framework.pdb
 C:\Users\dane\TGP\TGP资源管理平台\信息管理系统界面\MIS.Foundation.Framework\obj\Debug\MIS.Foundation.Framework.csprojResolveAssemblyReference.cache
+E:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.Foundation.Framework\bin\Debug\MIS.Foundation.Framework.dll
+E:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.Foundation.Framework\bin\Debug\MIS.Foundation.Framework.pdb
+E:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.Foundation.Framework\obj\Debug\MIS.Foundation.Framework.dll
+E:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.Foundation.Framework\obj\Debug\MIS.Foundation.Framework.pdb

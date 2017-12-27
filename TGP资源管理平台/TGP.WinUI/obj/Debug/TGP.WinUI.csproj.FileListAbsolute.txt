@@ -7,3 +7,12 @@ C:\Users\dane\TGP\TGP资源管理平台\TGP.WinUI\obj\Debug\TGP.WinUI.Properties
 C:\Users\dane\TGP\TGP资源管理平台\TGP.WinUI\obj\Debug\TGP.WinUI.csproj.GenerateResource.Cache
 C:\Users\dane\TGP\TGP资源管理平台\TGP.WinUI\obj\Debug\TGP.WinUI.exe
 C:\Users\dane\TGP\TGP资源管理平台\TGP.WinUI\obj\Debug\TGP.WinUI.pdb
+E:\Github\TGP\TGP资源管理平台\TGP.WinUI\bin\Debug\TGP.WinUI.exe.config
+E:\Github\TGP\TGP资源管理平台\TGP.WinUI\bin\Debug\TGP.WinUI.exe
+E:\Github\TGP\TGP资源管理平台\TGP.WinUI\bin\Debug\TGP.WinUI.pdb
+E:\Github\TGP\TGP资源管理平台\TGP.WinUI\obj\Debug\TGP.WinUI.csprojResolveAssemblyReference.cache
+E:\Github\TGP\TGP资源管理平台\TGP.WinUI\obj\Debug\TGP.WinUI.Form1.resources
+E:\Github\TGP\TGP资源管理平台\TGP.WinUI\obj\Debug\TGP.WinUI.Properties.Resources.resources
+E:\Github\TGP\TGP资源管理平台\TGP.WinUI\obj\Debug\TGP.WinUI.csproj.GenerateResource.Cache
+E:\Github\TGP\TGP资源管理平台\TGP.WinUI\obj\Debug\TGP.WinUI.exe
+E:\Github\TGP\TGP资源管理平台\TGP.WinUI\obj\Debug\TGP.WinUI.pdb

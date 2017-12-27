@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MIS.DB
 {
-    public class Class1
+    public class IDBFactory
     {
     }
 }

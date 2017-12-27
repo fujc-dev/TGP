@@ -3,7 +3,7 @@
 
 	项目结构(持续增加中...)：
 		MIS.ClientUI							//界面部分(程序界面，提示信息(弹出提示，右下角Tips提示等)
-		MIS.YTIM								//即时通信部分(涉及到界面相关以及业务逻辑都会封装到此类库中)
+		MIS.YTIM								//即时通信部分(涉及到界面相关以及业务逻辑都会封装到此类库中，http://yanshi.sucaihuo.com/jquery/6/669/demo/)
 		MIS.Foundation.Framework		//基础框架
 		MIS.DB									//数据库处理部分(如果条件可行，会做一个Nhibernate、EF、ADO.NET等多库切换的封装处理)
 		MIS.AutoUpdate						//更新程序，与服务器连接，并下载最新的DLL文件

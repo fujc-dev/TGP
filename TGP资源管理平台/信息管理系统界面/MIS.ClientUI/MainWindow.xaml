@@ -6,7 +6,7 @@
         xmlns:toolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Layout.Toolkit"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Views="clr-namespace:MIS.ClientUI.Views" mc:Ignorable="d"
         x:Class="MIS.ClientUI.MainWindow"
-        Title="MainWindow" Height="542" Width="1103.725" WindowStyle="None" ResizeMode="NoResize">
+        Title="MainWindow" Height="673" Width="1103.725" WindowStyle="None" ResizeMode="NoResize">
     <!-- 主界面布局 -->
     <Grid>
         <!---->

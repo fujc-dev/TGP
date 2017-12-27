@@ -86,6 +86,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\MISPager.xaml.cs">
+      <DependentUpon>MISPager.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MISIndex.xaml.cs">
       <DependentUpon>MISIndex.xaml</DependentUpon>
     </Compile>
@@ -110,6 +113,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\MISLoginTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MISPager.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
