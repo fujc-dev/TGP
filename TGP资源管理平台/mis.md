@@ -15,11 +15,13 @@
 				Main内容部分加载方式
 				
 				核心：
-					1、动态加载插件
+					1、动态加载插件（采用OSGI.NET，源码参见https://github.com/FreezeSoul/OSGi.NET） 
+						注：OSGi(Open Service Gateway Initiative)技术是Java动态化模块化系统的一系列规范。
 					2、DLL版本控制
 					3、即时通信Socket封装处理(采用SuperSocket框架来实现即时通信)
 					4、LocalMessagePusher(在框架类封装一个消息队列，用于生产者和消费者之间的通信的场景，暂时未定技术)
-					5、
+					5、日志(Log4Net) 
+					6、AOP权限，日志，运行记录等(准备使用企业库)
 
 
 	

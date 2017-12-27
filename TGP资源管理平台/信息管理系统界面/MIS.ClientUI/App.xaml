@@ -5,6 +5,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/MISImageButton.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/MISLinkButton.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/MISLoginPassword.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Controls/MISLoginButton.xaml" />

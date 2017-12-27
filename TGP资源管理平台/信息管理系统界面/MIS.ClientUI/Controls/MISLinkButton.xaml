@@ -25,8 +25,15 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type  mis:MISLinkButton}">
-                    <Border x:Name="border" SnapsToDevicePixels="true">
-                        <TextBlock Foreground="{TemplateBinding LBForeground}"  x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}"  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Text="{TemplateBinding Content}"/>
+                    <Border x:Name="border" SnapsToDevicePixels="true" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Grid Margin="6,0,0,0" VerticalAlignment="Stretch">
+                        	<Grid.ColumnDefinitions>
+                        		<ColumnDefinition Width="6*"/>
+                        		<ColumnDefinition Width="100*"/>
+                        	</Grid.ColumnDefinitions>
+                    		<Image Margin="0" Source="{TemplateBinding Source}" Stretch="Uniform" Width="5" Height="9" VerticalAlignment="Stretch"/>
+                        	<TextBlock Foreground="{TemplateBinding LBForeground}"  x:Name="contentPresenter" Focusable="False" Margin="6,0,0,0"  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Text="{TemplateBinding Content}" Grid.ColumnSpan="1" Grid.Column="1" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                    	</Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsDefaulted" Value="true">

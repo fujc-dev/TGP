@@ -59,5 +59,17 @@ namespace MIS.ClientUI.Controls
             DependencyProperty.Register("LBPressdForeground", typeof(Brush), typeof(MISLinkButton), new PropertyMetadata(null));
 
         #endregion
+
+
+        public ImageSource Source
+        {
+            get { return (ImageSource)GetValue(SourceProperty); }
+            set { SetValue(SourceProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Source.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty SourceProperty =
+            DependencyProperty.Register("Source", typeof(ImageSource), typeof(MISLinkButton), new PropertyMetadata(null));
+
     }
 }
