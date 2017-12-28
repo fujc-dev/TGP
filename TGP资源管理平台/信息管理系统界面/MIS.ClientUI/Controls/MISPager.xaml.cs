@@ -23,18 +23,16 @@ namespace MIS.ClientUI.Controls
     [TemplatePart(Name = MISPager.MIS_PART_NEXTPAGE, Type = typeof(MISImageButton))]
     public partial class MISPager : Control
     {
-        //分页明细布局
         private const String MIS_PART_CONTENT = "PART_Content";
-        //上一页
         private const String MIS_PART_PREVIOUSPAGE = "PART_Previouspage";
-        //下一页
         private const String MIS_PART_NEXTPAGE = "PART_Nextpage";
-
 
         private MISImageButton PART_Nextpage;  //下一页事件
         private MISImageButton PART_Previouspage; //上一页事件
         private StackPanel PART_Content;  //子页码
-
+        private PagerType mPagerType = PagerType.Default;  //当前分页控件类型，复杂、默认
+        private List<Int32> mCurrentPagers = new List<Int32>(); //当前分页控件显示的页码索引
+        private Boolean mCurrentIsAddEllipsisCtrl = false;  //当前是否已添加省略号控件(当前还是可以直接在集合控件中比对)
         public MISPager()
         {
             this.PageIndex = 1;
@@ -42,6 +40,7 @@ namespace MIS.ClientUI.Controls
             this.Total = 1119;
         }
 
+        //初始化控件时调用的系统方法
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
@@ -50,31 +49,56 @@ namespace MIS.ClientUI.Controls
             this.PART_Previouspage = this.GetTemplateChild(MISPager.MIS_PART_PREVIOUSPAGE) as MISImageButton;
             //计算页码数
             this.PageCount = (Int32)Math.Ceiling((Double)this.Total / (Double)this.PageSize);
-            //当总页码小于10页，显示1、2、3、4、5、6、7、8、9
-            if (this.PageCount < 10)
+            //当总页码小于7页，显示1、2、3、4、5、6、7
+            if (this.PageCount <= 7)
             {
-                this._CreateStackPanelItem();
+                this.mPagerType = PagerType.Default;
+                for (int i = 0; i < 7; i++)
+                {
+                    var misImgBtn = new MISLinkButton()
+                    {
+                        Content = (i + 1).ToString(),
+                        Width = 35,
+                        BorderThickness = new Thickness(1, 0, 0, 0),
+                        Style = Application.Current.FindResource("DefaultLinkButton2Style") as Style
+                    };
+                    this.mCurrentPagers.Add((i + 1));
+                    misImgBtn.Click += OnMisImgBtn_Click;
+                    if (this.PART_Content != null)
+                    {
+                        this.PART_Content.Children.Add(misImgBtn);
+                    }
+                }
             }
             else
             {
-                _CreateStackPanelItem2();
+                this.mPagerType = PagerType.Complex;
+                for (int i = 0; i < 5; i++)
+                {
+                    var misImgBtn = new MISLinkButton() { Content = (i + 1).ToString(), Width = 35, BorderThickness = new Thickness(1, 0, 0, 0), Style = Application.Current.FindResource("DefaultLinkButton2Style") as Style };
+                    misImgBtn.Click += OnMisImgBtn_Click;
+                    if (i.Equals(0)) misImgBtn.Tag = 0;
+                    if (i.Equals(4)) misImgBtn.Tag = 5;  //
+                    this.mCurrentPagers.Add((i + 1));
+                    if (this.PART_Content != null)
+                    {
+                        this.PART_Content.Children.Add(misImgBtn);
+                    }
+                }
+                this.PART_Content.Children.Add(new MISLinkButton() { Content = "...", Width = 35, BorderThickness = new Thickness(1, 0, 0, 0), Style = Application.Current.FindResource("DefaultLinkButton3Style") as Style });
+                this.PART_Content.Children.Add(new MISLinkButton() { Content = this.PageCount.ToString(), Width = 35, BorderThickness = new Thickness(1, 0, 0, 0), Style = Application.Current.FindResource("DefaultLinkButton2Style") as Style });
             }
-            if (this.PART_Nextpage == null)
+            if (this.PART_Previouspage != null)
             {
-
+                this.PART_Previouspage.Click += OnPART_Previouspage_Click;
             }
-            if (this.PART_Previouspage == null)
+            if (this.PART_Nextpage != null)
             {
-
-            }
-            if (this.PART_Content == null)
-            {
-
+                this.PART_Nextpage.Click += OnPART_Nextpage_Click;
             }
         }
 
         #region 依赖属性
-
 
         #region 当前DataGrid显示的数据总条数，用于计算页码数
         /// <summary>
@@ -140,33 +164,271 @@ namespace MIS.ClientUI.Controls
 
         #endregion
 
+        #region 路由事件
+
+        //注册分页路由事件
+        public static readonly RoutedEvent PageChangedEvent = EventManager.RegisterRoutedEvent("PageChanged",
+            RoutingStrategy.Bubble, typeof(EventHandler<PageChangedEventArgs>), typeof(MISPager));
+
+
+        public event EventHandler<PageChangedEventArgs> PageChanged
+        {
+            add
+            {
+                this.AddHandler(PageChangedEvent, value);
+            }
+            remove
+            {
+                this.RemoveHandler(PageChangedEvent, value);
+            }
+        }
+
+
+        #endregion
+
         #region 私有方法
 
-        private void _CreateStackPanelItem()
+        /// <summary>
+        /// 计算当前选中的分页按钮的索引
+        /// </summary>
+        private Int32 CalculationCurrentSelectPagerButtonWithIndex()
         {
-            for (int i = 1; i < 10; i++)
+            //当前控件显示的页码集合
+            return this.mCurrentPagers.FindIndex((o) => { return o == this.PageIndex; });
+        }
+        /// <summary>
+        /// 维护当前分页控件显示的页码数据
+        /// </summary>
+        /// <param name="addSubtract"></param>
+        private void MaintainCurrentPagers(AddSubtract addSubtract)
+        {
+            if (addSubtract == AddSubtract.Add)
             {
-                var misImgBtn = new MISLinkButton() { Content = i.ToString(), Width = 35, BorderThickness = new Thickness(1, 0, 0, 0), Style = Application.Current.FindResource("DefaultLinkButton2Style") as Style };
-                if (this.PART_Content != null)
+                for (int i = 0; i < this.mCurrentPagers.Count; i++)
                 {
-                    this.PART_Content.Children.Add(misImgBtn);
+                    this.mCurrentPagers[i] = this.mCurrentPagers[i] + 1;
                 }
             }
+            if (addSubtract == AddSubtract.subtract)
+            {
+                for (int i = 0; i < this.mCurrentPagers.Count; i++)
+                {
+                    this.mCurrentPagers[i] = this.mCurrentPagers[i] - 1;
+                }
+            }
+
+        }
+        /// <summary>
+        /// 下一页
+        /// </summary>
+        private void OnPART_Nextpage_Click(object sender, RoutedEventArgs e)
+        {
+            this.PageIndex++;
+            //计算当前选中的分页按钮是索引位置
+            if (this.PageIndex >= 5)
+            {
+                if (this.PageIndex == this.PageCount) this.PART_Nextpage.IsEnabled = false;
+                //检测当前是否已添加省略号控件
+                if (!this.mCurrentIsAddEllipsisCtrl)
+                {
+                    this.mCurrentIsAddEllipsisCtrl = true;
+                    //在翻页控件第一个位置添加一个省略号控件
+                    this.PART_Content.Children.Insert(0, new MISLinkButton() { Content = "...", Width = 35, BorderThickness = new Thickness(1, 0, 0, 0), Style = Application.Current.FindResource("DefaultLinkButton3Style") as Style });
+                }
+                //刷新UI(所有的分页控件加1)
+                this._RefreshPager(AddSubtract.Add);
+            }
+            else
+            {
+
+            }
+
+        }
+        /// <summary>
+        /// 上一页
+        /// </summary>
+        private void OnPART_Previouspage_Click(object sender, RoutedEventArgs e)
+        {
+            //当前PageIndex在界面上显示的索引           
+            var _index = this.CalculationCurrentSelectPagerButtonWithIndex();
+            this.PageIndex--;
+            if (this.PageIndex == 1) this.PART_Previouspage.IsEnabled = false;
+            if (_index == 0) //
+            {
+                if (this.mCurrentIsAddEllipsisCtrl)
+                {
+                    this.mCurrentIsAddEllipsisCtrl = false;
+                    this.PART_Content.Children.RemoveAt(0);
+                }
+                //刷新UI(所有的分页控件减1)
+                this._RefreshPager(AddSubtract.subtract);
+            }
+            else
+            {
+                if (this.mCurrentIsAddEllipsisCtrl)
+                {
+
+                }
+                else
+                {
+
+                }
+                //移动焦点
+                this.PART_Content.Children[0].Focus();
+            }
+
         }
 
-        private void _CreateStackPanelItem2()
+        protected virtual void OnPageChanged()
         {
-            for (int i = 1; i < 6; i++)
+            var eventArgs = new PageChangedEventArgs(this.PageIndex) { RoutedEvent = PageChangedEvent, Source = this };
+            this.RaiseEvent(eventArgs);
+        }
+
+        private void _RefreshPager(AddSubtract addSubtract)
+        {
+            /*
+             * 1、默认分页的按钮为7个
+             * 2、当分页总数小于等于7时，直接显示1-7个分页按钮
+             * 3、当分页总数大于7时，显示当时为1、2、3、4、5、...、999(999为总页数)
+             * 4、
+             * **/
+            if (this.PART_Content.Children.Count > 0)
             {
-                var misImgBtn = new MISLinkButton() { Content = i.ToString(), Width = 35, Margin = new Thickness(1, 0, 0, 0), Style = Application.Current.FindResource("DefaultLinkButton2Style") as Style };
-                if (this.PART_Content != null)
+                int _index = 0;  //
+                int _contentCount = this.PART_Content.Children.Count;
+                if (this.mCurrentIsAddEllipsisCtrl) //当前包含前缀省略号控件
                 {
-                    this.PART_Content.Children.Add(misImgBtn);
+                    _index = 1;
+                    _contentCount = _contentCount - 1;
+                }
+                for (int i = 0; i < _contentCount - 2; i++)
+                {
+                    var misLinkBtn = this.PART_Content.Children[_index] as MISLinkButton;
+                    if (misLinkBtn != null)
+                    {
+                        misLinkBtn.Content = addSubtract == AddSubtract.Add ? (Convert.ToInt32(misLinkBtn.Content) + 1).ToString() : (Convert.ToInt32(misLinkBtn.Content) - 1).ToString();
+                    }
+                    _index++;
+                }
+                if (addSubtract == AddSubtract.Add)
+                {
+                    //设置倒数第一个按钮会选中状态
+                    this.PART_Content.Children[_index - 2].Focus();
+                }
+                else
+                {   //设置第二个按钮会选中状态
+                    if (this.mCurrentIsAddEllipsisCtrl)
+                    {
+                        this.PART_Content.Children[2].Focus();
+                    }
+                    else
+                    {
+                        this.PART_Content.Children[1].Focus();
+                    }
                 }
             }
-            this.PART_Content.Children.Add(new MISLinkButton() { Content = "...", Width = 35, Margin = new Thickness(1, 0, 0, 0), Style = Application.Current.FindResource("DefaultLinkButton2Style") as Style });
-            this.PART_Content.Children.Add(new MISLinkButton() { Content = "10", Width = 35, Margin = new Thickness(1, 0, 0, 0), Style = Application.Current.FindResource("DefaultLinkButton2Style") as Style });
+
+
+
+
+
+
+
         }
+
+        /// <summary>
+        /// 页码索引点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnMisImgBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //获取当前点击的PageIndex
+            var misImgBtn = sender as MISLinkButton;
+            this.PageIndex = Convert.ToInt32(misImgBtn.Content);
+            //当为复杂控件时处理
+            if (this.mPagerType == PagerType.Complex)
+            {
+                this._RefreshPager(misImgBtn);
+            }
+            //执行路由回调
+            OnPageChanged();
+        }
+
+        private void _RefreshPager(MISLinkButton misImgBtn)
+        {
+            //对比点击的控件
+            if (misImgBtn.Tag != null)
+            {
+                if (misImgBtn.Tag.Equals(0))
+                {
+                    if (this.PageIndex > 1)
+                    {
+                        if (this.PageIndex == 2 && this.mCurrentIsAddEllipsisCtrl) //当前点击第二页时，显示第一个并移除左侧的省略号控件
+                        {
+                            this.mCurrentIsAddEllipsisCtrl = false;
+                            this.PART_Content.Children.RemoveAt(0);
+                        }
+                        //刷新UI(所有的分页控件减1)
+                        this._RefreshPager(AddSubtract.subtract);
+                        this.MaintainCurrentPagers(AddSubtract.subtract);
+                    }
+                }
+                if (misImgBtn.Tag.Equals(5))
+                {
+                    //检测当前是否已添加省略号控件
+                    if (!this.mCurrentIsAddEllipsisCtrl)
+                    {
+                        this.mCurrentIsAddEllipsisCtrl = true;
+                        //在翻页控件第一个位置添加一个省略号控件
+                        this.PART_Content.Children.Insert(0, new MISLinkButton() { Content = "...", Width = 35, BorderThickness = new Thickness(1, 0, 0, 0), Style = Application.Current.FindResource("DefaultLinkButton3Style") as Style });
+                    }
+                    //刷新UI(所有的分页控件加1)
+                    this._RefreshPager(AddSubtract.Add);
+                    this.MaintainCurrentPagers(AddSubtract.Add);
+                }
+            }
         #endregion
+        }
+    }
+
+    /// <summary>
+    /// 分页事件参数
+    /// </summary>
+    public class PageChangedEventArgs : RoutedEventArgs
+    {
+
+        public int PageIndex
+        {
+            get;
+            set;
+        }
+
+        public PageChangedEventArgs(int pageIndex)
+            : base()
+        {
+            PageIndex = pageIndex;
+        }
+    }
+
+    /// <summary>
+    /// 分页控件类型
+    /// </summary>
+    public enum PagerType
+    {
+        /// <summary>
+        /// 默认
+        /// </summary>
+        Default,
+        /// <summary>
+        /// 复杂
+        /// </summary>
+        Complex
+    }
+
+    public enum AddSubtract
+    {
+        Add, subtract
     }
 }
