@@ -16,3 +16,12 @@ E:\Github\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\bin\Debug\AutoMa
 E:\Github\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\obj\Debug\CreateMySqlTimer.csprojResolveAssemblyReference.cache
 E:\Github\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\obj\Debug\CreateMySqlTimer.exe
 E:\Github\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\obj\Debug\CreateMySqlTimer.pdb
+D:\Github\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\bin\Debug\CreateMySqlTimer.exe.config
+D:\Github\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\bin\Debug\CreateMySqlTimer.exe
+D:\Github\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\bin\Debug\CreateMySqlTimer.pdb
+D:\Github\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\bin\Debug\AutoMapper.dll
+D:\Github\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\bin\Debug\MySql.Data.dll
+D:\Github\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\bin\Debug\AutoMapper.xml
+D:\Github\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\obj\Debug\CreateMySqlTimer.csprojResolveAssemblyReference.cache
+D:\Github\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\obj\Debug\CreateMySqlTimer.exe
+D:\Github\TGP\TGP资源管理平台\Foundation\CreateMySqlTimer\obj\Debug\CreateMySqlTimer.pdb

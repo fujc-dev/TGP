@@ -9,3 +9,8 @@ E:\Github\TGP\TGP资源管理平台\Foundation\TGP.Stack\bin\Debug\TGP.Stack.pdb
 E:\Github\TGP\TGP资源管理平台\Foundation\TGP.Stack\obj\Debug\TGP.Stack.exe
 E:\Github\TGP\TGP资源管理平台\Foundation\TGP.Stack\obj\Debug\TGP.Stack.pdb
 E:\Github\TGP\TGP资源管理平台\Foundation\TGP.Stack\obj\Debug\TGP.Stack.csprojResolveAssemblyReference.cache
+D:\Github\TGP\TGP资源管理平台\Foundation\TGP.Stack\bin\Debug\TGP.Stack.exe.config
+D:\Github\TGP\TGP资源管理平台\Foundation\TGP.Stack\bin\Debug\TGP.Stack.exe
+D:\Github\TGP\TGP资源管理平台\Foundation\TGP.Stack\bin\Debug\TGP.Stack.pdb
+D:\Github\TGP\TGP资源管理平台\Foundation\TGP.Stack\obj\Debug\TGP.Stack.exe
+D:\Github\TGP\TGP资源管理平台\Foundation\TGP.Stack\obj\Debug\TGP.Stack.pdb

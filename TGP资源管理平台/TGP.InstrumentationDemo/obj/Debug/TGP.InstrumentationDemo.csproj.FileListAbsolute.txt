@@ -23,3 +23,15 @@ E:\Github\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\TGP.Instru
 E:\Github\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\TGP.InstrumentationDemo.exe
 E:\Github\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\TGP.InstrumentationDemo.pdb
 E:\Github\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\TGP.InstrumentationDemo.csprojResolveAssemblyReference.cache
+D:\Github\TGP\TGP资源管理平台\TGP.InstrumentationDemo\bin\Debug\TGP.InstrumentationDemo.exe
+D:\Github\TGP\TGP资源管理平台\TGP.InstrumentationDemo\bin\Debug\TGP.InstrumentationDemo.pdb
+D:\Github\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\MainWindow.g.cs
+D:\Github\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\App.g.cs
+D:\Github\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\TGP.InstrumentationDemo_MarkupCompile.cache
+D:\Github\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\TGP.InstrumentationDemo_MarkupCompile.lref
+D:\Github\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\MainWindow.baml
+D:\Github\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\TGP.InstrumentationDemo.g.resources
+D:\Github\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\TGP.InstrumentationDemo.Properties.Resources.resources
+D:\Github\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\TGP.InstrumentationDemo.csproj.GenerateResource.Cache
+D:\Github\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\TGP.InstrumentationDemo.exe
+D:\Github\TGP\TGP资源管理平台\TGP.InstrumentationDemo\obj\Debug\TGP.InstrumentationDemo.pdb

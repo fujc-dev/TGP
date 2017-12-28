@@ -25,3 +25,16 @@ E:\Github\TGP\TGP资源管理平台\TGP.SlidesDemo\obj\Debug\TGP.SlidesDemo.cspr
 E:\Github\TGP\TGP资源管理平台\TGP.SlidesDemo\obj\Debug\TGP.SlidesDemo.exe
 E:\Github\TGP\TGP资源管理平台\TGP.SlidesDemo\obj\Debug\TGP.SlidesDemo.pdb
 E:\Github\TGP\TGP资源管理平台\TGP.SlidesDemo\obj\Debug\TGP.SlidesDemo.csprojResolveAssemblyReference.cache
+D:\Github\TGP\TGP资源管理平台\TGP.SlidesDemo\bin\Debug\TGP.SlidesDemo.exe
+D:\Github\TGP\TGP资源管理平台\TGP.SlidesDemo\bin\Debug\TGP.SlidesDemo.pdb
+D:\Github\TGP\TGP资源管理平台\TGP.SlidesDemo\obj\Debug\MainWindow.g.cs
+D:\Github\TGP\TGP资源管理平台\TGP.SlidesDemo\obj\Debug\App.g.cs
+D:\Github\TGP\TGP资源管理平台\TGP.SlidesDemo\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Github\TGP\TGP资源管理平台\TGP.SlidesDemo\obj\Debug\TGP.SlidesDemo_MarkupCompile.cache
+D:\Github\TGP\TGP资源管理平台\TGP.SlidesDemo\obj\Debug\TGP.SlidesDemo_MarkupCompile.lref
+D:\Github\TGP\TGP资源管理平台\TGP.SlidesDemo\obj\Debug\MainWindow.baml
+D:\Github\TGP\TGP资源管理平台\TGP.SlidesDemo\obj\Debug\TGP.SlidesDemo.g.resources
+D:\Github\TGP\TGP资源管理平台\TGP.SlidesDemo\obj\Debug\TGP.SlidesDemo.Properties.Resources.resources
+D:\Github\TGP\TGP资源管理平台\TGP.SlidesDemo\obj\Debug\TGP.SlidesDemo.csproj.GenerateResource.Cache
+D:\Github\TGP\TGP资源管理平台\TGP.SlidesDemo\obj\Debug\TGP.SlidesDemo.exe
+D:\Github\TGP\TGP资源管理平台\TGP.SlidesDemo\obj\Debug\TGP.SlidesDemo.pdb
