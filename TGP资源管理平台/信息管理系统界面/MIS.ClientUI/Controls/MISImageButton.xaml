@@ -8,6 +8,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Themes/Corlors.xaml" />
     </ResourceDictionary.MergedDictionaries>
+
     <Style x:Key="DefaultImageButtonStyle" TargetType="{x:Type mis:MISImageButton}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
         <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
@@ -20,12 +21,19 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type mis:MISImageButton}">
-                    <Border x:Name="border" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true" BorderBrush="#FFD3DBDE" Background="#FFF1F5F7">
-                        <StackPanel Margin="0" Orientation="Horizontal">
-                        	<Image HorizontalAlignment="Stretch" Height="{TemplateBinding IconHeight}" Margin="5,0,2,0" VerticalAlignment="Stretch" Source="{TemplateBinding Source}" Width="{TemplateBinding IconWidth}"/>
-                        	<TextBlock x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="0" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Width="Auto" Height="Auto" Text="{TemplateBinding Content}"/>
-                        </StackPanel>
-                    </Border>
+                    <Grid>
+                        <Border x:Name="border" 
+                			CornerRadius="{Binding MISCornerRadius, RelativeSource={RelativeSource TemplatedParent}}"
+                			SnapsToDevicePixels="true" 
+                			BorderBrush="#FFD3DBDE" 
+                			Background="#FFF1F5F7" 
+                			BorderThickness="{TemplateBinding BorderThickness}">
+                            <StackPanel Margin="0" Orientation="Horizontal">
+                                <Image HorizontalAlignment="Stretch" Height="{TemplateBinding IconHeight}" Margin="5,0,2,0" VerticalAlignment="Stretch" Source="{TemplateBinding Source}" Width="{TemplateBinding IconWidth}"/>
+                                <TextBlock x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="0" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Width="Auto" Height="Auto" Text="{TemplateBinding Content}"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsDefaulted" Value="true">
                             <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
@@ -59,24 +67,24 @@
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Padding" Value="1"/>
-		<Setter Property="Width" Value="73"/>
-		<Setter Property="Height" Value="80"/>
-		<Setter Property="Source" Value="/MIS.ClientUI;component/images/ico01.png"/>
-		<Setter Property="Content" Value="管理设置"/>
+        <Setter Property="Width" Value="73"/>
+        <Setter Property="Height" Value="80"/>
+        <Setter Property="Source" Value="/MIS.ClientUI;component/images/ico01.png"/>
+        <Setter Property="Content" Value="管理设置"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type mis:MISImageButton}">
                     <Border x:Name="border" SnapsToDevicePixels="true" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" VerticalAlignment="Stretch">
                         <Grid Margin="0" >
-                        	<Grid.RowDefinitions>
-                        		<RowDefinition Height="15"/>
-                        		<RowDefinition/>
-                        		<RowDefinition Height="22"/>
-                        	</Grid.RowDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="15"/>
+                                <RowDefinition/>
+                                <RowDefinition Height="22"/>
+                            </Grid.RowDefinitions>
                             <Rectangle Fill="Transparent" HorizontalAlignment="Left" Height="80" Grid.RowSpan="3" Stroke="Transparent" VerticalAlignment="Top" Width="73"/>
-                        	<Image HorizontalAlignment="Stretch" Height="32" Margin="0" VerticalAlignment="Stretch" Source="{TemplateBinding Source}" Stretch="Uniform" Width="32" Grid.Row="1"/>
-                        	<TextBlock x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="12.5,3.38" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Height="15.24" Text="{TemplateBinding Content}" Grid.Row="2" Width="48"/>
-                    	</Grid>
+                            <Image HorizontalAlignment="Stretch" Height="32" Margin="0" VerticalAlignment="Stretch" Source="{TemplateBinding Source}" Stretch="Uniform" Width="32" Grid.Row="1"/>
+                            <TextBlock x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="12.5,3.38" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Height="15.24" Text="{TemplateBinding Content}" Grid.Row="2" Width="48"/>
+                        </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsDefaulted" Value="true">
@@ -101,4 +109,66 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <!-- 支持SVG -->
+    <Style x:Key="DefaultISvgImageButtonStyle" TargetType="{x:Type mis:MISImageButton}">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+        <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type mis:MISImageButton}">
+                    <Grid>
+                        <Border x:Name="border" 
+                			CornerRadius="{Binding MISCornerRadius, RelativeSource={RelativeSource TemplatedParent}}"
+                			SnapsToDevicePixels="true" 
+                			BorderBrush="#FFD3DBDE" 
+                			Background="#FFF1F5F7" 
+                			BorderThickness="{TemplateBinding BorderThickness}">
+                            <StackPanel Margin="0" Orientation="Horizontal">
+                                <Image HorizontalAlignment="Stretch" Margin="5,0,2,0" VerticalAlignment="Stretch" Source="{TemplateBinding Source}" />
+                                <Path x:Name="PART_Icon"  
+                                      Data="{TemplateBinding GeometryIcon}"
+                                  Fill="{StaticResource DefaultButtonSvgFill}" 
+                                  HorizontalAlignment="Stretch" Stretch="Fill" 
+                                  Stroke="{StaticResource DefaultButtonSvgStroke}"
+                                  Margin="1"
+                                  VerticalAlignment="Stretch" 
+                                      Width="{TemplateBinding IconWidth}" 
+                                      Height="{TemplateBinding IconHeight}" 
+                                  RenderTransformOrigin="0.5,0.5"></Path>
+                                <TextBlock x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="0" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Width="Auto" Height="Auto" Text="{TemplateBinding Content}"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="#FF00B0DF"/>
+                            <Setter Property="Foreground" TargetName="contentPresenter" Value="#FF00B0DF"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                            <Setter Property="Foreground" TargetName="contentPresenter" Value="#FF00B0DF"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="#FF00B0DF"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

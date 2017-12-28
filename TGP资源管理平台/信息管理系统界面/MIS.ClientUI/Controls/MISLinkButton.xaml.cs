@@ -30,7 +30,7 @@ namespace MIS.ClientUI.Controls
 
         public static readonly DependencyProperty LBForegroundProperty =
             DependencyProperty.Register("LBForeground", typeof(Brush), typeof(MISLinkButton), new PropertyMetadata(null));  //#9595BC 
-           
+
 
         #endregion
 
@@ -43,7 +43,7 @@ namespace MIS.ClientUI.Controls
         }
 
         public static readonly DependencyProperty LBMouseOverForegroundProperty =
-            DependencyProperty.Register("LBMouseOverForeground", typeof(Brush), typeof(MISLinkButton), new PropertyMetadata(null)); 
+            DependencyProperty.Register("LBMouseOverForeground", typeof(Brush), typeof(MISLinkButton), new PropertyMetadata(null));
 
         #endregion
 

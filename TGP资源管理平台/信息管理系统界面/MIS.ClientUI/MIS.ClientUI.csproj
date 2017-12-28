@@ -181,6 +181,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\Generate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Share.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MISIndex.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -360,6 +368,8 @@
     <Content Include="Assets\References\System.Windows.Interactivity.dll" />
     <Content Include="Assets\References\WPF.Themes.dll" />
     <Content Include="Assets\References\WPFToolkit.dll" />
+    <Resource Include="images\pager_next.png" />
+    <Resource Include="images\pager_pre.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Plugins\" />

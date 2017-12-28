@@ -8,3 +8,7 @@ E:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.DB\obj\Debug\MI
 E:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.DB\obj\Debug\MIS.DB.pdb
 E:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.DB\bin\Debug\MIS.DB.dll
 E:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.DB\bin\Debug\MIS.DB.pdb
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.DB\bin\Debug\MIS.DB.dll
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.DB\bin\Debug\MIS.DB.pdb
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.DB\obj\Debug\MIS.DB.dll
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.DB\obj\Debug\MIS.DB.pdb

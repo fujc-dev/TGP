@@ -24,3 +24,15 @@ E:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\
 E:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MIS.AutoUpdate.csproj.GenerateResource.Cache
 E:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MIS.AutoUpdate.exe
 E:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MIS.AutoUpdate.pdb
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\bin\Debug\MIS.AutoUpdate.exe.config
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\bin\Debug\MIS.AutoUpdate.exe
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\bin\Debug\MIS.AutoUpdate.pdb
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MainWindow.baml
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MainWindow.g.cs
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\App.g.cs
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MIS.AutoUpdate_MarkupCompile.cache
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MIS.AutoUpdate.g.resources
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MIS.AutoUpdate.Properties.Resources.resources
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MIS.AutoUpdate.csproj.GenerateResource.Cache
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MIS.AutoUpdate.exe
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.AutoUpdate\obj\Debug\MIS.AutoUpdate.pdb

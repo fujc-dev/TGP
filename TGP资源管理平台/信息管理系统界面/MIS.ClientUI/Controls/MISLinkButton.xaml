@@ -15,7 +15,7 @@
         <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
         <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
         <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Padding" Value="1"/>
@@ -25,15 +25,15 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type  mis:MISLinkButton}">
-                    <Border x:Name="border" SnapsToDevicePixels="true" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Border x:Name="border" BorderThickness="{Binding RelativeSource={RelativeSource TemplatedParent},Path=BorderThickness}" SnapsToDevicePixels="true" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <Grid Margin="6,0,0,0" VerticalAlignment="Stretch">
-                        	<Grid.ColumnDefinitions>
-                        		<ColumnDefinition Width="6*"/>
-                        		<ColumnDefinition Width="100*"/>
-                        	</Grid.ColumnDefinitions>
-                    		<Image Margin="0" Source="{TemplateBinding Source}" Stretch="Uniform" Width="5" Height="9" VerticalAlignment="Stretch"/>
-                        	<TextBlock Foreground="{TemplateBinding LBForeground}"  x:Name="contentPresenter" Focusable="False" Margin="6,0,0,0"  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Text="{TemplateBinding Content}" Grid.ColumnSpan="1" Grid.Column="1" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
-                    	</Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="6*"/>
+                                <ColumnDefinition Width="100*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Margin="0" Source="{TemplateBinding Source}" Stretch="Uniform" Width="5" Height="9" VerticalAlignment="Stretch"/>
+                            <TextBlock Foreground="{TemplateBinding LBForeground}"  x:Name="contentPresenter" Focusable="False" Margin="6,0,0,0"  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Text="{TemplateBinding Content}" Grid.ColumnSpan="1" Grid.Column="1" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                        </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsDefaulted" Value="true">
@@ -46,6 +46,52 @@
                         <Trigger Property="IsKeyboardFocused" Value="true">
                             <Setter Property="Foreground" TargetName="contentPresenter" Value="{Binding RelativeSource={RelativeSource TemplatedParent},Path=LBPressdForeground}"/>
                             <!--<Setter Property="Cursor" TargetName="border" Value="Hand"/>-->
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DefaultLinkButton2Style" TargetType="{x:Type mis:MISLinkButton}">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+        <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="LBForeground" Value="#9595BC"/>
+        <Setter Property="LBMouseOverForeground" Value="#FF386B95"/>
+        <Setter Property="LBPressdForeground" Value="Red"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type  mis:MISLinkButton}">
+                    <Border x:Name="border"  BorderThickness="{Binding RelativeSource={RelativeSource TemplatedParent},Path=BorderThickness}"  SnapsToDevicePixels="true" Margin="0" VerticalAlignment="Stretch" BorderBrush="#FFDDDDDD">
+                        <Grid Margin="0">
+                            <Rectangle Fill="Transparent" HorizontalAlignment="Stretch" Height="Auto" Stroke="Transparent" VerticalAlignment="Stretch" Width="Auto"/>
+                        	<TextBlock Foreground="{TemplateBinding LBForeground}"  x:Name="contentPresenter" Focusable="False" Margin="0"  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{TemplateBinding Content}"/>
+                    	</Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" TargetName="contentPresenter" Value="{Binding RelativeSource={RelativeSource TemplatedParent},Path=LBMouseOverForeground}"/>
+                            <Setter Property="Background" TargetName="border" Value="#FFF5F5F5"/>
+                            <!--<Setter Property="Cursor" TargetName="border" Value="Hand"/>-->
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="true">
+                            <Setter Property="Foreground" TargetName="contentPresenter" Value="{Binding RelativeSource={RelativeSource TemplatedParent},Path=LBPressdForeground}"/>
+                            <!--<Setter Property="Cursor" TargetName="border" Value="Hand"/>-->
+							<Setter Property="Background" TargetName="border" Value="#FFF5F5F5"/>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>

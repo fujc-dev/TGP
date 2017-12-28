@@ -24,3 +24,15 @@ E:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.YTIM\obj\Debug\
 E:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.YTIM\obj\Debug\MIS.YTIM.csproj.GenerateResource.Cache
 E:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.YTIM\obj\Debug\MIS.YTIM.exe
 E:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.YTIM\obj\Debug\MIS.YTIM.pdb
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.YTIM\bin\Debug\MIS.YTIM.exe.config
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.YTIM\bin\Debug\MIS.YTIM.exe
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.YTIM\bin\Debug\MIS.YTIM.pdb
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.YTIM\obj\Debug\MainWindow.baml
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.YTIM\obj\Debug\MainWindow.g.cs
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.YTIM\obj\Debug\App.g.cs
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.YTIM\obj\Debug\MIS.YTIM_MarkupCompile.cache
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.YTIM\obj\Debug\MIS.YTIM.g.resources
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.YTIM\obj\Debug\MIS.YTIM.Properties.Resources.resources
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.YTIM\obj\Debug\MIS.YTIM.csproj.GenerateResource.Cache
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.YTIM\obj\Debug\MIS.YTIM.exe
+D:\Github\TGP\TGP资源管理平台\信息管理系统界面\MIS.YTIM\obj\Debug\MIS.YTIM.pdb

@@ -21,19 +21,19 @@ namespace MIS.ClientUI.Controls
     public partial class MISImageButton : Button
     {
 
+        #region 图片地址
         public ImageSource Source
         {
             get { return (ImageSource)GetValue(SourceProperty); }
             set { SetValue(SourceProperty, value); }
         }
 
-        // Using a DependencyProperty as the backing store for Source.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty SourceProperty =
             DependencyProperty.Register("Source", typeof(ImageSource), typeof(MISImageButton), new PropertyMetadata(null));
 
+        #endregion
 
-
-
+        #region 显示图片大小
         public Double IconWidth
         {
             get { return (Double)GetValue(IconWidthProperty); }
@@ -57,8 +57,29 @@ namespace MIS.ClientUI.Controls
         public static readonly DependencyProperty IconHeightProperty =
             DependencyProperty.Register("IconHeight", typeof(Double), typeof(MISImageButton), new PropertyMetadata(24D));
 
+        #endregion
+
+        public CornerRadius MISCornerRadius
+        {
+            get { return (CornerRadius)GetValue(MISCornerRadiusProperty); }
+            set { SetValue(MISCornerRadiusProperty, value); }
+        }
+        public static readonly DependencyProperty MISCornerRadiusProperty =
+            DependencyProperty.Register("MISCornerRadius", typeof(CornerRadius), typeof(MISImageButton), new PropertyMetadata(new CornerRadius(1)));
 
 
 
+
+        public Geometry GeometryIcon
+        {
+            get { return (Geometry)GetValue(GeometryIconProperty); }
+            set { SetValue(GeometryIconProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for GeometryIcon.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty GeometryIconProperty =
+            DependencyProperty.Register("GeometryIcon", typeof(Geometry), typeof(MISImageButton), new PropertyMetadata(null));
+
+        
     }
 }
