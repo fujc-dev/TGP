@@ -5,50 +5,50 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:mis="clr-namespace:MIS.ClientUI.Controls"
              mc:Ignorable="d" >
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Themes/Corlors.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Themes/Share.xaml" />
-    </ResourceDictionary.MergedDictionaries>
-    <!--系统默认的分页控件-->
-    <Style x:Key="MISDefaultDataPagerStyle" TargetType="{x:Type mis:MISPager}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type mis:MISPager}">
-                    <Grid Margin="0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <StackPanel Margin="0" Orientation="Horizontal">
-                            <TextBlock TextWrapping="Wrap" Text="共" Margin="0" VerticalAlignment="Center"/>
-                            <TextBlock x:Name="PART_Count" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center" Text="1256" Foreground="#FF056DAE"/>
-                            <TextBlock TextWrapping="Wrap" Text="条记录，当前显示第" Margin="0" VerticalAlignment="Center"/>
-                            <TextBlock x:Name="PART_PageCount" TextWrapping="Wrap" Text=" 2 " Margin="0" VerticalAlignment="Center" Foreground="#FF056DAE"/>
-                            <TextBlock TextWrapping="Wrap" Text="页" Margin="0" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <Border BorderBrush="Black" Grid.Column="1" Margin="0" HorizontalAlignment="Right">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="40"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="40"/>
-                                </Grid.ColumnDefinitions>
-                                <Border BorderBrush="#FFDDDDDD" BorderThickness="1,1,0,1" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" CornerRadius="2,0,0,2">
-                                    <mis:MISImageButton  BorderThickness="0" MISCornerRadius="0" GeometryIcon="{DynamicResource DefaultDataPagerPreviouspage}"  Style="{DynamicResource DefaultISvgImageButtonStyle}"  x:Name="PART_Previouspage" />
-                                </Border>
-                                <Border Grid.ColumnSpan="1" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="1" BorderBrush="#FFDDDDDD" BorderThickness="0,1">
-                                    <StackPanel x:Name="PART_Content" Orientation="Horizontal">
-                                    </StackPanel>
-                                </Border>
-                                <Border BorderBrush="#FFDDDDDD" BorderThickness="1" Margin="0" Grid.Column="2" CornerRadius="0,2,2,0">
-                                    <mis:MISImageButton BorderThickness="0" MISCornerRadius="0" GeometryIcon="{DynamicResource DefaultDataPagerNextpage}"  x:Name="PART_Nextpage" Style="{DynamicResource DefaultISvgImageButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0"/>
-                                </Border>
-                            </Grid>
-                        </Border>
-                    </Grid>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Themes/Corlors.xaml" />
+		<ResourceDictionary Source="pack://application:,,,/MIS.ClientUI;component/Themes/Share.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+	<!--系统默认的分页控件-->
+	<Style x:Key="MISDefaultDataPagerStyle" TargetType="{x:Type mis:MISPager}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type mis:MISPager}">
+					<Grid Margin="0">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="Auto"/>
+						</Grid.ColumnDefinitions>
+						<StackPanel Margin="0" Orientation="Horizontal">
+							<TextBlock TextWrapping="Wrap" Text="共" Margin="0" VerticalAlignment="Center"/>
+							<TextBlock x:Name="PART_Count" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center" Text="1256" Foreground="#FF056DAE"/>
+							<TextBlock TextWrapping="Wrap" Text="条记录，当前显示第" Margin="0" VerticalAlignment="Center"/>
+							<TextBlock x:Name="PART_PageIndex" TextWrapping="Wrap" Text=" 2 " Margin="0" VerticalAlignment="Center" Foreground="#FF056DAE"/>
+							<TextBlock TextWrapping="Wrap" Text="页" Margin="0" VerticalAlignment="Center"/>
+						</StackPanel>
+						<Border BorderBrush="Black" Grid.Column="1" Margin="0" HorizontalAlignment="Right">
+							<Grid>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="40"/>
+									<ColumnDefinition Width="*"/>
+									<ColumnDefinition Width="40"/>
+								</Grid.ColumnDefinitions>
+								<Border BorderBrush="#FFDDDDDD" BorderThickness="1,1,0,1" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" CornerRadius="2,0,0,2">
+									<mis:MISImageButton  BorderThickness="0" MISCornerRadius="0" GeometryIcon="{DynamicResource DefaultDataPagerPreviouspage}"  Style="{DynamicResource DefaultISvgImageButtonStyle}"  x:Name="PART_Previouspage" />
+								</Border>
+								<Border Grid.ColumnSpan="1" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch" Width="Auto" Grid.Column="1" BorderBrush="#FFDDDDDD" BorderThickness="0,1">
+									<StackPanel x:Name="PART_Content" Orientation="Horizontal">
+									</StackPanel>
+								</Border>
+								<Border BorderBrush="#FFDDDDDD" BorderThickness="1" Margin="0" Grid.Column="2" CornerRadius="0,2,2,0">
+									<mis:MISImageButton BorderThickness="0" MISCornerRadius="0" GeometryIcon="{DynamicResource DefaultDataPagerNextpage}"  x:Name="PART_Nextpage" Style="{DynamicResource DefaultISvgImageButtonStyle}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0"/>
+								</Border>
+							</Grid>
+						</Border>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
 
 </ResourceDictionary>

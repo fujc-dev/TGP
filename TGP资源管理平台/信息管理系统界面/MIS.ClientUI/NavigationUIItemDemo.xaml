@@ -206,7 +206,7 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Controls:MISPager Style="{DynamicResource MISDefaultDataPagerStyle}" HorizontalAlignment="Left" Margin="9,13,0,0" VerticalAlignment="Top" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Width="730" Height="40">
+        <Controls:MISPager Total="60" Style="{DynamicResource MISDefaultDataPagerStyle}" HorizontalAlignment="Left" Margin="9,13,0,0" VerticalAlignment="Top" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Width="730" Height="40">
         </Controls:MISPager>
         <Controls:MISImageButton GeometryIcon="{DynamicResource DefaultDataPagerPreviouspage}" Style="{DynamicResource DefaultISvgImageButtonStyle}" MISCornerRadius="2,0,0,2"  HorizontalAlignment="Left" Margin="175,64.5,0,0" IconHeight="16" IconWidth="16" VerticalAlignment="Top" Height="37"  Width="31" Grid.Row="2"/>
         <Controls:MISImageButton GeometryIcon="{DynamicResource DefaultDataPagerNextpage}" Style="{DynamicResource DefaultISvgImageButtonStyle}" MISCornerRadius="2,0,0,2"  HorizontalAlignment="Left" Margin="237,64.5,0,0" IconHeight="16" IconWidth="16" VerticalAlignment="Top" Height="37"  Width="31" Grid.Row="2"/>
