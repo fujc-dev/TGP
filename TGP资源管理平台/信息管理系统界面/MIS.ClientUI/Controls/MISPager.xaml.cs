@@ -40,7 +40,8 @@ namespace MIS.ClientUI.Controls
 		private PagerType mPagerType = PagerType.Default;  //当前分页控件类型，复杂、默认
 		private List<Int32> mCurrentPagers = new List<Int32>(); //当前分页控件显示的页码索引
 		private Boolean mCurrentIsAddEllipsisCtrl = false;  //当前是否已添加省略号控件(当前还是可以直接在集合控件中比对)
-		public MISPager()
+		
+        public MISPager()
 		{
 
 		}
