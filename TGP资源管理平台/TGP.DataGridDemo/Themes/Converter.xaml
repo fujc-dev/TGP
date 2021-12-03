@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:yft="clr-namespace:TGP.DataGridDemo"                >
+
+    <yft:ChineseCommonValueConverter x:Key="chineseCommonValueConverter" />
+    <yft:DictionaryChineseBooleanValueConverter x:Key="dicChineseBooleanValueConverter" />
+    <yft:DictionaryCommonValueConverter x:Key="dicCommonValueConverter" />
+    <yft:HorizontalAlignmentValueConverter x:Key="horizontalAlignmentValueConverter" />
+    <yft:VisibilityValueConverter x:Key="visibilityValueConverter" />
+</ResourceDictionary>

@@ -1,0 +1,58 @@
+﻿<Style  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" TargetType="{x:Type DataGridColumnHeader}">
+    <!--<Setter Property="FontWeight" Value="Bold"/>-->
+    <Setter Property="Template">
+        <Setter.Value>
+            <ControlTemplate>
+                <Grid>                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <!--<VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal"/>
+                            <VisualState x:Name="MouseOver">
+                                <Storyboard>
+                                    <ColorAnimation Duration="0" Storyboard.TargetName="BackgroundRectangle" Storyboard.TargetProperty="(Fill).Color" To="#FF448DCA"/>
+                                    <ColorAnimation Duration="0" Storyboard.TargetName="BackgroundGradient"  Storyboard.TargetProperty="(Fill).(GradientStops)[3].Color" To="#2E7AE6FF"/>
+                                    <ColorAnimation Duration="0" Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Fill).(GradientStops)[2].Color" To="Orange"/>
+                                    <ColorAnimation Duration="0" Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Fill).(GradientStops)[1].Color" To="#2E7AE6FF"/>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="Pressed">
+                                <Storyboard>
+                                    <ColorAnimation Duration="0" Storyboard.TargetName="BackgroundRectangle" Storyboard.TargetProperty="(Fill).Color" To="#FF448DCA"/>
+                                    <ColorAnimation Duration="0" Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Fill).(GradientStops)[0].Color" To="#2E7AE6FF"/>
+                                    <ColorAnimation Duration="0" Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Fill).(GradientStops)[1].Color" To="#2E7AE6FF"/>
+                                    <ColorAnimation Duration="0" Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Fill).(GradientStops)[2].Color" To="#8CFFFFFF"/>
+                                    <ColorAnimation Duration="0" Storyboard.TargetName="BackgroundGradient" Storyboard.TargetProperty="(Fill).(GradientStops)[3].Color" To="#3FFFFFFF"/>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="SortStates">
+                            <VisualState x:Name="Unsorted"/>
+                            <VisualState x:Name="SortAscending" />
+                            <VisualState x:Name="SortDescending" />
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>-->
+                    <Rectangle x:Name="BackgroundRectangle" Fill="#FF1F3B53" Stretch="Fill" Grid.ColumnSpan="2"/>
+                    <Rectangle x:Name="BackgroundGradient" Stretch="Fill" Grid.ColumnSpan="2">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush EndPoint=".7,1" StartPoint=".7,0">
+                                <GradientStop Color="#FCFFFFFF" Offset="0.015"/>
+                                <GradientStop Color="#F7FFFFFF" Offset="0.375"/>
+                                <GradientStop Color="#E5FFFFFF" Offset="0.6"/>
+                                <GradientStop Color="#D1FFFFFF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Grid HorizontalAlignment="Stretch" MinHeight="25">
+                        {#content#}
+                    </Grid>
+                    <Rectangle x:Name="VerticalSeparator" Fill="#FFC9CACA" VerticalAlignment="Stretch" Width="1" Visibility="Visible"   Grid.Row="1" Grid.Column="1"/>
+                </Grid>
+            </ControlTemplate>
+        </Setter.Value>
+    </Setter>
+</Style>
+

@@ -1,0 +1,15 @@
+﻿<Application x:Class="TGP.DataGridDemo.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TGP.DataGridDemo"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--使用DataGrid时将资源引入到App.Xaml中-->
+                <ResourceDictionary Source="pack://application:,,,/TGP.DataGridDemo;component/Themes/Converter.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/TGP.DataGridDemo;component/Themes/DataGrid.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
